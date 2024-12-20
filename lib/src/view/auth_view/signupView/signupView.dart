@@ -3,6 +3,7 @@ import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/linkButtons.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/mainHomeView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,7 +39,7 @@ class _SignupviewState extends State<Signupview> {
                       Navigator.pushReplacement(
                         context,
                         CupertinoDialogRoute(
-                            builder: (context) => Signupview(),
+                            builder: (context) => MainHomeView(),
                             context: context),
                       );
                     },
