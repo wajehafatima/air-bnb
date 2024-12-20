@@ -130,8 +130,43 @@ class _HomeviewState extends State<Homeview> {
               ],
             ),
           ),
-          Text('data'),
-          SizedBox(height: 20.h),
+          SizedBox(height: 10.h),
+// Additional text content below the slider
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.w),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Primarytext(
+                  text: 'Cap Town, South Africa',
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w500,
+                  textColor: appColors.blacktext,
+                ),
+                SizedBox(height: 5.h),
+                Primarytext(
+                  text: '9.43 kilometers away',
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w400,
+                  textColor: appColors.grey,
+                ),
+                SizedBox(height: 5.h),
+                Primarytext(
+                  text: 'May 21-26',
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w400,
+                  textColor: appColors.grey,
+                ),
+                SizedBox(height: 5.h),
+                Primarytext(
+                  text: '\$114/night',
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w600,
+                  textColor: appColors.blacktext,
+                ),
+              ],
+            ),
+          ),
           // Additional content can go here
         ],
       ),
