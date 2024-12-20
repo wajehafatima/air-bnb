@@ -35,46 +35,79 @@ class _HomeviewState extends State<Homeview> {
             child: Row(
               children: [
                 Expanded(
-                  child: Container(
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                      color: appColors.whiteBG,
-                      borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 4,
-                          color: appColors.grey,
-                        )
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Row(
-                        children: [
-                          Icon(Icons.search, size: 24, color: appColors.grey),
-                          SizedBox(width: 10.w),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Primarytext(
-                                  text: 'Where to?',
-                                  fontSize: 12.sp,
-                                  fontWeight: FontWeight.w500,
-                                  textColor: appColors.blacktext,
-                                ),
-                                Primarytext(
-                                  text: 'Anywhere Any week Add guests',
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w300,
-                                  textColor: appColors.grey,
-                                ),
-                              ],
-                            ),
-                          ),
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isFocused = true; // Focus enable
+                      });
+                    },
+                    child: Container(
+                      height: 40.h,
+                      decoration: BoxDecoration(
+                        color: appColors.whiteBG,
+                        borderRadius: BorderRadius.circular(30),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4,
+                            color: appColors.grey,
+                          )
                         ],
                       ),
+                      child: isFocused
+                          ? TextField(
+                              autofocus: true,
+                              onSubmitted: (value) {
+                                // Handle submission
+                                setState(() {
+                                  isFocused =
+                                      false; // Dismiss focus after submission
+                                });
+                              },
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Search your destination...',
+                                contentPadding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                icon: Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Icon(Icons.search,
+                                      size: 24, color: appColors.grey),
+                                ),
+                              ),
+                            )
+                          : Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.search,
+                                      size: 24, color: appColors.grey),
+                                  SizedBox(width: 10.w),
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Primarytext(
+                                          text: 'Where to?',
+                                          fontSize: 12.sp,
+                                          fontWeight: FontWeight.w500,
+                                          textColor: appColors.blacktext,
+                                        ),
+                                        Primarytext(
+                                          text: 'Anywhere Any week Add guests',
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w300,
+                                          textColor: appColors.grey,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                     ),
                   ),
                 ),
@@ -104,6 +137,26 @@ class _HomeviewState extends State<Homeview> {
                 CustomTabBar(
                     icon: Icons.location_city_rounded, text: 'Top cities'),
               ],
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: appColors.whiteBG,
+                border: Border.all()),
+            child: ListTile(
+              title: Primarytext(
+                text: 'Display total price',
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext,
+              ),
+              subtitle: Primarytext(
+                text: 'Where to?',
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.grey,
+              ),
             ),
           ),
           SizedBox(height: 20.h),
@@ -193,6 +246,7 @@ class _HomeviewState extends State<Homeview> {
               ],
             ),
           ),
+          Text('data'),
           SizedBox(height: 20.h),
           // Additional content can go here
         ],
