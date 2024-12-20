@@ -37,7 +37,7 @@ SizedBox(height: 10.h,),
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Primarytext(text: 'Can\'t find your reservation here?', fontSize:13.sp, fontWeight:FontWeight.w400, textColor: appColors.blacktext),
-                SizedBox(width: 1,),
+
                 TextButton(onPressed: (){}, child: Text('visit the help center',style: TextStyle(color: appColors.blacktext,fontSize: 13.sp,
                   decoration: TextDecoration.underline,)),
                 ) ],

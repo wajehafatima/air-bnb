@@ -30,7 +30,7 @@ class _WishlistviewState extends State<Wishlistview> {
               borderRadius: BorderRadius.circular(20),
               boxShadow: [BoxShadow(blurRadius: 2,color: appColors.grey)],
               border: Border.all(color: appColors.whiteBG,width: 3)),child: Center(child: Icon(Icons.update,color: appColors.whiteBG,size: 70,)),),
-       SizedBox(height: 10.h,),
+       SizedBox(height: 15.h,),
             Primarytext(text: 'Recently Viewed', fontSize: 13.sp, fontWeight:FontWeight.w600, textColor:appColors.blacktext)
         ],),
       ),
