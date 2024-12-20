@@ -1,5 +1,7 @@
 import 'package:air_bnb/src/view/auth_view/signupView/signupView.dart';
 import 'package:air_bnb/src/view/homeview/HomeView.dart';
+import 'package:air_bnb/src/view/homeview/mainHomeView.dart';
+import 'package:air_bnb/src/view/homeview/tripsView.dart';
 import 'package:air_bnb/src/view/startingView/splashView/splashView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -36,8 +38,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:// Signupview(),
-      Homeview()
+      home:Tripsview()
+      //MainHomeView()
+      // Signupview(),
+      //Homeview()
 
     ),);
   }
