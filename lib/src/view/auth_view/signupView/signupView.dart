@@ -3,6 +3,7 @@ import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/linkButtons.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:country_picker/country_picker.dart';
@@ -31,7 +32,17 @@ class _SignupviewState extends State<Signupview> {
                 Padding(
                   padding:
                       const EdgeInsets.only(left: 10), // Icon aligned to left
-                  child: Icon(Icons.cancel),
+                  child: IconButton(
+                    icon: Icon(Icons.cancel),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        CupertinoDialogRoute(
+                            builder: (context) => Signupview(),
+                            context: context),
+                      );
+                    },
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 10, top: 30, bottom: 20),
