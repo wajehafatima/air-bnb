@@ -22,6 +22,7 @@ class Homeview extends StatefulWidget {
 class _HomeviewState extends State<Homeview> {
   int _currentIndex = 0;
   bool isFocused = false;
+  bool isSwitchOn = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -139,7 +140,13 @@ class _HomeviewState extends State<Homeview> {
               ],
             ),
           ),
+
+          SizedBox(
+            height: 10.h,
+          ),
           Container(
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(1),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: appColors.whiteBG,
@@ -152,10 +159,22 @@ class _HomeviewState extends State<Homeview> {
                 textColor: appColors.blacktext,
               ),
               subtitle: Primarytext(
-                text: 'Where to?',
+                text: 'Includes all fees,before taxes',
                 fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
                 textColor: appColors.grey,
+              ),
+              trailing: Switch(
+                value: isSwitchOn,
+                onChanged: (value) {
+                  setState(() {
+                    isSwitchOn = value; // Update switch state
+                  });
+                },
+                activeColor:
+                    appColors.blacktext, // Customize active switch color
+                inactiveThumbColor:
+                    appColors.grey, // Customize inactive thumb color
               ),
             ),
           ),
