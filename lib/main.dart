@@ -39,9 +39,9 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: Splashview()
-          //Tripsview()
-          //MainHomeView()
+          home: //Splashview()
+              //Tripsview()
+              MainHomeView()
           // Signupview(),
           //Homeview()
 
