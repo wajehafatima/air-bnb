@@ -64,11 +64,13 @@ class _HomeviewState extends State<Homeview> {
             ],
           ),
           SizedBox(height: 10.h,),
-          Row(
+          Column(
             children: [
-              Column(children: [
+              Row(
+                children: [
 
-              ],)
+                ],
+              )
             ],
           )
         ],

@@ -1,4 +1,5 @@
 import 'package:air_bnb/src/controller/assets/appIcons/appIcons.dart';
+import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/linkButtons.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
@@ -110,18 +111,8 @@ class _SignupviewState extends State<Signupview> {
             child: Primarytext(text: 'we\'ll call you to confirm your number. Standard message and data rates apply.', fontSize: 10.sp, fontWeight: FontWeight.w500,
                 textColor:appColors.blacktext),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20,left: 10,right: 10,bottom: 20),
-            child: Container(
-              height: 33.h,
-              decoration: BoxDecoration(
-            color: appColors.secondary,
-                borderRadius: BorderRadius.circular(10),
+         Custombutton(text: 'Continue', onTap:(){}),
 
-              ),
-              child: Center(child: Primarytext(text: 'Continue', fontSize:15.sp, fontWeight:FontWeight.w500, textColor: appColors.whiteBG),),
-            ),
-          ),
           Center(child: Primarytext(text: 'Or', fontSize: 15.sp, fontWeight: FontWeight.w300, textColor:appColors.grey)),
           Linkbuttons(imagePath: appIcons.mail, text: 'Continue with Email', onTap:(){}),
           Linkbuttons(imagePath: appIcons.facebook, text: 'Continue with Facebook', onTap: (){}),
