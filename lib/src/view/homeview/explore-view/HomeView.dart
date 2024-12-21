@@ -7,7 +7,7 @@ import 'package:air_bnb/src/view/homeview/home-view-widgets/tab-row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'home-view-widgets/costum-search.dart';
+import '../home-view-widgets/costum-search.dart';
 
 class Homeview extends StatefulWidget {
   Homeview({super.key});
