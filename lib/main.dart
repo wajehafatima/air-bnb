@@ -40,24 +40,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: //Splashview()
-<<<<<<< HEAD
-          //Tripsview()
-          MainHomeView()
-        // Signupview(),
-        //Homeview()
-=======
-              //Tripsview()
-              MainHomeView()
-          // Signupview(),
-          //Homeview()
->>>>>>> ebfa05155f746e76f947fc42586a47cd3eaa3a61
-
-      ),
+          home: Splashview()),
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ebfa05155f746e76f947fc42586a47cd3eaa3a61
