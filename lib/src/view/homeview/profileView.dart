@@ -1,5 +1,6 @@
 import 'package:air_bnb/src/controller/assets/appIcons/appIcons.dart';
 import 'package:air_bnb/src/controller/assets/appImages/appImages.dart';
+import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/components/profileDetails.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
@@ -81,6 +82,31 @@ class _ProfileviewState extends State<Profileview> {
               ProfileDetails(icon: Icons.notifications_outlined, text:'Notifications'),
               ProfileDetails(icon: Icons.lock_outline, text:'Privacy and Sharing'),
               ProfileDetails(icon: Icons.card_travel, text:'Travel for work'),
+              SizedBox(height:15.h),
+              Primarytext(text: 'Hosting', fontSize:20.sp, fontWeight:FontWeight.w500, textColor:appColors.blacktext),
+              SizedBox(height: 20.h,),
+              ProfileDetails(icon: Icons.home_outlined, text: 'List your space'),
+              ProfileDetails(icon: Icons.add_home_rounded, text:'Learn about hosting'),
+              ProfileDetails(icon: Icons.groups_outlined, text:'Host an experience'),
+              SizedBox(height:15.h),
+              Primarytext(text: 'Support', fontSize:20.sp, fontWeight:FontWeight.w500, textColor:appColors.blacktext),
+              SizedBox(height: 20.h,),
+              ProfileDetails(icon: Icons.question_mark, text: 'Visit help Center'),
+              ProfileDetails(icon: Icons.health_and_safety_outlined, text:'Get the help with a security issue'),
+              ProfileDetails(icon: Icons.mode_of_travel_outlined, text: 'How Airbnb works'),
+              ProfileDetails(icon: Icons.edit_outlined, text:'Give us feedback'),
+              SizedBox(height:15.h),
+              Primarytext(text: 'Legal', fontSize:20.sp, fontWeight:FontWeight.w500, textColor:appColors.blacktext),
+              SizedBox(height: 20.h,),
+              ProfileDetails(icon: Icons.menu_book_outlined, text:'Terms of services'),
+              ProfileDetails(icon: Icons.menu_book_outlined, text:'Privacy Policy'),
+              ProfileDetails(icon: Icons.menu_book_outlined, text:'Open source licenses'),
+              SizedBox(height: 10.h,),
+              Custombutton(text:'Logout', onTap: (){},width: 60.w,color: appColors.whiteBG,textColor: appColors.blacktext,),
+              SizedBox(height: 15,),
+              Divider()
+
+
 
 
             ],),
