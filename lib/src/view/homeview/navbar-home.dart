@@ -17,7 +17,7 @@ class _MainHomeViewState extends State<MainHomeView> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-     Homeview(),
+    Homeview(),
     Wishlistview(),
     Tripsview(),
     Messagesview(),
