@@ -1,10 +1,10 @@
-import 'package:air_bnb/src/view/homeview/messagesView.dart';
-import 'package:air_bnb/src/view/homeview/profileView.dart';
-import 'package:air_bnb/src/view/homeview/tripsView.dart';
-import 'package:air_bnb/src/view/homeview/wishListView.dart';
+import 'package:air_bnb/src/view/homeview/explore-view/HomeView.dart';
+import 'package:air_bnb/src/view/homeview/mesages-view/messagesView.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/profileView.dart';
+import 'package:air_bnb/src/view/homeview/trips-view/tripsView.dart';
+import 'package:air_bnb/src/view/homeview/wishlist-view/wishListView.dart';
 import 'package:flutter/material.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
-import 'homeView.dart'; // Replace with the correct path to the HomeView file.
 
 class MainHomeView extends StatefulWidget {
   const MainHomeView({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class _MainHomeViewState extends State<MainHomeView> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-     Homeview(),
+    Homeview(),
     Wishlistview(),
     Tripsview(),
     Messagesview(),
