@@ -41,23 +41,12 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           home: //Splashview()
-<<<<<<< HEAD
           //Tripsview()
           MainHomeView()
         // Signupview(),
         //Homeview()
-=======
-              //Tripsview()
-              MainHomeView()
-          // Signupview(),
-          //Homeview()
->>>>>>> ebfa05155f746e76f947fc42586a47cd3eaa3a61
 
       ),
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ebfa05155f746e76f947fc42586a47cd3eaa3a61
