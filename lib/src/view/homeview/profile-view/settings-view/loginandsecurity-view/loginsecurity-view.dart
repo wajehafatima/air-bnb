@@ -3,6 +3,7 @@ import 'package:air_bnb/src/controller/components/personalDetails-list.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/components/securityPolicy-login.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/profileView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class LogInSecurity extends StatefulWidget {
@@ -17,7 +18,9 @@ class _LogInSecurityState extends State<LogInSecurity> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed:(){}, icon:Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed:(){
+          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=> Profileview()));
+        }, icon:Icon(Icons.arrow_back)),
 
       ),
       body: Padding(
@@ -37,12 +40,13 @@ class _LogInSecurityState extends State<LogInSecurity> {
            SecurityPolicyLogin(),
 
                   SizedBox(height: 20.h,),
-                  Primarytext(text:'Account', fontSize:27.sp , fontWeight:FontWeight.w500, textColor:appColors.blacktext),
+                  Primarytext(text:'Account', fontSize:25.sp , fontWeight:FontWeight.w500, textColor:appColors.blacktext),
                   SizedBox(height: 20.h,),
-                  Row(children: [
+                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
                     Primarytext(text: 'Deactivate your account', fontSize:14.sp, fontWeight:FontWeight.w400, textColor: appColors.blacktext),
                     InkWell(onTap: (){},
-                        child: Primarytext(text:'Deactivate', fontSize: 14.sp, fontWeight:FontWeight.w300, textColor: appColors.secondary))
+                        child: Primarytext(text:'Deactivate', fontSize: 14.sp, fontWeight:FontWeight.w500, textColor: appColors.secondary))
                   ],)
 
 

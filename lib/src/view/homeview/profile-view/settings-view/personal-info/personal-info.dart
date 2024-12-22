@@ -1,6 +1,7 @@
 import 'package:air_bnb/src/controller/components/personalDetails-list.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/profileView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,7 +16,9 @@ class _PersonalInfoState extends State<PersonalInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back),
+      appBar: AppBar(leading: IconButton(onPressed: (){
+        Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>Profileview()));
+      }, icon: Icon(Icons.arrow_back),
       ),
      backgroundColor: appColors.whiteBG, ),
       body: SingleChildScrollView(

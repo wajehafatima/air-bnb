@@ -130,7 +130,9 @@ class _SignupviewState extends State<Signupview> {
                       fontWeight: FontWeight.w500,
                       textColor: appColors.blacktext),
                 ),
-                Custombutton(text: 'Continue', onTap: () {}),
+                Custombutton(text: 'Continue', onTap: () {
+                 
+                }),
                 Center(
                     child: Primarytext(
                         text: 'Or',

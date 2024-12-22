@@ -15,9 +15,9 @@ class SecurityPolicyLogin extends StatelessWidget {
             children: [
               Image.asset(appIcons.security,height: 70.h, width: 70.w,),
               SizedBox(height: 10.h,),
-              Primarytext(text: 'Keeping your account Secure', fontSize:20.sp, fontWeight: FontWeight.w500, textColor: appColors.blacktext),
+              Primarytext(text: 'Keeping your account Secure', fontSize:18.sp, fontWeight: FontWeight.w500, textColor: appColors.blacktext),
               Primarytext(text: 'We regularly review your account to ensure that they are secure as possible.we\'ll also let you know if there\'s more we can do to increase the security of tour account.',
-                  fontSize: 10.sp, fontWeight: FontWeight.w300, textColor: appColors.blacktext),
+                  fontSize: 11.sp, fontWeight: FontWeight.w300, textColor: appColors.blacktext),
               SizedBox(height: 20,),
               RichText(
                 text: TextSpan(
