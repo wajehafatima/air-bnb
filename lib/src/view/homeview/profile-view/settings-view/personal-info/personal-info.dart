@@ -16,7 +16,8 @@ class _PersonalInfoState extends State<PersonalInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(leading: IconButton(onPressed: (){
+      appBar: AppBar(
+        leading: IconButton(onPressed: (){
         Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>Profileview()));
       }, icon: Icon(Icons.arrow_back),
       ),

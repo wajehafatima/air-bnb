@@ -17,7 +17,7 @@ class _PaymentsViewState extends State<PaymentsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(
+      appBar: AppBar(backgroundColor: appColors.whiteBG,
         leading: IconButton(onPressed:(){
           Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=> Profileview()));
         }, icon:Icon(Icons.arrow_back)),

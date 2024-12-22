@@ -16,7 +16,7 @@ class _TranslationViewState extends State<TranslationView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: appColors.whiteBG,
-       appBar: AppBar(
+       appBar: AppBar(backgroundColor: appColors.whiteBG,
         leading: IconButton(onPressed:(){
           Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=> Profileview()));
         }, icon:Icon(Icons.arrow_back)),
@@ -28,8 +28,9 @@ class _TranslationViewState extends State<TranslationView> {
 
           children: [
            Primarytext(text:'Translation', fontSize:25.sp ,
-           fontWeight:FontWeight.w500, textColor:appColors.blacktext),
-            Primarytext(text:'Automatically translate the reviews, descriptions, and messages written by guests and hosts to English. Turn this feature off if you\'dlike to show the original language', fontSize:12.sp ,
+           fontWeight:FontWeight.w600, textColor:appColors.blacktext),
+           SizedBox(height: 10.h,),
+            Primarytext(text:'Automatically translate the reviews, descriptions, and messages written by guests and hosts to English. Turn this feature off if you\'dlike to show the original language.', fontSize:12.sp ,
            fontWeight:FontWeight.w300, textColor:appColors.blacktext),
         ],),
       ),
