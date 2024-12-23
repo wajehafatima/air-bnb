@@ -1,3 +1,5 @@
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification/account-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification/offers-view.dart';
 import 'package:flutter/material.dart';
 
 class NotificationView extends StatefulWidget {
@@ -45,46 +47,6 @@ class _NotificationViewState extends State<NotificationView>
           OffersAndUpdatesScreen(),
           AccountScreen(),
         ],
-      ),
-    );
-  }
-}
-
-// Separate StatefulWidget for Offers & Updates Tab
-class OffersAndUpdatesScreen extends StatefulWidget {
-  const OffersAndUpdatesScreen({super.key});
-
-  @override
-  State<OffersAndUpdatesScreen> createState() => _OffersAndUpdatesScreenState();
-}
-
-class _OffersAndUpdatesScreenState extends State<OffersAndUpdatesScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Offers and Updates Content',
-        style: TextStyle(fontSize: 18),
-      ),
-    );
-  }
-}
-
-// Separate StatefulWidget for Account Tab
-class AccountScreen extends StatefulWidget {
-  const AccountScreen({super.key});
-
-  @override
-  State<AccountScreen> createState() => _AccountScreenState();
-}
-
-class _AccountScreenState extends State<AccountScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Account Content',
-        style: TextStyle(fontSize: 18),
       ),
     );
   }
