@@ -1,3 +1,5 @@
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/tax-views/document-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/tax-views/taxpayers-view.dart';
 import 'package:flutter/material.dart';
 
 class TaxesView extends StatefulWidget {
@@ -41,23 +43,11 @@ class _TaxesViewState extends State<TaxesView>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
-          _buildTaxPayersTab(),
-          _buildDocumentsTab(),
+        children: const [
+          TaxPayersScreen(),
+          DocumentsScreen(),
         ],
       ),
-    );
-  }
-
-  Widget _buildTaxPayersTab() {
-    return const Center(
-      child: Text('Tax Payers Content'),
-    );
-  }
-
-  Widget _buildDocumentsTab() {
-    return const Center(
-      child: Text('Documents Content'),
     );
   }
 }
