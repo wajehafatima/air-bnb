@@ -9,6 +9,6 @@ class taxesView extends StatefulWidget {
 class _taxesViewState extends State<taxesView> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }
