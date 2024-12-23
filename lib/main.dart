@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: Size(360, 640),
       child: MaterialApp(
-          title: 'Flutter Demo',
+          title: 'H Pulse',
           theme: ThemeData(
             // This is the theme of your application.
             //
