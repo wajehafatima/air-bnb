@@ -4,6 +4,7 @@ import 'package:air_bnb/src/view/homeview/navbar-home.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/loginandsecurity-view/loginsecurity-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/payment-view/payment-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-info.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/tax-views/document-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/taxes-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/translation-view/translation-view.dart';
 import 'package:air_bnb/src/view/homeview/trips-view/tripsView.dart';
@@ -45,7 +46,8 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home:taxesView()
+          home:
+        TaxesView()
         //TranslationView()
           //PaymentsView()
           //LogInSecurity()
