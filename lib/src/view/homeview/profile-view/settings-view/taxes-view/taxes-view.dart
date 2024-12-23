@@ -1,14 +1,53 @@
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/tax-views/document-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/tax-views/taxpayers-view.dart';
 import 'package:flutter/material.dart';
-class taxesView extends StatefulWidget {
-  const taxesView({super.key});
+
+class TaxesView extends StatefulWidget {
+  const TaxesView({super.key});
 
   @override
-  State<taxesView> createState() => _taxesViewState();
+  State<TaxesView> createState() => _TaxesViewState();
 }
 
-class _taxesViewState extends State<taxesView> {
+class _TaxesViewState extends State<TaxesView>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this); // Two tabs
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Taxes View'),
+        bottom: TabBar(
+          controller: _tabController,
+          indicatorColor: Colors.red,
+          labelColor: Colors.red,
+          unselectedLabelColor: Colors.grey,
+          tabs: const [
+            Tab(text: 'Tax Payers'),
+            Tab(text: 'Documents'),
+          ],
+        ),
+      ),
+      body: TabBarView(
+        controller: _tabController,
+        children: const [
+          TaxPayersScreen(),
+          DocumentsScreen(),
+        ],
+      ),
+    );
   }
 }
