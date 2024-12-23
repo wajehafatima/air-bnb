@@ -4,4 +4,5 @@ class appIcons {
   static String google = 'lib/src/controller/assets/appIcons/search.png';
   static String apple = 'lib/src/controller/assets/appIcons/apple.png';
   static String home = 'lib/src/controller/assets/appIcons/home.png';
+  static String security = 'lib/src/controller/assets/appIcons/safety.png';
 }
