@@ -4,6 +4,7 @@ import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/components/profileDetails.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/taxes-view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -186,7 +187,13 @@ class _ProfileviewState extends State<Profileview> {
               ProfileDetails(
                 icon: Icons.notifications_outlined,
                 text: 'Notifications',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      CupertinoDialogRoute(
+                          builder: (context) => NotificationView(),
+                          context: context));
+                },
               ),
               ProfileDetails(
                 icon: Icons.lock_outline,
