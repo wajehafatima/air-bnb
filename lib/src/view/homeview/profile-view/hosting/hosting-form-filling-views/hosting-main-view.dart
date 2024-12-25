@@ -1,4 +1,5 @@
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/1st-option-views/about-place-view/about-place-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/1st-option-views/place-option-view/place-option-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/1st-option-views/type-place-view/type-place-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-widgets/place-option-wdget.dart';
@@ -37,22 +38,7 @@ class _ExpandedScreenExampleState extends State<ExpandedScreenExample> {
             flex: 70,
             child: IndexedStack(
               index: currentIndex,
-              children: [
-                SelectPlace(),
-                GuestTypePlace(),
-                Container(
-                  color: Colors.red,
-                  child: Center(
-                    child: Text(
-                      'Content 3',
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+              children: [SelectPlace(), GuestTypePlace(), AboutPlace()],
             ),
           ),
           Expanded(
