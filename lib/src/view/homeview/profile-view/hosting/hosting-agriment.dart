@@ -16,20 +16,21 @@ class HostingAgreementScreen extends StatefulWidget {
 class _HostingAgreementScreenState extends State<HostingAgreementScreen> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Scaffold(
+        body: Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 20.h,
+            height: 90.h,
           ),
           Primarytext(
               text: 'Our Community Commitment',
               fontSize: 18.sp,
               fontWeight: FontWeight.w600, // Semi-bold
               textColor: appColors.blacktext),
-          SizedBox(height: 10.h),
+          SizedBox(height: 20.h),
           Primarytext(
               text: 'Xobnb is a community where anyone can belong',
               fontSize: 22.sp, // Extra large text
@@ -40,7 +41,7 @@ class _HostingAgreementScreenState extends State<HostingAgreementScreen> {
               text:
                   'To ensure this, we are asking you to commit to the following:',
               fontSize: 16.sp,
-              fontWeight: FontWeight.w400, // Non-bold
+              fontWeight: FontWeight.bold, // Non-bold
               textColor: appColors.blacktext),
           SizedBox(height: 20.h),
           Primarytext(
@@ -50,28 +51,23 @@ class _HostingAgreementScreenState extends State<HostingAgreementScreen> {
               fontWeight: FontWeight.w600, // Normal bold
               textColor: appColors.blacktext),
           SizedBox(height: 30.h),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Custombutton(
-                text: 'Agree',
-                onTap: () {},
-                color: appColors.blacktext,
-                textColor: appColors.whiteBG,
-                width: 120.w,
-              ),
-              SizedBox(width: 20.w),
-              Custombutton(
-                text: 'Continue',
-                onTap: () {},
-                color: appColors.blacktext,
-                textColor: appColors.whiteBG,
-                width: 120.w,
-              ),
-            ],
+          Custombutton(
+            text: 'Agree & Continue',
+            onTap: () {},
+            color: appColors.blacktext,
+            textColor: appColors.whiteBG,
+            // width: 120.w,
+          ),
+          SizedBox(height: 20.w),
+          Custombutton(
+            text: 'Decline',
+            onTap: () {},
+            color: appColors.blacktext,
+            textColor: appColors.whiteBG,
+            //   width: 120.w,
           ),
         ],
       ),
-    );
+    ));
   }
 }
