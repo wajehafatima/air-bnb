@@ -2,6 +2,8 @@ import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/components/underlinedtext.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-starting-view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -53,15 +55,22 @@ class _HostingAgreementScreenState extends State<HostingAgreementScreen> {
           SizedBox(height: 30.h),
           Custombutton(
             text: 'Agree & Continue',
-            onTap: () {},
-            color: appColors.blacktext,
+            onTap: () {
+              Navigator.push(
+                  context,
+                  CupertinoDialogRoute(
+                      builder: (context) => GettingStartedScreen(),
+                      context: context));
+            },
+            color: appColors.secondary,
             textColor: appColors.whiteBG,
             // width: 120.w,
           ),
-          SizedBox(height: 20.w),
           Custombutton(
             text: 'Decline',
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+            },
             color: appColors.blacktext,
             textColor: appColors.whiteBG,
             //   width: 120.w,
