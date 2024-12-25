@@ -13,6 +13,8 @@ import 'package:air_bnb/src/view/startingView/splashView/splashView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'src/view/homeview/profile-view/hosting/hosting-agriment.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -46,12 +48,14 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: TaxesView()
-            //TranslationView()
-            //PaymentsView()
-            //LogInSecurity()
-            //PersonalInfo(),
-            //Splashview()),
-            ));
+            home:
+                //TaxesView()
+                //TranslationView()
+                //PaymentsView()
+                //LogInSecurity()
+                //PersonalInfo(),
+                HostingAgreementScreen()
+            //  Splashview()),
+            )); //));
   }
 }
