@@ -1,5 +1,6 @@
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/1st-option-views/place-option-view/place-option-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/1st-option-views/type-place-view/type-place-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-widgets/place-option-wdget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,6 +39,7 @@ class _ExpandedScreenExampleState extends State<ExpandedScreenExample> {
               index: currentIndex,
               children: [
                 SelectPlace(),
+                GuestTypePlace(),
                 Container(
                   color: Colors.red,
                   child: Center(
