@@ -1,6 +1,9 @@
+import 'package:air_bnb/src/controller/components/primaryText.dart';
+import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/tax-views/document-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/tax-views/taxpayers-view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TaxesView extends StatefulWidget {
   const TaxesView({super.key});
@@ -27,9 +30,10 @@ class _TaxesViewState extends State<TaxesView>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Taxes View'),
+    return Scaffold(backgroundColor: appColors.whiteBG,
+      appBar: AppBar(backgroundColor: appColors.whiteBG,
+        title:  Primarytext(text: 'Taxes', fontSize: 25.sp,
+            fontWeight: FontWeight.w500, textColor: appColors.blacktext),
         bottom: TabBar(
           controller: _tabController,
           indicatorColor: Colors.red,
