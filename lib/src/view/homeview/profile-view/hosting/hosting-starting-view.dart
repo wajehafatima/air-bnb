@@ -1,5 +1,7 @@
 import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/hosting-main-view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -126,8 +128,14 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
             Spacer(),
             Custombutton(
               text: 'Get Started',
-              onTap: () {},
-              color: appColors.blacktext,
+              onTap: () {
+                Navigator.push(
+                    context,
+                    CupertinoDialogRoute(
+                        builder: (context) => ExpandedScreenExample(),
+                        context: context));
+              },
+              color: appColors.secondary,
               textColor: appColors.whiteBG,
               width: double.infinity,
             ),
