@@ -1,3 +1,4 @@
+import 'package:air_bnb/src/controller/assets/appImages/appImages.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:flutter/material.dart';
@@ -15,15 +16,19 @@ class _AirbnbworksviewState extends State<Airbnbworksview> {
     return Scaffold(backgroundColor: appColors.whiteBG,
       appBar: AppBar(backgroundColor: appColors.whiteBG,
         leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),),
-      body: Padding(
-        padding: const EdgeInsets.only(left: 20,right: 20),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.center,
-          
-          children: [
-          Primarytext(text: 'You are just 3 steps away from your next gateway',
-              fontSize: 20.sp, fontWeight: FontWeight.w500, textColor: appColors.blacktext),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20,right: 20),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            
+            children: [
+            Primarytext(text: 'You are just 3 steps away from your next gateway',
+                fontSize: 20.sp, fontWeight: FontWeight.w500, textColor: appColors.blacktext),
+        SizedBox(height: 10,),
+              
 
-        ],),
+          ],),
+        ),
       ),
     );
   }

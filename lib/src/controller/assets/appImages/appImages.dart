@@ -5,5 +5,5 @@ class appImages {
   static String hotel3= 'lib/src/controller/assets/appImages/hotel3.jpg';
   static String hotel4= 'lib/src/controller/assets/appImages/hotel4.jpg';
   static String dp= 'lib/src/controller/assets/appImages/dp.jpg';
-
+  static String hosting= 'lib/src/controller/assets/appImages/hosting.jpg';
 }
