@@ -4,12 +4,12 @@ import '../../../../../../controller/assets/appImages/appImages.dart';
 import '../../../../../../controller/components/primaryText.dart';
 import '../../../../../../controller/constants/colors/appColors.dart';
 
-class imageColumn extends StatelessWidget {
+class ImageColumn extends StatelessWidget {
   final String image;
   final String title;
   final String title2;
 
-  const imageColumn({
+  const ImageColumn({
     super.key,
     required this.image,
     required this.title,
@@ -18,10 +18,10 @@ class imageColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Column(crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 400.h,
+          height: 300.h,
           width: 400.w,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
