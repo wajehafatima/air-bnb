@@ -9,8 +9,10 @@ import 'package:air_bnb/src/view/homeview/profile-view/settings-view/loginandsec
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/payment-view/payment-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-info.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/privacyAndSharingView/Privacy-sharing-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/taxes-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/translation-view/translation-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/travelForWork/travel-for-work.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -214,13 +216,15 @@ class _ProfileviewState extends State<Profileview> {
                 icon: Icons.lock_outline,
                 text: 'Privacy and Sharing',
                 onTap: () {
-
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> Privacysharingview()));
                 },
               ),
               ProfileDetails(
                 icon: Icons.card_travel,
                 text: 'Travel for work',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> Travelforwork()));
+                },
               ),
               SizedBox(height: 15.h),
               Primarytext(

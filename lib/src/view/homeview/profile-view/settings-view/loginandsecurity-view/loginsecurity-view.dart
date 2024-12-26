@@ -34,7 +34,19 @@ class _LogInSecurityState extends State<LogInSecurity> {
             SizedBox(height: 5.h,),
             Divider(),
 
-            PersonalDetails(title: 'Password', title2: 'Updated 3days ago', buttonText: 'Update', onTap: (){}),
+           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+             Column(crossAxisAlignment: CrossAxisAlignment.start,
+               children: [
+                 Primarytext(text: 'Password', fontSize:14.sp,
+                     fontWeight: FontWeight.w500, textColor: appColors.blacktext),
+                 Primarytext(text: 'Updated 5 days ago', fontSize:12.sp,
+                     fontWeight:FontWeight.w300, textColor:appColors.blacktext)
+               ],
+
+             ),
+                 TextButton(onPressed: (){}, child:Primarytext(text: 'Update', fontSize:12.sp, fontWeight:FontWeight.w500, textColor:appColors.linkBlue))
+           ]),
             SizedBox(height: 10.h,),
 
            SecurityPolicyLogin(),

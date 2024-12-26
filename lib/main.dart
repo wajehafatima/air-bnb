@@ -11,6 +11,7 @@ import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/taxes-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/translation-view/translation-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/travelForWork/travel-for-work.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/support-view/feed-back-view/feedback-view.dart';
 import 'package:air_bnb/src/view/homeview/trips-view/tripsView.dart';
 import 'package:air_bnb/src/view/homeview/wishlist-view/wishListView.dart';
 import 'package:air_bnb/src/view/startingView/splashView/splashView.dart';
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home:Travelforwork()
+            home://Travelforwork()
           //Privacysharingview()
           //Accessbility()
           //NotificationView(),
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
                // HostingAgreementScreen()
             //  Splashview()),
          // Homeview()
-
+Feedbackview()
             )); //));
   }
 }

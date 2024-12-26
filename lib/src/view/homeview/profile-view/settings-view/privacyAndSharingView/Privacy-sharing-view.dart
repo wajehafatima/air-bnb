@@ -35,7 +35,14 @@ class _PrivacysharingviewState extends State<Privacysharingview> {
                text2: 'we\'ll create a file for you to download your personal data'),
             SizedBox(height: 10.h,),
             Divider(),
-            Privacyoptionlist(text1: 'Delete your account', text2: 'This will permanently delete your account, and your data in accordance with applicable law.')
+            Privacyoptionlist(text1: 'Delete your account', text2: 'This will permanently delete your account.'),
+            SizedBox(height: 10.h,),
+            Divider(),
+            Privacyoptionlist(text1: 'Sharing', text2: 'describe your activity shown to other.'),
+            SizedBox(height: 10.h,),
+            Divider(),
+
+            Privacyoptionlist(text1: 'Services', text2: 'View and manage services.'),
 
           ],),
       ),
