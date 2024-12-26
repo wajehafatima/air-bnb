@@ -4,6 +4,7 @@ import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/components/profileDetails.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/accessbility-view/accessbility-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/loginandsecurity-view/loginsecurity-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/payment-view/payment-view.dart';
@@ -177,7 +178,9 @@ class _ProfileviewState extends State<Profileview> {
               ProfileDetails(
                 icon: Icons.settings_applications_outlined,
                 text: 'Accessibility',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> Accessbility()));
+                },
               ),
               ProfileDetails(
                 icon: Icons.copy_rounded,
@@ -210,7 +213,9 @@ class _ProfileviewState extends State<Profileview> {
               ProfileDetails(
                 icon: Icons.lock_outline,
                 text: 'Privacy and Sharing',
-                onTap: () {},
+                onTap: () {
+
+                },
               ),
               ProfileDetails(
                 icon: Icons.card_travel,

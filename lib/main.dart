@@ -1,6 +1,7 @@
 import 'package:air_bnb/src/view/auth_view/signupView/signupView.dart';
 import 'package:air_bnb/src/view/homeview/explore-view/HomeView.dart';
 import 'package:air_bnb/src/view/homeview/navbar-home.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/accessbility-view/accessbility-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/loginandsecurity-view/loginsecurity-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/payment-view/payment-view.dart';
@@ -49,8 +50,9 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home:NotificationView(),
-          //MainHomeView()
+            home://Accessbility()
+          //NotificationView(),
+          MainHomeView()
                 //TaxesView()
                 //TranslationView()
                 //PaymentsView()
@@ -58,6 +60,7 @@ class MyApp extends StatelessWidget {
                 //PersonalInfo(),
                // HostingAgreementScreen()
             //  Splashview()),
+         // Homeview()
 
             )); //));
   }

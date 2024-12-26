@@ -33,7 +33,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
              PersonalDetails(title: 'Legal name', title2: 'Username', buttonText:'Edit', onTap:(){}),
               PersonalDetails(title: 'preferred first name', title2: 'not provided', buttonText:'Add', onTap:(){}),
               PersonalDetails(title: 'Phone number', title2: '+11122334455', buttonText:'Edit', onTap:(){}),
-              PersonalDetails(title: 'Email', title2: 'ma****Gmail.com', buttonText:'Edit', onTap:(){}),
+              PersonalDetails(title: 'Email', title2: 'ma****gmail.com', buttonText:'Edit', onTap:(){}),
               PersonalDetails(title: 'Address', title2: 'not provided', buttonText:'Add', onTap:(){}),
               PersonalDetails(title: 'Emergency contact', title2: '+134567890', buttonText:'Edit', onTap:(){}),
               PersonalDetails(title: 'Government ID', title2: 'not provided', buttonText:'Add', onTap:(){}),

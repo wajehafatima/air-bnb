@@ -65,9 +65,9 @@ class _TranslationViewState extends State<TranslationView> {
                       _isTranslationEnabled = value;
                     });
                   },
-                  activeColor: appColors.grey,
+                  activeColor: appColors.blacktext,
                   inactiveThumbColor: appColors.grey,
-                  inactiveTrackColor: appColors.blacktext,
+                  inactiveTrackColor: appColors.whiteBG,
 
                 ),
               ],
