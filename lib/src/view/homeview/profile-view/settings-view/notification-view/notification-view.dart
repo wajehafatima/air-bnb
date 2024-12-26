@@ -1,6 +1,9 @@
+import 'package:air_bnb/src/controller/components/primaryText.dart';
+import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification/account-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification/offers-view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotificationView extends StatefulWidget {
   const NotificationView({super.key});
@@ -27,13 +30,13 @@ class _NotificationViewState extends State<NotificationView>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Notification View'),
+    return Scaffold(backgroundColor: appColors.whiteBG,
+      appBar: AppBar(backgroundColor: appColors.whiteBG,
+        title:  Primarytext(text: 'Notifications', fontSize:25.sp, fontWeight:FontWeight.w600, textColor:appColors.blacktext),
         bottom: TabBar(
           controller: _tabController,
-          indicatorColor: Colors.red,
-          labelColor: Colors.red,
+          indicatorColor: appColors.secondary,
+          labelColor: appColors.secondary,
           unselectedLabelColor: Colors.grey,
           tabs: const [
             Tab(text: 'Offers & Updates'),
@@ -42,11 +45,12 @@ class _NotificationViewState extends State<NotificationView>
         ),
       ),
       body: TabBarView(
-        controller: _tabController,
-        children: const [
-          OffersAndUpdatesScreen(),
-          AccountScreen(),
-        ],
+          controller: _tabController,
+          children: const [
+            OffersAndUpdatesScreen(),
+            AccountScreen(),
+          ],
+
       ),
     );
   }

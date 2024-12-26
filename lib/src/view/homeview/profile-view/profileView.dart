@@ -4,8 +4,12 @@ import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/components/profileDetails.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/loginandsecurity-view/loginsecurity-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/payment-view/payment-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-info.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/taxes-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/translation-view/translation-view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -152,17 +156,23 @@ class _ProfileviewState extends State<Profileview> {
               ProfileDetails(
                 icon: Icons.person_outline_rounded,
                 text: 'Personal Information',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> PersonalInfo()));
+                },
               ),
               ProfileDetails(
                 icon: Icons.security,
                 text: 'Login and Security',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> LogInSecurity()));
+                },
               ),
               ProfileDetails(
                 icon: Icons.payments_outlined,
                 text: 'Payments and payouts',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> PaymentsView()));
+                },
               ),
               ProfileDetails(
                 icon: Icons.settings_applications_outlined,
@@ -182,7 +192,9 @@ class _ProfileviewState extends State<Profileview> {
               ProfileDetails(
                 icon: Icons.g_translate,
                 text: 'Translation',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> TranslationView()));
+                },
               ),
               ProfileDetails(
                 icon: Icons.notifications_outlined,

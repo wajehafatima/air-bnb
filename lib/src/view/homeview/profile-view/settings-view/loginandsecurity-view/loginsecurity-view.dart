@@ -16,7 +16,7 @@ class LogInSecurity extends StatefulWidget {
 class _LogInSecurityState extends State<LogInSecurity> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: appColors.whiteBG,
       appBar: AppBar(backgroundColor: appColors.whiteBG,
         leading: IconButton(onPressed:(){
           Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=> Profileview()));
