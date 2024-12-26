@@ -6,9 +6,11 @@ import 'package:air_bnb/src/view/homeview/profile-view/settings-view/loginandsec
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/payment-view/payment-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-info.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/privacyAndSharingView/Privacy-sharing-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/tax-views/document-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/taxes-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/translation-view/translation-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/travelForWork/travel-for-work.dart';
 import 'package:air_bnb/src/view/homeview/trips-view/tripsView.dart';
 import 'package:air_bnb/src/view/homeview/wishlist-view/wishListView.dart';
 import 'package:air_bnb/src/view/startingView/splashView/splashView.dart';
@@ -50,9 +52,11 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home://Accessbility()
+            home:Travelforwork()
+          //Privacysharingview()
+          //Accessbility()
           //NotificationView(),
-          MainHomeView()
+          //MainHomeView()
                 //TaxesView()
                 //TranslationView()
                 //PaymentsView()
