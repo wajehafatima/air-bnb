@@ -4,6 +4,7 @@ import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/airbnb-works-view/airbnb-widgets/hereToHelpDetails.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/airbnb-works-view/airbnb-widgets/imageColumn.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/support-view/airbnb-works-view/airbnb-widgets/questionList.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class Airbnbworksview extends StatefulWidget {
@@ -50,8 +51,14 @@ class _AirbnbworksviewState extends State<Airbnbworksview> {
               Heretohelpdetails(text1: 'More cancellation options', text2: 'Host can offer a range of cancellation\n options.', image:appIcons.support),
               SizedBox(height: 20.h,),
               Heretohelpdetails(text1: 'Support anytime, day, or night', text2: 'with 24/7 global support,we wew there\n for you.', image: appIcons.support),
-
-
+              SizedBox(height: 30.h,),
+              Primarytext(text: 'Still have questions?', fontSize: 20.sp, fontWeight: FontWeight.w500, textColor: appColors.blacktext),
+              SizedBox(height: 40.h,),
+             Questionlist(text: 'Do I need to meet my host?'),
+              Questionlist(text: 'whats the Airbnb doing about covid19?'),
+              Questionlist(text: 'when am I charged for reservation?'),
+              Questionlist(text: 'Host Center'),
+              Questionlist(text: 'Need more info')
 
           ],),
         ),
