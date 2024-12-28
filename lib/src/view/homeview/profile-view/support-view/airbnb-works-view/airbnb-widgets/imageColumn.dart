@@ -21,7 +21,7 @@ class ImageColumn extends StatelessWidget {
     return Column(crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 300.h,
+          height: 250.h,
           width: 400.w,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),

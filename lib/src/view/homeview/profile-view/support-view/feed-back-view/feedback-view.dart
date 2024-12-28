@@ -25,7 +25,9 @@ class _FeedbackviewState extends State<Feedbackview> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: appColors.whiteBG,
-        leading: Icon(Icons.arrow_back),
+        leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        },icon:Icon(Icons.arrow_back)),
       ),
       backgroundColor: appColors.whiteBG,
       body: Padding(

@@ -18,7 +18,7 @@ class Questionlist extends StatelessWidget {
                     textColor: appColors.blacktext),
                 IconButton(onPressed: (){}, icon: Icon(Icons.arrow_drop_down_sharp)),
               ],),
-            SizedBox(height: 10,),
+            SizedBox(height: 5.h),
             Divider()
           ],
         );

@@ -13,6 +13,7 @@ import 'package:air_bnb/src/view/homeview/profile-view/settings-view/translation
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/travelForWork/travel-for-work.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/airbnb-works-view/airbnb-works-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/feed-back-view/feedback-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/support-view/get-help-security-view/gethelp-security-view.dart';
 import 'package:air_bnb/src/view/homeview/trips-view/tripsView.dart';
 import 'package:air_bnb/src/view/homeview/wishlist-view/wishListView.dart';
 import 'package:air_bnb/src/view/startingView/splashView/splashView.dart';
@@ -58,7 +59,7 @@ class MyApp extends StatelessWidget {
           //Privacysharingview()
           //Accessbility()
           //NotificationView(),
-          //MainHomeView()
+          MainHomeView()
                 //TaxesView()
                 //TranslationView()
                 //PaymentsView()
@@ -68,7 +69,8 @@ class MyApp extends StatelessWidget {
             //  Splashview()),
          // Homeview()
 //Feedbackview()
-        Airbnbworksview()
+      //  Airbnbworksview()
+          //Gethelpsecurityview()
 
             )); //));
   }

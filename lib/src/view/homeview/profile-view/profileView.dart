@@ -4,6 +4,7 @@ import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/components/profileDetails.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/legal-view/privacy-policy-view/privacy-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/accessbility-view/accessbility-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/loginandsecurity-view/loginsecurity-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification-view.dart';
@@ -13,6 +14,9 @@ import 'package:air_bnb/src/view/homeview/profile-view/settings-view/privacyAndS
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/taxes-view/taxes-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/translation-view/translation-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/travelForWork/travel-for-work.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/support-view/airbnb-works-view/airbnb-works-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/support-view/feed-back-view/feedback-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/support-view/get-help-security-view/gethelp-security-view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -160,28 +164,28 @@ class _ProfileviewState extends State<Profileview> {
                 icon: Icons.person_outline_rounded,
                 text: 'Personal Information',
                 onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> PersonalInfo()));
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> PersonalInfo()));
                 },
               ),
               ProfileDetails(
                 icon: Icons.security,
                 text: 'Login and Security',
                 onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> LogInSecurity()));
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> LogInSecurity()));
                 },
               ),
               ProfileDetails(
                 icon: Icons.payments_outlined,
                 text: 'Payments and payouts',
                 onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> PaymentsView()));
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> PaymentsView()));
                 },
               ),
               ProfileDetails(
                 icon: Icons.settings_applications_outlined,
                 text: 'Accessibility',
                 onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> Accessbility()));
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> Accessbility()));
                 },
               ),
               ProfileDetails(
@@ -198,7 +202,7 @@ class _ProfileviewState extends State<Profileview> {
                 icon: Icons.g_translate,
                 text: 'Translation',
                 onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> TranslationView()));
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> TranslationView()));
                 },
               ),
               ProfileDetails(
@@ -216,14 +220,14 @@ class _ProfileviewState extends State<Profileview> {
                 icon: Icons.lock_outline,
                 text: 'Privacy and Sharing',
                 onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> Privacysharingview()));
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> Privacysharingview()));
                 },
               ),
               ProfileDetails(
                 icon: Icons.card_travel,
                 text: 'Travel for work',
                 onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> Travelforwork()));
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> Travelforwork()));
                 },
               ),
               SizedBox(height: 15.h),
@@ -267,17 +271,23 @@ class _ProfileviewState extends State<Profileview> {
               ProfileDetails(
                 icon: Icons.health_and_safety_outlined,
                 text: 'Get the help with a security issue',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> Gethelpsecurityview()));
+                },
               ),
               ProfileDetails(
                 icon: Icons.mode_of_travel_outlined,
                 text: 'How Airbnb works',
-                onTap: () {},
+                onTap: () {  Navigator.push(context,CupertinoPageRoute(builder: (context)=> Airbnbworksview()));
+
+                },
               ),
               ProfileDetails(
                 icon: Icons.edit_outlined,
                 text: 'Give us feedback',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> Feedbackview()));
+                },
               ),
               SizedBox(height: 15.h),
               Primarytext(
@@ -296,7 +306,9 @@ class _ProfileviewState extends State<Profileview> {
               ProfileDetails(
                 icon: Icons.menu_book_outlined,
                 text: 'Privacy Policy',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,CupertinoPageRoute(builder: (context)=> Privacyview()));
+                },
               ),
               ProfileDetails(
                 icon: Icons.menu_book_outlined,
