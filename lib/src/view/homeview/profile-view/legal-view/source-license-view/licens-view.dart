@@ -34,7 +34,8 @@ class _LicensviewState extends State<Licensview> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start
             ,
             children: [
-            LicenseWidget(text:'ASM based accessors helper used by json-smart' , onTap: () {  },)
+            LicenseWidget(text:'ASM based accessors helper used by json-smart' , onTap: () {  },),
+              LicenseWidget(text:'android', onTap: (){})
           ],),
         ),
       ),
