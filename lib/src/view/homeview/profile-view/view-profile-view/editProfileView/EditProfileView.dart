@@ -2,6 +2,7 @@ import 'package:air_bnb/src/controller/assets/appImages/appImages.dart';
 import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/view-profile-view/editProfileView/edit-profile-widget/edit-profilewidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -100,27 +101,12 @@ class _EditprofileviewState extends State<Editprofileview> {
                         textColor: appColors.blacktext,
                       ),
                       SizedBox(height: 20.h),
-                      Row(
-                        children: [
-                          Icon(Icons.work_outline_outlined),
-                          SizedBox(width: 10.w),
-                          InkWell(
-                            onTap: () {
-                              _showMyWorkBottomSheet(context);
-                            },
-                            child: Primarytext(
-                              text: 'My Work',
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w400,
-                              textColor: appColors.blacktext,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10.h),
-                      Divider(),
-                      SizedBox(height: 10.h,),
-
+                     EditProfileRow(icon: Icons.work_outline_rounded, text: 'My work', onTap: (){
+                       _showMyWorkBottomSheet(context);
+                     }),
+                      EditProfileRow(icon: Icons.public_rounded, text: 'Where I\'ve always wanted to go', onTap: (){}),
+                      EditProfileRow(icon: Icons.handyman_rounded, text: 'My most useless skills', onTap: (){}),
+                      EditProfileRow(icon: Icons.lightbulb_outline, text: 'My fun fact', onTap: (){}),
                     ],
                   ),
                 ],
