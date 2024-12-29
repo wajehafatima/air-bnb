@@ -58,24 +58,24 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home:Licensview()
-          //Viewprofileview()
-          //Travelforwork()
-          //Privacysharingview()
-          //Accessbility()
-          //NotificationView(),
-         // MainHomeView()
-                //TaxesView()
-                //TranslationView()
-                //PaymentsView()
-                //LogInSecurity()
-                //PersonalInfo(),
-               // HostingAgreementScreen()
+            home: Licensview()
+            //Viewprofileview()
+            //Travelforwork()
+            //Privacysharingview()
+            //Accessbility()
+            //NotificationView(),
+            // MainHomeView()
+            //TaxesView()
+            //TranslationView()
+            //PaymentsView()
+            //LogInSecurity()
+            //PersonalInfo(),
+            // HostingAgreementScreen()
             //  Splashview()),
-         // Homeview()
+            // Homeview()
 //Feedbackview()
-      //  Airbnbworksview()
-          //Gethelpsecurityview()
+            //  Airbnbworksview()
+            //Gethelpsecurityview()
 
             )); //));
   }
