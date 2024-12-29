@@ -17,6 +17,7 @@ import 'package:air_bnb/src/view/homeview/profile-view/settings-view/travelForWo
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/airbnb-works-view/airbnb-works-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/feed-back-view/feedback-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/get-help-security-view/gethelp-security-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/view-profile-view/editProfileView/EditProfileView.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/view-profile-view/viewProfileView.dart';
 import 'package:air_bnb/src/view/homeview/trips-view/tripsView.dart';
 import 'package:air_bnb/src/view/homeview/wishlist-view/wishListView.dart';
@@ -59,7 +60,8 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home:AdminHomeView()
+            home:Editprofileview()
+          //AdminHomeView()
           //Licensview()
           //Viewprofileview()
           //Travelforwork()
@@ -74,6 +76,7 @@ class MyApp extends StatelessWidget {
                 //PersonalInfo(),
                // HostingAgreementScreen()
             //  Splashview()),
+
          // Homeview()
 //Feedbackview()
       //  Airbnbworksview()
