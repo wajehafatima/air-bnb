@@ -53,9 +53,8 @@ class _EditprofileviewState extends State<Editprofileview> {
                             backgroundImage: AssetImage(appImages.dp),
                           ),
                         ),
-                        Positioned(
-                          bottom: 0,
-                          left: MediaQuery.of(context).size.width * 0.5 - 22.5,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 110),
                           child: Container(
                             width: 45.w,
                             height: 22.h,
@@ -124,15 +123,58 @@ class _EditprofileviewState extends State<Editprofileview> {
                       icon: Icons.pets_outlined,
                       text: 'Pets',
                       onTap: () {
-
+                        // Show the BottomSheet when tapping the "Pets" row
+                        _showPetsBottomSheet(context);
                       },
                     ),
-                    EditProfileRow(icon: Icons.youtube_searched_for_sharp, text: 'Decade I was born in', onTap: (){}),
-                    EditProfileRow(icon: Icons.school, text: 'Where i went to school', onTap: (){}),
-                    EditProfileRow(icon: Icons.music_note_outlined, text: 'My favourite song in high School', onTap:(){}),
-                    EditProfileRow(icon: Icons.access_time, text:'I spend too much time', onTap:(){}),
-                    EditProfileRow(icon: Icons.favorite_border, text:'I\'m obsessed with', onTap: (){}),
-                    EditProfileRow(icon: Icons.menu_book_sharp, text: 'My biography title would be', onTap: (){}),
+                    EditProfileRow(
+                      icon: Icons.youtube_searched_for_sharp,
+                      text: 'Decade I was born in',
+                      onTap: () {
+                        // Show the BottomSheet when tapping the "Decade I was born in" row
+                        _showBornDecadeBottomSheet(context);
+                      },
+                    ),
+                    EditProfileRow(
+                      icon: Icons.school,
+                      text: 'Where I went to school',
+                      onTap: () {
+                        // Show the BottomSheet when tapping the "Where I went to school" row
+                        _showWhereWantedToGoBottomSheet(context);
+                      },
+                    ),
+                    EditProfileRow(
+                      icon: Icons.music_note_outlined,
+                      text: 'My favourite song in high school',
+                      onTap: () {
+                        // Show the BottomSheet when tapping the "My favourite song in high school" row
+                        _showFavoriteSongBottomSheet(context);
+                      },
+                    ),
+                    EditProfileRow(
+                      icon: Icons.access_time,
+                      text: 'I spend too much time',
+                      onTap: () {
+                        // Show the BottomSheet when tapping the "I spend too much time" row
+                        _showTimeSpentBottomSheet(context);
+                      },
+                    ),
+                    EditProfileRow(
+                      icon: Icons.favorite_border,
+                      text: 'I\'m obsessed with',
+                      onTap: () {
+                        // Show the BottomSheet when tapping the "I'm obsessed with" row
+                        _showObsessedWithBottomSheet(context);
+                      },
+                    ),
+                    EditProfileRow(
+                      icon: Icons.menu_book_sharp,
+                      text: 'My biography title would be',
+                      onTap: () {
+                        // Show the BottomSheet when tapping the "My biography title would be" row
+                        _showBiographyTitleBottomSheet(context);
+                      },
+                    ),
                     EditProfileRow(icon: Icons.language, text: 'Languages I speak', onTap: (){}),
                     EditProfileRow(icon: Icons.public_rounded, text:'Where I live', onTap: (){}),
                     // Additional Rows...
@@ -532,4 +574,538 @@ void _showMyFunFactBottomSheet(BuildContext context) {
     },
   );
 }
+void _showPetsBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: appColors.whiteBG, // Using your appColors
+    isScrollControlled: true,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(20.r),
+      ),
+    ),
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 20.w,
+          right: 20.w,
+          top: 20.h,
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.cancel_outlined, color: appColors.blacktext),
+              ),
+              SizedBox(height: 10.h),
+              Primarytext(
+                text: 'Edit Pets',
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 5.h),
+              Primarytext(
+                text: 'Tell us more about your pets!',
+                fontSize: 11.sp,
+                fontWeight: FontWeight.w300,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 20.h),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Pet Name',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
+                    borderSide: BorderSide(color: appColors.blacktext),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appColors.blacktext),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20.h),
+              Divider(),
+              Custombutton(
+                text: 'Save',
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                textColor: appColors.whiteBG,
+                color: appColors.blacktext,
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
+void _showBornDecadeBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: appColors.whiteBG, // Using your appColors
+    isScrollControlled: true,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(20.r),
+      ),
+    ),
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 20.w,
+          right: 20.w,
+          top: 20.h,
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.cancel_outlined, color: appColors.blacktext),
+              ),
+              SizedBox(height: 10.h),
+              Primarytext(
+                text: 'Your birthday year is not visible to anyone.',
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w300,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 20.h),
+              Primarytext(
+                text: 'Decade I was born in',
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 5.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Primarytext(
+                        text: 'Born in the 90s',
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                        textColor: appColors.blacktext,
+                      ),
+                    ],
+                  ),
+                  Switch(
+                    value: true, // Toggle value (set based on your logic)
+                    onChanged: (bool value) {
+                      // Handle switch change
+                    },
+                    activeColor: appColors.blacktext, // Custom active color for the switch
+                  ),
+                ],
+              ),
+              SizedBox(height: 20.h),
+              Divider(),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('Save'),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: appColors.whiteBG,
+                  backgroundColor: appColors.blacktext,
+                  minimumSize: Size(double.infinity, 50.h),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
+void _showWhereWantedToGoBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: appColors.whiteBG, // Using your appColors
+    isScrollControlled: true,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(20.r),
+      ),
+    ),
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 20.w,
+          right: 20.w,
+          top: 20.h,
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.cancel_outlined, color: appColors.blacktext),
+              ),
+              SizedBox(height: 10.h),
+              Primarytext(
+                text: 'Where I\'ve always wanted to go',
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 5.h),
+              Primarytext(
+                text: 'Share a dream destination you\'ve always wanted to visit. It could inspire others!',
+                fontSize: 11.sp,
+                fontWeight: FontWeight.w300,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 20.h),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Dream Destination',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
+                    borderSide: BorderSide(color: appColors.blacktext),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appColors.blacktext),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20.h),
+              Divider(),
+              Custombutton(
+                text: 'Save',
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                textColor: appColors.whiteBG,
+                color: appColors.blacktext,
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
+void _showFavoriteSongBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: appColors.whiteBG, // Using your appColors
+    isScrollControlled: true,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(20.r),
+      ),
+    ),
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 20.w,
+          right: 20.w,
+          top: 20.h,
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.cancel_outlined, color: appColors.blacktext),
+              ),
+              SizedBox(height: 10.h),
+              Primarytext(
+                text: 'My favourite song in high school',
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 5.h),
+              Primarytext(
+                text: 'Share the song that defined your high school days!',
+                fontSize: 11.sp,
+                fontWeight: FontWeight.w300,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 20.h),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Favourite Song',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
+                    borderSide: BorderSide(color: appColors.blacktext),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appColors.blacktext),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20.h),
+              Divider(),
+              Custombutton(
+                text: 'Save',
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                textColor: appColors.whiteBG,
+                color: appColors.blacktext,
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
+void _showTimeSpentBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: appColors.whiteBG, // Using your appColors
+    isScrollControlled: true,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(20.r),
+      ),
+    ),
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 20.w,
+          right: 20.w,
+          top: 20.h,
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.cancel_outlined, color: appColors.blacktext),
+              ),
+              SizedBox(height: 10.h),
+              Primarytext(
+                text: 'I spend too much time...',
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 5.h),
+              Primarytext(
+                text: 'Share the activity you feel you spend too much time on.',
+                fontSize: 11.sp,
+                fontWeight: FontWeight.w300,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 20.h),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Activity I spend too much time on',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
+                    borderSide: BorderSide(color: appColors.blacktext),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appColors.blacktext),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20.h),
+              Divider(),
+              Custombutton(
+                text: 'Save',
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                textColor: appColors.whiteBG,
+                color: appColors.blacktext,
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
+void _showObsessedWithBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: appColors.whiteBG, // Using your appColors
+    isScrollControlled: true,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(20.r),
+      ),
+    ),
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 20.w,
+          right: 20.w,
+          top: 20.h,
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.cancel_outlined, color: appColors.blacktext),
+              ),
+              SizedBox(height: 10.h),
+              Primarytext(
+                text: 'I\'m obsessed with',
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 5.h),
+              Primarytext(
+                text: 'Share the things or activities you are obsessed with!',
+                fontSize: 11.sp,
+                fontWeight: FontWeight.w300,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 20.h),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'What am I obsessed with?',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
+                    borderSide: BorderSide(color: appColors.blacktext),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appColors.blacktext),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20.h),
+              Divider(),
+              Custombutton(
+                text: 'Save',
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                textColor: appColors.whiteBG,
+                color: appColors.blacktext,
+              ),
+            ],
+          ),
+        ),
 
+      );
+    },
+
+
+  );
+
+}
+void _showBiographyTitleBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: appColors.whiteBG, // Using your appColors
+    isScrollControlled: true,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(20.r),
+      ),
+    ),
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 20.w,
+          right: 20.w,
+          top: 20.h,
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.cancel_outlined, color: appColors.blacktext),
+              ),
+              SizedBox(height: 10.h),
+              Primarytext(
+                text: 'My biography title would be',
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 5.h),
+              Primarytext(
+                text: 'Share the title you think would suit your biography!',
+                fontSize: 11.sp,
+                fontWeight: FontWeight.w300,
+                textColor: appColors.blacktext,
+              ),
+              SizedBox(height: 20.h),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Biography Title',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
+                    borderSide: BorderSide(color: appColors.blacktext),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: appColors.blacktext),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20.h),
+              Divider(),
+              Custombutton(
+                text: 'Save',
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                textColor: appColors.whiteBG,
+                color: appColors.blacktext,
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
