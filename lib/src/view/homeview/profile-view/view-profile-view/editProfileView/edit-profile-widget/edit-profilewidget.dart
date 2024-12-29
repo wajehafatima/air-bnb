@@ -3,32 +3,42 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../controller/components/primaryText.dart';
 import '../../../../../../controller/constants/colors/appColors.dart';
-class Editprofilewidget extends StatelessWidget {
-  const Editprofilewidget({super.key});
+
+class EditProfileRow extends StatelessWidget {
+  final IconData icon;
+  final String text;
+  final VoidCallback onTap;
+
+  const EditProfileRow({
+    super.key,
+    required this.icon,
+    required this.text,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Row(
-        children: [
-          Icon(Icons.work_outline_outlined),
-          SizedBox(width: 10.w),
-          InkWell(
-            onTap: () {
-
-            },
-            child: Primarytext(
-              text: 'My Work',
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w400,
-              textColor: appColors.blacktext,
+    return Column(
+      children: [
+        Row(
+          children: [
+            Icon(icon, color: appColors.blacktext), // Reusable icon
+            SizedBox(width: 10.w),
+            InkWell(
+              onTap: onTap, // Reusable tap action
+              child: Primarytext(
+                text: text, // Reusable text
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
+                textColor: appColors.blacktext,
+              ),
             ),
-          ),
-        ],
-      ),
-      SizedBox(height: 10.h),
-      Divider(),
-      SizedBox(height: 10.h,),
-    ],);
+          ],
+        ),
+        SizedBox(height: 10.h),
+        Divider(),
+        SizedBox(height: 10.h),
+      ],
+    );
   }
 }
