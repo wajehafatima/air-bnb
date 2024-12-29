@@ -1,29 +1,16 @@
 import 'package:flutter/material.dart';
-
-class Test extends StatefulWidget {
-  const Test({super.key});
+class Payemntssview extends StatefulWidget {
+  const Payemntssview({super.key});
 
   @override
-  State<Test> createState() => _TestState();
+  State<Payemntssview> createState() => _PayemntssviewState();
 }
 
-class _TestState extends State<Test> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+class _PayemntssviewState extends State<Payemntssview> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+
+    );
   }
 }
