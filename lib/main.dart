@@ -62,7 +62,7 @@ class MyApp extends StatelessWidget {
             ),
             home: //AdminLoginScreen(),
 
-          Editprofileview()
+                Editprofileview()
 
             //Licensview()
             //Viewprofileview()
@@ -78,7 +78,6 @@ class MyApp extends StatelessWidget {
             //PersonalInfo(),
             // HostingAgreementScreen()
             //  Splashview()),
-
             // Homeview()
 //Feedbackview()
             //  Airbnbworksview()

@@ -123,6 +123,7 @@ class _EditprofileviewState extends State<Editprofileview> {
                             fontWeight: FontWeight.w500,
                             textColor: appColors.blacktext),
                         SizedBox(height: 10.h,),
+<<<<<<< HEAD
                         Container(height: 55.h,width: 330.h,decoration: BoxDecoration(
                           color: appColors.whiteBG,
                           border: Border.all(color: appColors.blacktext,
@@ -137,6 +138,17 @@ class _EditprofileviewState extends State<Editprofileview> {
                                   fontWeight:FontWeight.w400, textColor: appColors.blacktext),
                             ),
 
+=======
+                        Container(height: 60.h,width: 330.h,decoration: BoxDecoration(
+                          color: appColors.whiteBG,
+                          border: Border.all(color: appColors.blacktext,
+
+                          ),),
+                          child: Column(children: [
+                            Primarytext(text: 'Write something fun and punchy', fontSize: 12.sp,
+                                fontWeight:FontWeight.w400, textColor: appColors.blacktext),
+                            SizedBox(height: 5.h,),
+>>>>>>> 1448d8845d05a8b9ed2c6c5c3a4451c71c0238cb
                             UnderlinedText(text: 'Add intro', onPressed: (){}),
                           ],),
 
@@ -149,7 +161,10 @@ class _EditprofileviewState extends State<Editprofileview> {
                         Primarytext(text: 'Find common ground with other guests and hosts bt adding interests to your profiles.',
                             fontSize: 12.sp, fontWeight: FontWeight.w500,
                             textColor: appColors.blacktext),
+<<<<<<< HEAD
                         SizedBox(height: 10,),
+=======
+>>>>>>> 1448d8845d05a8b9ed2c6c5c3a4451c71c0238cb
                         Container(height: 30.h,width:80.h,
                           decoration: BoxDecoration(
                             border: Border.all(color: appColors.blacktext),
