@@ -30,9 +30,15 @@ class _NotificationViewState extends State<NotificationView>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(backgroundColor: appColors.whiteBG,
-        title:  Primarytext(text: 'Notifications', fontSize:25.sp, fontWeight:FontWeight.w600, textColor:appColors.blacktext),
+    return Scaffold(
+      backgroundColor: appColors.whiteBG,
+      appBar: AppBar(
+        backgroundColor: appColors.whiteBG,
+        title: Primarytext(
+            text: 'Notifications',
+            fontSize: 25.sp,
+            fontWeight: FontWeight.w600,
+            textColor: appColors.blacktext),
         bottom: TabBar(
           controller: _tabController,
           indicatorColor: appColors.secondary,
@@ -45,12 +51,11 @@ class _NotificationViewState extends State<NotificationView>
         ),
       ),
       body: TabBarView(
-          controller: _tabController,
-          children: const [
-            OffersAndUpdatesScreen(),
-            AccountScreen(),
-          ],
-
+        controller: _tabController,
+        children: const [
+          OffersAndUpdatesScreen(),
+          AccountScreen(),
+        ],
       ),
     );
   }

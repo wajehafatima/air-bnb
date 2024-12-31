@@ -21,7 +21,7 @@ class _PayoutManagementViewState extends State<PayoutManagementView>
   void initState() {
     super.initState();
     _tabController = TabController(
-        length: 2, vsync: this); // Two tabs: Pending and Completed
+        length: 2, vsync: this); // Two tabs: Manage Hosts and Charges
   }
 
   @override
@@ -44,12 +44,19 @@ class _PayoutManagementViewState extends State<PayoutManagementView>
         ),
         bottom: TabBar(
           controller: _tabController,
-          labelColor: appColors.blacktext,
-          unselectedLabelColor: appColors.blacktext,
+          labelColor: appColors.secondary,
+          unselectedLabelColor: appColors.blacktext.withOpacity(0.7),
           indicatorColor: appColors.secondary,
+          indicatorWeight: 3.0,
           tabs: const [
-            Tab(text: 'Manage hosts'),
-            Tab(text: 'Charges'),
+            Tab(
+              text: 'Manage Hosts',
+              icon: Icon(Icons.account_balance, color: AppColors.secondary),
+            ),
+            Tab(
+              text: 'Charges',
+              icon: Icon(Icons.attach_money, color: AppColors.secondary),
+            ),
           ],
         ),
       ),

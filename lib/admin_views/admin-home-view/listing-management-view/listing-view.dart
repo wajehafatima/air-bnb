@@ -70,7 +70,8 @@ class ManageListingsWidget extends StatelessWidget {
       padding: EdgeInsets.all(16.w),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return Card(color: appColors.whiteBG,
+        return Card(
+          color: appColors.whiteBG,
           elevation: 5,
           margin: EdgeInsets.only(bottom: 16.h),
           shape: RoundedRectangleBorder(
@@ -81,43 +82,43 @@ class ManageListingsWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Primarytext(text:
-                  "Listing #${index + 1}",
-
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w600,
-                    textColor: appColors.blacktext,
-                  ),
-
+                Primarytext(
+                  text: "Listing #${index + 1}",
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w600,
+                  textColor: appColors.blacktext,
+                ),
                 SizedBox(height: 8.h),
-                Primarytext(text:
-                  "Status: Pending Approval",
-
-                    fontSize: 14.sp,
-                    textColor: appColors.grey, fontWeight: FontWeight.w400,
-                  ),
-
+                Primarytext(
+                  text: "Status: Pending Approval",
+                  fontSize: 14.sp,
+                  textColor: appColors.grey,
+                  fontWeight: FontWeight.w400,
+                ),
                 SizedBox(height: 8.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: appColors.whiteBG,
-                      ),
-              child: Primarytext(text: 'Approve', fontSize: 11.sp, fontWeight: FontWeight.w600,
-                  textColor: appColors.blacktext)
-          ),
-
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: appColors.whiteBG,
+                        ),
+                        child: Primarytext(
+                            text: 'Approve',
+                            fontSize: 11.sp,
+                            fontWeight: FontWeight.w600,
+                            textColor: appColors.blacktext)),
                     ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: appColors.whiteBG,
-                      ),
-                      child: Primarytext(text: 'Reject', fontSize: 11.sp, fontWeight: FontWeight.w600,
-                          textColor: appColors.secondary)
-                    ),
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: appColors.whiteBG,
+                        ),
+                        child: Primarytext(
+                            text: 'Reject',
+                            fontSize: 11.sp,
+                            fontWeight: FontWeight.w600,
+                            textColor: appColors.secondary)),
                   ],
                 ),
               ],
@@ -138,7 +139,8 @@ class ControlRankingWidget extends StatelessWidget {
       padding: EdgeInsets.all(16.w),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return Card(color: appColors.whiteBG,
+        return Card(
+          color: appColors.whiteBG,
           elevation: 5,
           margin: EdgeInsets.only(bottom: 16.h),
           shape: RoundedRectangleBorder(
@@ -149,14 +151,12 @@ class ControlRankingWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Primarytext(text:
-                  "Listing #${index + 1}",
-
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w500,
-                    textColor: appColors.blacktext,
-                  ),
-
+                Primarytext(
+                  text: "Listing #${index + 1}",
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w500,
+                  textColor: appColors.blacktext,
+                ),
                 Row(
                   children: [
                     IconButton(
