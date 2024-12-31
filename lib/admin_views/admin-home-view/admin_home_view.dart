@@ -1,5 +1,6 @@
 import 'package:air_bnb/admin_views/admin-home-view/about-section-view/about-view.dart';
 import 'package:air_bnb/admin_views/admin-home-view/admin-bank-accounts/admin-accounts-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/admin-dashboard/admin-dashboard-view.dart';
 import 'package:air_bnb/admin_views/admin-home-view/analytics-reports-view/analytics-reports-view.dart';
 import 'package:air_bnb/admin_views/admin-home-view/booking-management-view/booking-management-view.dart';
 import 'package:air_bnb/admin_views/admin-home-view/calender-view/calender-view.dart';
@@ -160,7 +161,7 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                     Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => Managementview()));
+                            builder: (context) => AdminDashboardView()));
                   },
                 ),
                 ProfileDetails(

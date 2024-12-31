@@ -1,11 +1,10 @@
-
 import 'package:air_bnb/admin_views/admin-home-view/manageent-views/managementView.dart';
 import 'package:air_bnb/admin_views/admin-home-view/payout-management-view/charges-view/charges-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/payout-management-view/manage-hosts-view/manage-hosts-view.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 class PayoutManagementView extends StatefulWidget {
   const PayoutManagementView({super.key});
@@ -14,13 +13,15 @@ class PayoutManagementView extends StatefulWidget {
   State<PayoutManagementView> createState() => _PayoutManagementViewState();
 }
 
-class _PayoutManagementViewState extends State<PayoutManagementView> with SingleTickerProviderStateMixin {
+class _PayoutManagementViewState extends State<PayoutManagementView>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this); // Two tabs: Pending and Completed
+    _tabController = TabController(
+        length: 2, vsync: this); // Two tabs: Pending and Completed
   }
 
   @override
@@ -31,8 +32,10 @@ class _PayoutManagementViewState extends State<PayoutManagementView> with Single
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(backgroundColor: appColors.whiteBG,
+    return Scaffold(
+      backgroundColor: appColors.whiteBG,
+      appBar: AppBar(
+        backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'Payout Management',
           fontSize: 25.sp,
@@ -53,7 +56,7 @@ class _PayoutManagementViewState extends State<PayoutManagementView> with Single
       body: TabBarView(
         controller: _tabController,
         children: [
-          Managementview(),
+          Managehostsview(),
           Chargesview(),
         ],
       ),
