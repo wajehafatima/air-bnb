@@ -7,9 +7,6 @@ import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-
-
 class EarningManagementView extends StatefulWidget {
   const EarningManagementView({super.key});
 
@@ -17,7 +14,8 @@ class EarningManagementView extends StatefulWidget {
   State<EarningManagementView> createState() => _EarningManagementViewState();
 }
 
-class _EarningManagementViewState extends State<EarningManagementView> with SingleTickerProviderStateMixin {
+class _EarningManagementViewState extends State<EarningManagementView>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -34,8 +32,10 @@ class _EarningManagementViewState extends State<EarningManagementView> with Sing
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(backgroundColor: appColors.whiteBG,
+    return Scaffold(
+      backgroundColor: appColors.whiteBG,
+      appBar: AppBar(
+        backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'Earning Management',
           fontSize: 25.sp,
@@ -57,7 +57,7 @@ class _EarningManagementViewState extends State<EarningManagementView> with Sing
       body: TabBarView(
         controller: _tabController,
         children: [
-         Totalearningview(),
+          Totalearningview(),
           Refundview(),
           Cancellationview(),
         ],
