@@ -1,5 +1,18 @@
+import 'package:air_bnb/admin_views/admin-home-view/about-section-view/about-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/admin-bank-accounts/admin-accounts-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/analytics-reports-view/analytics-reports-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/booking-management-view/booking-management-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/calender-view/calender-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/control-hosting-view/control-hosting-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/conversation-monitoring-view/conversation-monitoring-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/earning-management-view/earning-management-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/listing-management-view/listing-view.dart';
 import 'package:air_bnb/admin_views/admin-home-view/manageent-views/managementView.dart';
 import 'package:air_bnb/admin_views/admin-home-view/payment-views/payemnt-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/payout-management-view/payout-management-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/review-rating-view/review-rating-view.dart';
+import 'package:air_bnb/admin_views/admin-home-view/support-tickets-view/support-tickets.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/notification-view/notification-view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,155 +36,196 @@ class _AdminHomeViewState extends State<AdminHomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: appColors.whiteBG,
-        body: Padding(
-          padding: const EdgeInsets.only(left: 20,right: 20),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 40.h,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Primarytext(
-                      text: 'Profile',
-                      fontSize: 25.sp,
-                      fontWeight: FontWeight.w500,
-                      textColor: appColors.blacktext),
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.notifications_outlined,
-                        color: appColors.blacktext,
-                        size: 30,
-                      ))
-                ],
-              ),
-              SizedBox(
-                height: 20.h,
-              ),
-              Row(
-                children: [
-                  CircleAvatar(
-                    radius: 25.r,
-                    backgroundImage: AssetImage(appImages.dp),
-                  ),
-                  SizedBox(
-                    width: 15.w,
-                  ),
-                  Column(
-                    children: [
-                      Primarytext(
-                          text: 'Username',
-                          fontSize: 13.sp,
-                          fontWeight: FontWeight.w500,
-                          textColor: appColors.blacktext),
-                      Primarytext(
-                          text: 'Show profile',
-                          fontSize: 10.sp,
-                          fontWeight: FontWeight.w300,
-                          textColor: appColors.blacktext),
-                    ],
-                  ),
-                  SizedBox(
-                    width: 140.w,
-                  ),
-                  IconButton(
-                      onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
-                ],
-              ),
-              SizedBox(
-                height: 5.w,
-              ),
-              Divider(),
-              SizedBox(
-                height: 15.h,
-              ),
-              Container(
-                height: 70.h,
-                width: 380.w,
-                decoration: BoxDecoration(
-                    color: appColors.whiteBG,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(blurRadius: 2, color: appColors.grey),
-                    ]),
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10, top: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Primarytext(
-                              text: 'Airbnb your home',
-                              fontSize: 13.sp,
-                              fontWeight: FontWeight.w500,
-                              textColor: appColors.blacktext,
-                            ),
-                            SizedBox(
-                              height: 5.h,
-                            ),
-                            Primarytext(
-                                text:
-                                    'It\'s easy to start hosting and earn extra income',
-                                fontSize: 10.sp,
-                                fontWeight: FontWeight.w300,
-                                textColor: appColors.blacktext)
-                          ],
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20,right: 20),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 40.h,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Primarytext(
+                        text: 'Profile',
+                        fontSize: 25.sp,
+                        fontWeight: FontWeight.w500,
+                        textColor: appColors.blacktext),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.notifications_outlined,
+                          color: appColors.blacktext,
+                          size: 30,
+                        ))
+                  ],
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 25.r,
+                      backgroundImage: AssetImage(appImages.dp),
+                    ),
+                    SizedBox(
+                      width: 15.w,
+                    ),
+                    Column(
+                      children: [
+                        Primarytext(
+                            text: 'Username',
+                            fontSize: 13.sp,
+                            fontWeight: FontWeight.w500,
+                            textColor: appColors.blacktext),
+                        Primarytext(
+                            text: 'Show profile',
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w300,
+                            textColor: appColors.blacktext),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 140.w,
+                    ),
+                    IconButton(
+                        onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
+                  ],
+                ),
+                SizedBox(
+                  height: 5.w,
+                ),
+                Divider(),
+                SizedBox(
+                  height: 15.h,
+                ),
+                Container(
+                  height: 70.h,
+                  width: 380.w,
+                  decoration: BoxDecoration(
+                      color: appColors.whiteBG,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(blurRadius: 2, color: appColors.grey),
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Primarytext(
+                                text: 'Airbnb your home',
+                                fontSize: 13.sp,
+                                fontWeight: FontWeight.w500,
+                                textColor: appColors.blacktext,
+                              ),
+                              SizedBox(
+                                height: 5.h,
+                              ),
+                              Primarytext(
+                                  text:
+                                      'It\'s easy to start hosting and earn extra income',
+                                  fontSize: 10.sp,
+                                  fontWeight: FontWeight.w300,
+                                  textColor: appColors.blacktext)
+                            ],
+                          ),
                         ),
-                      ),
-                      Image.asset(
-                        appIcons.home,
-                        width: 60.w,
-                        height: 60.h,
-                      )
-                    ],
+                        Image.asset(
+                          appIcons.home,
+                          width: 60.w,
+                          height: 60.h,
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              Divider(),
-              SizedBox(
-                height: 10.h,
-              ),
-              ProfileDetails(
-                icon: Icons.admin_panel_settings,
-                text: 'Admin dashboard',
-                onTap: () {
+                SizedBox(
+                  height: 15.h,
+                ),
+                Divider(),
+                SizedBox(
+                  height: 10.h,
+                ),
+                ProfileDetails(
+                  icon: Icons.admin_panel_settings,
+                  text: 'Admin dashboard',
+                  onTap: () {
+                    Navigator.push(context,
+                        CupertinoPageRoute(builder: (context) => Managementview()));
+                  },
+                ),
+                ProfileDetails(
+                  icon: Icons.manage_history,
+                  text: 'User management',
+                  onTap: () {
+                    Navigator.push(context,
+                        CupertinoPageRoute(builder: (context) => Payemntssview()));
+                  },
+                ),
+                ProfileDetails(icon: Icons.list_alt_outlined, text: 'Listing management', onTap: (){
                   Navigator.push(context,
-                      CupertinoPageRoute(builder: (context) => Managementview()));
-                },
-              ),
-              ProfileDetails(
-                icon: Icons.manage_history,
-                text: 'User management',
-                onTap: () {
+                      CupertinoPageRoute(builder: (context) => Listingview()));
+                }),
+                ProfileDetails(icon: Icons.book, text: 'Booking management', onTap: (){
                   Navigator.push(context,
-                      CupertinoPageRoute(builder: (context) => Payemntssview()));
-                },
-              ),
-              ProfileDetails(icon: Icons.list_alt_outlined, text: 'Listing management', onTap: (){}),
-              ProfileDetails(icon: Icons.book, text: 'Booking management', onTap: (){}),
-              ProfileDetails(icon: Icons.monetization_on, text: 'Earning management', onTap: (){}),
-              ProfileDetails(icon: Icons.payment_outlined, text: 'Payout management', onTap: (){}),
-              ProfileDetails(icon: Icons.notifications_active_outlined, text: 'Notifications', onTap: (){}),
-              ProfileDetails(icon: Icons.airplane_ticket_outlined, text: 'Support tickets and customer',
-                  onTap: (){}),
-              ProfileDetails(icon: Icons.rate_review_outlined, text: 'Reviews and ratings', onTap: (){}),
-              ProfileDetails(icon: Icons.phone_in_talk, text: 'conversation monitoring', onTap: (){}),
-              ProfileDetails(icon: Icons.comment_bank, text: 'Admin bank accounts', onTap: (){}),
-              ProfileDetails(icon: Icons.calendar_month, text:'Calender', onTap: (){}),
-              ProfileDetails(icon: Icons.analytics_outlined, text: 'Analytics and report', onTap: (){}),
-              ProfileDetails(icon: Icons.control_point_duplicate_outlined, text:'Control hosting', onTap: (){}),
-              ProfileDetails(icon: Icons.info_outline, text: 'About', onTap: (){}),
-                
-            ],
+                      CupertinoPageRoute(builder: (context) => BookingManagement()));
+                }),
+                ProfileDetails(icon: Icons.monetization_on, text: 'Earning management', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => EarningManagementView()));
+                }),
+                ProfileDetails(icon: Icons.payment_outlined, text: 'Payout management', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => PayoutManagementView()));
+                }),
+                ProfileDetails(icon: Icons.notifications_active_outlined, text: 'Notifications', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => NotificationView()));
+                }),
+                ProfileDetails(icon: Icons.airplane_ticket_outlined, text: 'Support tickets and customer',
+                    onTap: (){
+                      Navigator.push(context,
+                          CupertinoPageRoute(builder: (context) => Supporttickets()));
+                    }),
+                ProfileDetails(icon: Icons.rate_review_outlined, text: 'Reviews and ratings', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => Reviewratingview()));
+                }),
+                ProfileDetails(icon: Icons.phone_in_talk, text: 'conversation monitoring', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => Conversationmonitoringview()));
+                }),
+                ProfileDetails(icon: Icons.comment_bank, text: 'Admin bank accounts', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => Adminaccountsview()));
+                }),
+                ProfileDetails(icon: Icons.calendar_month, text:'Calender', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => Calenderview()));
+                }),
+                ProfileDetails(icon: Icons.analytics_outlined, text: 'Analytics and report', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => Analyticsreportsview()));
+                }),
+                ProfileDetails(icon: Icons.control_point_duplicate_outlined, text:'Control hosting', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => Controlhostingview()));
+                }),
+                ProfileDetails(icon: Icons.info_outline, text: 'About', onTap: (){
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => Aboutview()));
+                }),
+                  
+              ],
+            ),
           ),
         ));
   }
