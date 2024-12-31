@@ -14,7 +14,7 @@ class _CancellationviewState extends State<Cancellationview> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(backgroundColor: appColors.whiteBG,
-
+appBar: AppBar(),
     );
   }
 }
