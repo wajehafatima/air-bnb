@@ -1,22 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../src/controller/components/primaryText.dart';
-import '../../../../src/controller/constants/colors/appColors.dart';
-class Guestview extends StatefulWidget {
+class Guestview extends StatelessWidget {
   const Guestview({super.key});
 
   @override
-  State<Guestview> createState() => _GuestviewState();
-}
-
-class _GuestviewState extends State<Guestview> {
-  @override
   Widget build(BuildContext context) {
-    return  Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(backgroundColor: appColors.whiteBG,
-        title: Primarytext(text: 'Guests', fontSize: 25.sp, fontWeight:FontWeight.w500,
-            textColor: appColors.blacktext),
+    return ListView.builder(
+      padding: const EdgeInsets.all(16.0),
+      itemCount: 10, // Replace with dynamic data count
+      itemBuilder: (context, index) {
+        return _guestCard(index);
+      },
+    );
+  }
+
+  Widget _guestCard(int id) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16.0),
+      child: ListTile(
+        title: Text("Guest ID: $id"),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Name: Guest Name $id"),
+            Text("Address: 123 Street, City"),
+            Text("Phone: +1 123-456-7890"),
+            Text("Verified: Yes"),
+            Text("Profile: Incomplete"),
+          ],
+        ),
+        trailing: Icon(Icons.more_vert),
       ),
     );
   }
