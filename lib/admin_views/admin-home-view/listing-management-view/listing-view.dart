@@ -70,8 +70,8 @@ class ManageListingsWidget extends StatelessWidget {
       padding: EdgeInsets.all(16.w),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return Card(
-          elevation: 4,
+        return Card(color: appColors.whiteBG,
+          elevation: 5,
           margin: EdgeInsets.only(bottom: 16.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.r),
@@ -81,22 +81,22 @@ class ManageListingsWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                Primarytext(text:
                   "Listing #${index + 1}",
-                  style: TextStyle(
+
                     fontSize: 18.sp,
-                    fontWeight: FontWeight.bold,
-                    color: appColors.blacktext,
+                    fontWeight: FontWeight.w600,
+                    textColor: appColors.blacktext,
                   ),
-                ),
+
                 SizedBox(height: 8.h),
-                Text(
+                Primarytext(text:
                   "Status: Pending Approval",
-                  style: TextStyle(
+
                     fontSize: 14.sp,
-                    color: appColors.grey,
+                    textColor: appColors.grey, fontWeight: FontWeight.w400,
                   ),
-                ),
+
                 SizedBox(height: 8.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,16 +104,19 @@ class ManageListingsWidget extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: appColors.grey,
+                        backgroundColor: appColors.whiteBG,
                       ),
-                      child: Text("Approve"),
-                    ),
+              child: Primarytext(text: 'Approve', fontSize: 11.sp, fontWeight: FontWeight.w600,
+                  textColor: appColors.blacktext)
+          ),
+
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.grey,
+                        backgroundColor: appColors.whiteBG,
                       ),
-                      child: Text("Reject"),
+                      child: Primarytext(text: 'Reject', fontSize: 11.sp, fontWeight: FontWeight.w600,
+                          textColor: appColors.secondary)
                     ),
                   ],
                 ),
@@ -135,8 +138,8 @@ class ControlRankingWidget extends StatelessWidget {
       padding: EdgeInsets.all(16.w),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return Card(
-          elevation: 4,
+        return Card(color: appColors.whiteBG,
+          elevation: 5,
           margin: EdgeInsets.only(bottom: 16.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.r),
@@ -146,14 +149,14 @@ class ControlRankingWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                Primarytext(text:
                   "Listing #${index + 1}",
-                  style: TextStyle(
+
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w500,
-                    color: appColors.blacktext,
+                    textColor: appColors.blacktext,
                   ),
-                ),
+
                 Row(
                   children: [
                     IconButton(
@@ -167,7 +170,7 @@ class ControlRankingWidget extends StatelessWidget {
                       onPressed: () {},
                       icon: Icon(
                         Icons.arrow_downward,
-                        color: Colors.red,
+                        color: appColors.secondary,
                       ),
                     ),
                   ],
