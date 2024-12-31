@@ -235,7 +235,7 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                       Navigator.push(
                           context,
                           CupertinoPageRoute(
-                              builder: (context) => Reviewratingview()));
+                              builder: (context) => ReviewRatingView()));
                     }),
                 ProfileDetails(
                     icon: Icons.phone_in_talk,
@@ -245,7 +245,7 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                           context,
                           CupertinoPageRoute(
                               builder: (context) =>
-                                  Conversationmonitoringview()));
+                                  ConversationMonitoringView()));
                     }),
                 ProfileDetails(
                     icon: Icons.comment_bank,
