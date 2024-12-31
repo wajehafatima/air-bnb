@@ -2,6 +2,7 @@ import 'package:air_bnb/admin_views/admin-home-view/admin_home_view.dart';
 import 'package:air_bnb/admin_views/admin-home-view/booking-management-view/booking-management-view.dart';
 import 'package:air_bnb/admin_views/admin-home-view/listing-management-view/listing-view.dart';
 import 'package:air_bnb/admin_views/admin-home-view/manageent-views/managementView.dart';
+import 'package:air_bnb/admin_views/admin-home-view/payout-management-view/payout-management-view.dart';
 import 'package:air_bnb/src/view/auth_view/signupView/signupView.dart';
 import 'package:air_bnb/src/view/homeview/explore-view/HomeView.dart';
 import 'package:air_bnb/src/view/homeview/navbar-home.dart';
@@ -63,17 +64,17 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-<<<<<<< HEAD
-            home: //Listingview()
-         BookingManagement()
+
+            home: PayoutManagementView()
+          //Listingview()
+         //BookingManagement()
             //AdminHomeView()
 //UserManagementView()
                 //Editprofileview()
-=======
-            home: AdminHomeView()
+
             // UserManagementView()
             //Editprofileview()
->>>>>>> 85acfc37ecf08d99c110849a460affda8b9e0c44
+
 
             //Licensview()
             //Viewprofileview()

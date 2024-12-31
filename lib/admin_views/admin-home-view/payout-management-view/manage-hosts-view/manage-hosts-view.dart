@@ -1,3 +1,4 @@
+import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,14 +18,8 @@ class _ManagehostsviewState extends State<Managehostsview> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Manage Host Bank Details and Process Payments',
-            style: TextStyle(
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w600,
-              color: appColors.blacktext,
-            ),
-          ),
+          Primarytext(text: 'Manage Host Bank Details and Process Payments', fontSize: 18.sp, fontWeight: FontWeight.w500,
+              textColor: appColors.blacktext),
           SizedBox(height: 20.h),
           Container(
             decoration: BoxDecoration(
@@ -43,25 +38,14 @@ class _ManagehostsviewState extends State<Managehostsview> {
               shrinkWrap: true,
               itemCount: 5, // Example number of hosts
               itemBuilder: (context, index) {
-                return Card(
+                return Card(color: appColors.whiteBG,
                   elevation: 5,
                   margin: EdgeInsets.symmetric(vertical: 8.h),
                   child: ListTile(
-                    title: Text(
-                      'Host ${index + 1}',
-                      style: TextStyle(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w500,
-                        color: appColors.blacktext,
-                      ),
-                    ),
-                    subtitle: Text(
-                      'Bank Account: XXXXXXXXXX',
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: appColors.blacktext.withOpacity(0.6),
-                      ),
-                    ),
+                    title: Primarytext(text: 'Host ${index + 1}', fontSize: 14.sp, fontWeight: FontWeight.w600,
+                        textColor: appColors.blacktext),
+                    subtitle: Primarytext(text: 'Bank Account: XXXXXXXXXX', fontSize: 16.sp, fontWeight: FontWeight.w400,
+                        textColor: appColors.blacktext),
                     trailing: IconButton(
                       icon: Icon(Icons.payment, color: appColors.secondary),
                       onPressed: () {
