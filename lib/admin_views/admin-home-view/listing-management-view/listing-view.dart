@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../src/controller/components/primaryText.dart';
 import '../../../src/controller/constants/colors/appColors.dart';
+
 class Listingview extends StatefulWidget {
   const Listingview({super.key});
 
@@ -10,14 +11,172 @@ class Listingview extends StatefulWidget {
   State<Listingview> createState() => _ListingviewState();
 }
 
-class _ListingviewState extends State<Listingview> {
+class _ListingviewState extends State<Listingview>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(backgroundColor: appColors.whiteBG,
-        title: Primarytext(text: 'Listing management', fontSize: 25.sp, fontWeight:FontWeight.w500,
-            textColor: appColors.blacktext),
+    return Scaffold(
+      backgroundColor: appColors.whiteBG,
+      appBar: AppBar(
+        backgroundColor: appColors.whiteBG,
+        title: Primarytext(
+          text: 'Listing Management',
+          fontSize: 25.sp,
+          fontWeight: FontWeight.w500,
+          textColor: appColors.blacktext,
+        ),
+        bottom: TabBar(
+          controller: _tabController,
+          labelColor: appColors.blacktext,
+          indicatorColor: appColors.secondary,
+          unselectedLabelColor: appColors.grey,
+          tabs: [
+            Tab(text: "Manage Listings"),
+            Tab(text: "Control Ranking"),
+          ],
+        ),
       ),
+      body: TabBarView(
+        controller: _tabController,
+        children: [
+          ManageListingsWidget(),
+          ControlRankingWidget(),
+        ],
+      ),
+    );
+  }
+}
+
+class ManageListingsWidget extends StatelessWidget {
+  const ManageListingsWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      padding: EdgeInsets.all(16.w),
+      itemCount: 10,
+      itemBuilder: (context, index) {
+        return Card(
+          elevation: 4,
+          margin: EdgeInsets.only(bottom: 16.h),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.r),
+          ),
+          child: Padding(
+            padding: EdgeInsets.all(16.w),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Listing #${index + 1}",
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.bold,
+                    color: appColors.blacktext,
+                  ),
+                ),
+                SizedBox(height: 8.h),
+                Text(
+                  "Status: Pending Approval",
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    color: appColors.grey,
+                  ),
+                ),
+                SizedBox(height: 8.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: appColors.grey,
+                      ),
+                      child: Text("Approve"),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                      ),
+                      child: Text("Reject"),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class ControlRankingWidget extends StatelessWidget {
+  const ControlRankingWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      padding: EdgeInsets.all(16.w),
+      itemCount: 10,
+      itemBuilder: (context, index) {
+        return Card(
+          elevation: 4,
+          margin: EdgeInsets.only(bottom: 16.h),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.r),
+          ),
+          child: Padding(
+            padding: EdgeInsets.all(16.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Listing #${index + 1}",
+                  style: TextStyle(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w500,
+                    color: appColors.blacktext,
+                  ),
+                ),
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.arrow_upward,
+                        color: appColors.grey,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.arrow_downward,
+                        color: Colors.red,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
