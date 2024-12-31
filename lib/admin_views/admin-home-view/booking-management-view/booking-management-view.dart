@@ -74,20 +74,20 @@ class TrackBookingsTab extends StatelessWidget {
             elevation: 5,
             margin: EdgeInsets.symmetric(vertical: 8.0.h),
             child: ListTile(
-              title: Text('Booking #${index + 1}',
-                  style:
-                      TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold)),
-              subtitle: Text('Details about booking #${index + 1}',
-                  style: TextStyle(fontSize: 14.sp)),
+              title: Primarytext(text: 'Booking #${index + 1}',
+                  textColor: appColors.blacktext,
+                      fontSize: 18.sp, fontWeight: FontWeight.w600),
+              subtitle: Primarytext(text: 'Details about booking #${index + 1}',textColor: appColors.blacktext,fontWeight: FontWeight.w400,
+                 fontSize: 14.sp,),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.edit, color: appColors.secondary),
+                    icon: Icon(Icons.edit, color: appColors.grey),
                     onPressed: () {},
                   ),
                   IconButton(
-                    icon: Icon(Icons.delete, color: Colors.red),
+                    icon: Icon(Icons.delete, color: appColors.secondary),
                     onPressed: () {},
                   ),
                 ],
@@ -108,36 +108,39 @@ class NotificationsTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Automated Notifications',
-              style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold)),
+          Primarytext(text: 'Automated notifications', fontSize:20.sp, fontWeight:FontWeight.w600,
+              textColor: appColors.blacktext
+          ),
           SizedBox(height: 16.h),
           ListTile(
             leading: Icon(Icons.check_circle, color: Colors.green),
-            title: Text('Check-in Notification',
-                style: TextStyle(fontSize: 16.sp)),
-            subtitle: Text('Sent on arrival date to guest and host.',
-                style: TextStyle(fontSize: 14.sp)),
+            title: Primarytext(text: 'Check-in Notification', fontSize: 16.sp, fontWeight: FontWeight.w600,
+                textColor: appColors.blacktext),
+            subtitle: Primarytext(text: 'Sent on arrival date to guest and host.', fontSize: 14.sp, fontWeight:FontWeight.w500,
+                textColor:appColors.blacktext),
           ),
           ListTile(
             leading: Icon(Icons.check_circle_outline, color: Colors.blue),
-            title: Text('Check-out Notification',
-                style: TextStyle(fontSize: 16.sp)),
-            subtitle: Text('Sent on departure date to guest and host.',
-                style: TextStyle(fontSize: 14.sp)),
+            title: Primarytext(text:'Check-out Notification',
+                fontSize: 16.sp,textColor: appColors.blacktext,fontWeight: FontWeight.w600),
+            subtitle: Primarytext(text: 'Sent on departure date to guest and host.''Sent on departure date to guest and host.',
+                fontSize: 14.sp, fontWeight: FontWeight.w500, textColor: appColors.blacktext)
           ),
           ListTile(
             leading: Icon(Icons.confirmation_num, color: Colors.orange),
             title:
-                Text('Booking Confirmation', style: TextStyle(fontSize: 16.sp)),
-            subtitle: Text('Sent upon successful booking.',
-                style: TextStyle(fontSize: 14.sp)),
-          ),
+               Primarytext(text: 'Booking Confirmation', fontSize: 16.sp, fontWeight: FontWeight.w600,
+                   textColor: appColors.blacktext),
+            subtitle: Primarytext(text: 'Sent upon successful booking.', fontSize: 14.sp, fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext)),
+
           ListTile(
             leading: Icon(Icons.cancel, color: Colors.red),
             title:
-                Text('Booking Cancellation', style: TextStyle(fontSize: 16.sp)),
-            subtitle: Text('Sent upon booking cancellation.',
-                style: TextStyle(fontSize: 14.sp)),
+               Primarytext(text: 'Booking Cancellation', fontSize: 16.sp, fontWeight: FontWeight.w600,
+                   textColor: appColors.blacktext),
+            subtitle:Primarytext(text: 'Sent upon booking cancellation.', fontSize: 14.sp, fontWeight: FontWeight.w500,
+                textColor:appColors.blacktext),
           ),
         ],
       ),
