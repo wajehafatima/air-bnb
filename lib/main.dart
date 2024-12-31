@@ -62,8 +62,8 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             home: //AdminHomeView()
-UserManagementView()
-                //Editprofileview()
+                UserManagementView()
+            //Editprofileview()
 
             //Licensview()
             //Viewprofileview()
