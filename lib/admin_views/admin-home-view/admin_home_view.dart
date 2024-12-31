@@ -171,7 +171,7 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                     Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => Payemntssview()));
+                            builder: (context) => UserManagementView()));
                   },
                 ),
                 ProfileDetails(
