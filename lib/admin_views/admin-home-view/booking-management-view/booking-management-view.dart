@@ -70,8 +70,8 @@ class TrackBookingsTab extends StatelessWidget {
       child: ListView.builder(
         itemCount: 10,
         itemBuilder: (context, index) {
-          return Card(
-            elevation: 3,
+          return Card(color: appColors.whiteBG,
+            elevation: 5,
             margin: EdgeInsets.symmetric(vertical: 8.0.h),
             child: ListTile(
               title: Text('Booking #${index + 1}',
