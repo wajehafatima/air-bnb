@@ -254,7 +254,7 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                       Navigator.push(
                           context,
                           CupertinoPageRoute(
-                              builder: (context) => Adminaccountsview()));
+                              builder: (context) => AdminAccountsVieww()));
                     }),
                 ProfileDetails(
                     icon: Icons.calendar_month,
