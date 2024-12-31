@@ -1,4 +1,7 @@
+import 'package:air_bnb/src/controller/components/primaryText.dart';
+import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Hostview extends StatelessWidget {
   const Hostview({super.key});
@@ -15,23 +18,34 @@ class Hostview extends StatelessWidget {
   }
 
   Widget _hostCard(int id) {
-    return Card(
+    return Card(color: appColors.whiteBG,shadowColor: appColors.grey,elevation: 5,
       margin: const EdgeInsets.only(bottom: 16.0),
       child: ListTile(
-        title: Text("Host ID: $id"),
+        title: Primarytext(text: 'Host ID: $id', fontSize:13.sp, fontWeight: FontWeight.w600,
+            textColor: appColors.blacktext),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Name: Host Name $id"),
-            Text("Listing Name: Listing $id"),
-            Text("Address: 123 Host Street, City"),
-            Text("Phone: +1 123-456-7890"),
-            Text("Tax ID: 123456789"),
-            Text("Verification: Verified"),
-            Text("Incomplete Profiles: No"),
-            Text("Total Listings: 5"),
-            Text("Bookings: 12"),
-            Text("Earnings: \$5000"),
+            Primarytext(text: 'Name: Host Name $id"', fontSize: 12.sp, fontWeight: FontWeight.w500,
+                textColor: appColors.blacktext),
+            Primarytext(text: 'Listing Name: Listing $id', fontSize: 12.sp, fontWeight: FontWeight.w400,
+                textColor: appColors.blacktext),
+           Primarytext(text: 'Address: 123 Host Street, City', fontSize: 12.sp, fontWeight: FontWeight.w400,
+               textColor: appColors.blacktext),
+           Primarytext(text: 'Phone: +1 123-456-7890', fontSize: 12.sp, fontWeight: FontWeight.w400,
+               textColor: appColors.blacktext),
+            Primarytext(text: 'Tax ID: 123456789', fontSize: 12.sp, fontWeight: FontWeight.w400, 
+                textColor: appColors.blacktext),
+            Primarytext(text: 'Verification: Verified"', fontSize: 12.sp, fontWeight: FontWeight.w400,
+                textColor: appColors.blacktext,),
+            Primarytext(text: 'Incomplete Profiles: No', fontSize: 12.sp, fontWeight: FontWeight.w400,
+                textColor: appColors.blacktext),
+            Primarytext(text: 'Total Listings: 5', fontSize: 12.sp, fontWeight: FontWeight.w400,
+                textColor: appColors.blacktext),
+            Primarytext(text: 'Bookings: 12', fontSize:12.sp, fontWeight:FontWeight.w400,
+                textColor: appColors.blacktext),
+            Primarytext(text: 'Earning \$5000', fontSize: 12.sp, fontWeight: FontWeight.w400,
+                textColor: appColors.blacktext)
           ],
         ),
         trailing: Icon(Icons.more_vert),

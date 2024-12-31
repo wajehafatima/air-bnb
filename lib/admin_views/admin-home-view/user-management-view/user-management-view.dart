@@ -7,10 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Assuming AppColors is defined somewhere in your project
-class AppColors {
-  static const Color blackText = Colors.black;
-  static const Color secondary = Colors.purple; // Replace with your secondary color
-}
+
 
 class UserManagementView extends StatefulWidget {
   const UserManagementView({super.key});
@@ -42,13 +39,13 @@ class _UserManagementViewState extends State<UserManagementView> with SingleTick
           text: 'User Management',
           fontSize: 25.sp,
           fontWeight: FontWeight.w500,
-          textColor: AppColors.blackText,
+          textColor: appColors.blacktext,
         ),
         bottom: TabBar(
           controller: _tabController,
-          labelColor: AppColors.secondary,
-          unselectedLabelColor: AppColors.blackText,
-          indicatorColor: AppColors.secondary,
+          labelColor: appColors.secondary,
+          unselectedLabelColor: appColors.blacktext,
+          indicatorColor: appColors.secondary,
           tabs: const [
             Tab(text: 'Hosts'),
             Tab(text: 'Guests'),
