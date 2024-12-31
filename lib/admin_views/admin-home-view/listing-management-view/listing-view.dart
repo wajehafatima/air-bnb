@@ -11,7 +11,22 @@ class Listingview extends StatefulWidget {
   State<Listingview> createState() => _ListingviewState();
 }
 
-class _ListingviewState extends State<Listingview> {
+class _ListingviewState extends State<Listingview>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,10 +34,28 @@ class _ListingviewState extends State<Listingview> {
       appBar: AppBar(
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
-            text: 'Listing management',
-            fontSize: 25.sp,
-            fontWeight: FontWeight.w500,
-            textColor: appColors.blacktext),
+          text: 'Listing Management',
+          fontSize: 25.sp,
+          fontWeight: FontWeight.w500,
+          textColor: appColors.blacktext,
+        ),
+        bottom: TabBar(
+          controller: _tabController,
+          labelColor: appColors.blacktext,
+          indicatorColor: appColors.secondary,
+          unselectedLabelColor: appColors.grey,
+          tabs: [
+            Tab(text: "Manage Listings"),
+            Tab(text: "Control Ranking"),
+          ],
+        ),
+      ),
+      body: TabBarView(
+        controller: _tabController,
+        children: [
+          ManageListingsWidget(),
+          ControlRankingWidget(),
+        ],
       ),
     );
   }
