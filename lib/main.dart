@@ -64,6 +64,7 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
+<<<<<<< HEAD
 
             home: PayoutManagementView()
           //Listingview()
@@ -75,6 +76,16 @@ class MyApp extends StatelessWidget {
             // UserManagementView()
             //Editprofileview()
 
+=======
+            home: //Listingview()
+                BookingManagement()
+            //AdminHomeView()
+//UserManagementView()
+            //Editprofileview()
+
+            // UserManagementView()
+            //Editprofileview()
+>>>>>>> 73b28d2669e35ad007beaef2feae517a90b40612
 
             //Licensview()
             //Viewprofileview()
