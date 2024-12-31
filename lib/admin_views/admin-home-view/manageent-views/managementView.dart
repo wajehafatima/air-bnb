@@ -46,9 +46,8 @@ class _ManagementviewState extends State<Managementview>
           unselectedLabelColor: appColors.blacktext,
           indicatorColor: appColors.secondary,
           tabs: const [
-            Tab(text: 'Total earnings'),
-            Tab(text: 'Refunds'),
-            Tab(text: 'Cancellation'),
+            Tab(text: 'Over view'),
+            Tab(text: 'Charts'),
           ],
         ),
       ),
@@ -61,6 +60,5 @@ class _ManagementviewState extends State<Managementview>
         ],
       ),
     );
-    ;
   }
 }
