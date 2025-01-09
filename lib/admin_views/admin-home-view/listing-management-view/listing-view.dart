@@ -46,8 +46,8 @@ class _ListingviewState extends State<Listingview>
           indicatorColor: appColors.secondary,
           unselectedLabelColor: appColors.grey,
           tabs: [
-            Tab(text: "Manage Listings"),
-            Tab(text: "Control Ranking"),
+            Tab(child: Primarytext(text: 'Manage listing', fontSize: 12.sp, fontWeight:FontWeight.w500, textColor: appColors.grey),),
+            Tab(child: Primarytext(text: 'Control Ranking', fontSize: 12.sp, fontWeight:FontWeight.w500, textColor: appColors.grey),),
           ],
         ),
       ),
@@ -95,6 +95,9 @@ class ManageListingsWidget extends StatelessWidget {
                   textColor: appColors.blacktext,
                 ),
                 SizedBox(height: 10.h),
+                Primarytext(text: 'Host ID: 1', fontSize: 12.sp, fontWeight: FontWeight.w300, textColor: AppColors.blackText),
+                SizedBox(height: 10.h,),
+                Primarytext(text: 'Host name: John', fontSize: 12.sp, fontWeight: FontWeight.w300, textColor: AppColors.blackText),
                 Primarytext(
                   text: "Status: Pending Approval",
                   fontSize: 14.sp,
