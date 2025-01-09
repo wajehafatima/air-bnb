@@ -73,7 +73,7 @@ class ManageListingsWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
 
-          height: 120.h,
+          height: 160.h,
           width: 340.w,
           decoration: BoxDecoration(
             color: appColors.whiteBG,
@@ -91,20 +91,21 @@ class ManageListingsWidget extends StatelessWidget {
                 Primarytext(
                   text: "Listing #${index + 1}",
                   fontSize: 16.sp,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w400,
                   textColor: appColors.blacktext,
                 ),
                 SizedBox(height: 10.h),
-                Primarytext(text: 'Host ID: 1', fontSize: 12.sp, fontWeight: FontWeight.w300, textColor: AppColors.blackText),
+                Primarytext(text: 'Host ID: 1', fontSize: 14.sp, fontWeight: FontWeight.w300, textColor: AppColors.blackText),
                 SizedBox(height: 10.h,),
-                Primarytext(text: 'Host name: John', fontSize: 12.sp, fontWeight: FontWeight.w300, textColor: AppColors.blackText),
+                Primarytext(text: 'Host name: John', fontSize: 14.sp, fontWeight: FontWeight.w300, textColor: AppColors.blackText),
+                SizedBox(height: 10.h),
                 Primarytext(
                   text: "Status: Pending Approval",
                   fontSize: 14.sp,
                   textColor: appColors.grey,
                   fontWeight: FontWeight.w400,
                 ),
-                SizedBox(height: 15.h),
+                SizedBox(height: 10.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -118,7 +119,7 @@ class ManageListingsWidget extends StatelessWidget {
                            TextButton(onPressed: (){},
                              child: Primarytext(
                                 text: 'Approve',
-                                fontSize: 11.sp,
+                                fontSize: 12.sp,
                                 fontWeight: FontWeight.w600,
                                 textColor: appColors.blacktext),
                            )),
@@ -132,7 +133,7 @@ class ManageListingsWidget extends StatelessWidget {
                         TextButton(onPressed: (){},
                           child: Primarytext(
                               text: 'Reject',
-                              fontSize: 11.sp,
+                              fontSize: 12.sp,
                               fontWeight: FontWeight.w600,
                               textColor: appColors.blacktext),
                         )),
