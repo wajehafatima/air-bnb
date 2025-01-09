@@ -1,3 +1,4 @@
+import 'package:air_bnb/admin_views/admin-home-view/manageent-views/managementView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -70,13 +71,18 @@ class ManageListingsWidget extends StatelessWidget {
       padding: EdgeInsets.all(16.w),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return Card(
-          color: appColors.whiteBG,
-          elevation: 5,
-          margin: EdgeInsets.only(bottom: 16.h),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.r),
+        return Container(
+
+          height: 120.h,
+          width: 340.w,
+          decoration: BoxDecoration(
+            color: appColors.whiteBG,
+            border: Border.all(color: appColors.grey),
+            borderRadius: BorderRadius.circular(15),
+
           ),
+          margin: EdgeInsets.only(bottom: 16.h),
+
           child: Padding(
             padding: EdgeInsets.all(16.w),
             child: Column(
@@ -84,41 +90,50 @@ class ManageListingsWidget extends StatelessWidget {
               children: [
                 Primarytext(
                   text: "Listing #${index + 1}",
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w600,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w300,
                   textColor: appColors.blacktext,
                 ),
-                SizedBox(height: 8.h),
+                SizedBox(height: 10.h),
                 Primarytext(
                   text: "Status: Pending Approval",
                   fontSize: 14.sp,
                   textColor: appColors.grey,
                   fontWeight: FontWeight.w400,
                 ),
-                SizedBox(height: 8.h),
+                SizedBox(height: 15.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: appColors.whiteBG,
-                        ),
-                        child: Primarytext(
-                            text: 'Approve',
-                            fontSize: 11.sp,
-                            fontWeight: FontWeight.w600,
-                            textColor: appColors.blacktext)),
-                    ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: appColors.whiteBG,
-                        ),
-                        child: Primarytext(
-                            text: 'Reject',
-                            fontSize: 11.sp,
-                            fontWeight: FontWeight.w600,
-                            textColor: appColors.secondary)),
+                    Container(
+                      height: 30.h,width: 140.w,
+                      decoration:BoxDecoration(color: appColors.whiteBG,
+                          borderRadius: BorderRadius.circular(5),
+
+                          border: Border.all(color: appColors.grey)),
+                      child:
+                           TextButton(onPressed: (){},
+                             child: Primarytext(
+                                text: 'Approve',
+                                fontSize: 11.sp,
+                                fontWeight: FontWeight.w600,
+                                textColor: appColors.blacktext),
+                           )),
+
+                    Container(
+                        height: 30.h,width: 140.w,
+                        decoration:BoxDecoration(color: appColors.whiteBG,
+                            borderRadius: BorderRadius.circular(5),
+                            border: Border.all(color: appColors.grey)),
+                        child:
+                        TextButton(onPressed: (){},
+                          child: Primarytext(
+                              text: 'Reject',
+                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w600,
+                              textColor: appColors.blacktext),
+                        )),
+
                   ],
                 ),
               ],
@@ -154,7 +169,7 @@ class ControlRankingWidget extends StatelessWidget {
                 Primarytext(
                   text: "Listing #${index + 1}",
                   fontSize: 16.sp,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w300,
                   textColor: appColors.blacktext,
                 ),
                 Row(

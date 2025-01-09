@@ -64,28 +64,24 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-<<<<<<< HEAD
 
-            home: PayoutManagementView()
+
+            home: //PayoutManagementView()
           //Listingview()
          //BookingManagement()
-            //AdminHomeView()
+            AdminHomeView()
 //UserManagementView()
                 //Editprofileview()
 
             // UserManagementView()
-            //Editprofileview()
+            //Editprofileview
 
-=======
-            home: //Listingview()
-                BookingManagement()
             //AdminHomeView()
 //UserManagementView()
             //Editprofileview()
 
             // UserManagementView()
             //Editprofileview()
->>>>>>> 73b28d2669e35ad007beaef2feae517a90b40612
 
             //Licensview()
             //Viewprofileview()
@@ -100,12 +96,12 @@ class MyApp extends StatelessWidget {
             //LogInSecurity()
             //PersonalInfo(),
             // HostingAgreementScreen()
-            //  Splashview()),
+             //Splashview()),
             // Homeview()
 //Feedbackview()
             //  Airbnbworksview()
             //Gethelpsecurityview()
 
-            )); //));
+            )) ;//));
   }
 }
