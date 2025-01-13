@@ -228,18 +228,33 @@ class AdminDashboardView extends StatelessWidget {
         //   ),
         //   child: Icon(icon, size: 30.sp, color: appColors.secondary),
         // ),
-        title: Text(
-          value,
-          style: GoogleFonts.poppins(
-            fontSize: 26.sp,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+        title:
+        Primarytext(
+          text: value,
+          fontSize: 26.sp,
+          fontWeight: FontWeight.w500,
+          textColor: Colors.white,
         ),
-        subtitle: Text(
-          title,
-          style: GoogleFonts.poppins(fontSize: 16.sp, color: Colors.white),
+
+        // Text(
+        //   value,
+        //   style: GoogleFonts.poppins(
+        //     fontSize: 26.sp,
+        //     fontWeight: FontWeight.bold,
+        //     color: Colors.white,
+        //   ),
+        // ),
+        subtitle:
+        Primarytext(
+          text: title,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w500,
+          textColor: Colors.white,
         ),
+        // Text(
+        //   title,
+        //   style: GoogleFonts.poppins(fontSize: 16.sp, color: Colors.white),
+        // ),
       ),
     );
   }
