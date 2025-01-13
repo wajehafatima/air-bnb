@@ -102,6 +102,10 @@ class AdminDashboardView extends StatelessWidget {
             //   ),
             // )
 //,
+            _buildStatCard('Total Host', '37,46K', Icons.group),
+            _buildStatCard('Total Listings', '48,90K', Icons.home),
+            _buildStatCard('Avg Reviews', '23,27', Icons.star),
+            _buildStatCard('Avg Price', '\$153', Icons.attach_money),
             SizedBox(height: 20.h),
             // Filters Section
             Text(
@@ -201,22 +205,28 @@ class AdminDashboardView extends StatelessWidget {
     return Card(
       //elevation: 4,
       color: appColors.secondary,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       child:
       ListTile(
-        leading: Icon(icon, size: 30.sp, color: Colors.white),
+        leading: Container(
+          padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(5)
+            ),
+            child: Icon(icon, size: 30.sp, color: appColors.secondary)),
         title:  Text(
           value,
           style: TextStyle(
-              fontSize: 16.sp,
+              fontSize: 26.sp,
               fontWeight: FontWeight.bold,
               color: Colors.white
           ),
         ),
         subtitle:  Text(
           title,
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 12.sp,color: Colors.white,),
+          //textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 26.sp,color: Colors.white,),
         ),
       ),
       // Column(
