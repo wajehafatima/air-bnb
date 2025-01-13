@@ -100,7 +100,7 @@ class _EarningManagementViewState extends State<EarningManagementView>
     return Scaffold(backgroundColor: appColors.whiteBG,
      // backgroundColor: appColors.grey,
       appBar: AppBar(leading: IconButton(onPressed: (){Navigator.pop(context);
-
+   
       },icon: Icon(Icons.arrow_back_ios),),
         elevation: 0,
         backgroundColor: appColors.whiteBG,
