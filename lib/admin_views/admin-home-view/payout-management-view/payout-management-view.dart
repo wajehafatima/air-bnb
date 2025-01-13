@@ -36,7 +36,7 @@ class _PayoutManagementViewState extends State<PayoutManagementView>
       backgroundColor: appColors.whiteBG,
       appBar: AppBar(
         backgroundColor: appColors.whiteBG,leading: IconButton(onPressed: (){Navigator.pop(context);
-        Navigator.pop(context);
+
       },icon: Icon(Icons.arrow_back_ios),),
         title: Primarytext(
           text: 'Payout Management',
@@ -54,12 +54,12 @@ class _PayoutManagementViewState extends State<PayoutManagementView>
             Tab(
         child: Primarytext(text: 'Manage Hosts', fontSize: 12.sp, fontWeight:FontWeight.w400,
             textColor: appColors.blacktext),
-              icon: Icon(Icons.account_balance, color: appColors.secondary),
+             // icon: Icon(Icons.account_balance, color: appColors.secondary),
             ),
             Tab(
               child: Primarytext(text: 'Charges', fontSize: 12.sp, fontWeight:FontWeight.w400,
                   textColor: appColors.blacktext),
-              icon: Icon(Icons.attach_money, color: appColors.secondary),
+              //icon: Icon(Icons.attach_money, color: appColors.secondary),
             ),
           ],
         ),
