@@ -31,8 +31,10 @@ class _BookingManagementState extends State<BookingManagement>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: appColors.whiteBG,
       appBar: AppBar(
+        leading: IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back_ios)),
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'Booking Management',
