@@ -187,7 +187,7 @@ backgroundColor: appColors.whiteBG,
   TableRow _buildHeaderRow() {
     return TableRow(
       decoration: BoxDecoration(
-        color: Colors.blueAccent.shade100,
+        color: appColors.secondary,
       ),
       children: [
         _buildTableCell('ID'),
@@ -227,7 +227,7 @@ backgroundColor: appColors.whiteBG,
       padding: const EdgeInsets.all(8.0),
       child: Text(
         text,
-        style: GoogleFonts.poppins(fontSize: 14, color: Colors.black87),
+        style: GoogleFonts.poppins(fontSize: 14, color: appColors.blacktext.withOpacity(0.6),fontWeight: FontWeight.w500),
         textAlign: TextAlign.center,
       ),
     );

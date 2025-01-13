@@ -2,6 +2,7 @@ import 'package:air_bnb/admin_views/admin-home-view/manageent-views/managementVi
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../src/controller/components/primaryText.dart';
 import '../../../src/controller/constants/colors/appColors.dart';
@@ -33,11 +34,13 @@ class _ListingviewState extends State<Listingview>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: appColors.whiteBG,
-      appBar: AppBar(
+      appBar: AppBar(leading: IconButton(onPressed: (){
+        Navigator.pop(context);
+      },icon: Icon(Icons.arrow_back_ios),),
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'Listing Management',
-          fontSize: 25.sp,
+          fontSize: 20.sp,
           fontWeight: FontWeight.w500,
           textColor: appColors.blacktext,
         ),
@@ -178,7 +181,7 @@ class ControlRankingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: EdgeInsets.all(16.w),
+      padding: EdgeInsets.all(20.w),
       itemCount: 10,
       itemBuilder: (context, index) {
         return Card(
@@ -212,14 +215,14 @@ class ControlRankingWidget extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      Primarytext(text:
                         "Listing #${index + 1}",
-                        style: TextStyle(
+
                           fontSize: 18.sp,
-                          fontWeight: FontWeight.bold,
-                          color: appColors.blacktext,
+                          fontWeight: FontWeight.w500,
+                          textColor: appColors.blacktext,
                         ),
-                      ),
+
                       Row(
                         children: [
                           IconButton(
@@ -314,11 +317,11 @@ class ControlRankingWidget extends StatelessWidget {
                               getTitlesWidget: (value, meta) {
                                 switch (value.toInt()) {
                                   case 0:
-                                    return Text('Metric 1', style: TextStyle(fontSize: 12.sp));
+                                    return Primarytext(text: 'Metric 1', fontSize: 12.sp,fontWeight: FontWeight.w300,textColor: appColors.blacktext,);
                                   case 1:
-                                    return Text('Metric 2', style: TextStyle(fontSize: 12.sp));
+                                    return  Primarytext(text: 'Metric 2', fontSize: 12.sp,fontWeight: FontWeight.w300,textColor: appColors.blacktext,);
                                   case 2:
-                                    return Text('Metric 3', style: TextStyle(fontSize: 12.sp));
+                                    return  Primarytext(text: 'Metric 3', fontSize: 12.sp,fontWeight: FontWeight.w300,textColor: appColors.blacktext,);
                                   default:
                                     return const Text('');
                                 }
@@ -349,14 +352,14 @@ class ControlRankingWidget extends StatelessWidget {
         color: appColors.primary,
         radius: 30,
         title: '${(index + 1) * 20}%',
-        titleStyle: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.bold, color: appColors.whiteBG),
+        titleStyle: GoogleFonts.poppins(fontSize: 12.sp, fontWeight: FontWeight.bold, color: appColors.whiteBG),
       ),
       PieChartSectionData(
         value: (10 - index) * 10.0,
         color: appColors.secondary,
         radius: 30,
         title: '${(10 - index) * 10}%',
-        titleStyle: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.bold, color: appColors.whiteBG),
+        titleStyle: GoogleFonts.poppins(fontSize: 12.sp, fontWeight: FontWeight.bold, color: appColors.whiteBG),
       ),
     ];
   }

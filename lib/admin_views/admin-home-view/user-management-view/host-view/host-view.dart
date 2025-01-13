@@ -188,7 +188,7 @@ class HostView extends StatelessWidget {
   TableRow _buildHeaderRow(List<String> headers) {
     return TableRow(
       decoration: BoxDecoration(
-        color: Colors.blueAccent.shade100,
+        color: appColors.secondary,
       ),
       children: headers.map((header) {
         return Padding(
