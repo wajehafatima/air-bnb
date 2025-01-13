@@ -104,7 +104,7 @@ class _EarningManagementViewState extends State<EarningManagementView>
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'Earning Management',
-          fontSize: 22.sp,
+          fontSize: 20.sp,
           fontWeight: FontWeight.bold,
           textColor: appColors.blacktext,
         ),
@@ -118,10 +118,13 @@ class _EarningManagementViewState extends State<EarningManagementView>
               color: appColors.secondary,
             ),
           ),
-          tabs: const [
-            Tab(text: 'Total Earnings'),
-            Tab(text: 'Refunds'),
-            Tab(text: 'Cancellations'),
+          tabs:  [
+            Tab(child: Primarytext(text: 'Total earnings', fontSize: 12.sp, fontWeight:FontWeight.w400,
+            textColor: appColors.blacktext),),
+      Tab(child:  Primarytext(text: 'Refunds', fontSize: 12.sp, fontWeight:FontWeight.w400,
+          textColor: appColors.blacktext),),
+            Tab(child:  Primarytext(text: 'Total earnings', fontSize: 12.sp, fontWeight:FontWeight.w400,
+                textColor: appColors.blacktext),),
           ],
         ),
       ),
