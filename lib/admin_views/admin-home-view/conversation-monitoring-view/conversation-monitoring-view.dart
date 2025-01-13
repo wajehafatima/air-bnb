@@ -303,13 +303,21 @@ class AllConversationsView extends StatelessWidget {
                               text: "User ${index + 1}",
                               fontSize: 18.sp,
                               fontWeight: FontWeight.w600,
-                              textColor: appColors.blacktext,
+                              textColor: appColors.whiteBG,
                             ),
-                            Primarytext(
-                              text: "Active",
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w400,
-                              textColor: appColors.linkBlue,
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 4.h, horizontal: 8.w),
+                              decoration: BoxDecoration(
+                                color: appColors.whiteBG.withOpacity(0.8),
+                                borderRadius: BorderRadius.circular(8.r),
+                              ),
+                              child: Primarytext(
+                                text: "Pending",
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w500,
+                                textColor: appColors.secondary,
+                              ),
                             ),
                           ],
                         ),
@@ -319,7 +327,7 @@ class AllConversationsView extends StatelessWidget {
                               "This is a conversation that has already been reviewed by the admin.",
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
-                          textColor: appColors.grey,
+                          textColor: appColors.whiteBG.withOpacity(0.8),
                         ),
                         SizedBox(height: 12.h),
                         Row(
