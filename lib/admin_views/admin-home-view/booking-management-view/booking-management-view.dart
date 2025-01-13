@@ -61,44 +61,157 @@ class _BookingManagementState extends State<BookingManagement>
     );
   }
 }
-
 class TrackBookingsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(16.0.w),
-      child: ListView.builder(
-        itemCount: 10,
-        itemBuilder: (context, index) {
-          return Card(color: appColors.whiteBG,
-            elevation: 5,
-            margin: EdgeInsets.symmetric(vertical: 8.0.h),
-            child: ListTile(
-              title: Primarytext(text: 'Booking #${index + 1}',
-                  textColor: appColors.blacktext,
-                      fontSize: 18.sp, fontWeight: FontWeight.w600),
-              subtitle: Primarytext(text: 'Details about booking #${index + 1}',textColor: appColors.blacktext,fontWeight: FontWeight.w400,
-                 fontSize: 14.sp,),
-              trailing: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: Icon(Icons.edit, color: appColors.grey),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.delete, color: appColors.secondary),
-                    onPressed: () {},
-                  ),
-                ],
+      child: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            color: appColors.whiteBG,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 8,
+                offset: Offset(0, 4),
               ),
+            ],
+          ),
+          child: DataTable(
+            headingRowHeight: 60,
+            dataRowHeight: 70,
+            headingTextStyle: TextStyle(
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w600,
+              color: appColors.primary,
             ),
-          );
-        },
+            columns: [
+              DataColumn(
+                label: Text(
+                  'Booking #',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: appColors.primary,
+                    fontSize: 16.sp,
+                  ),
+                ),
+              ),
+              DataColumn(
+                label: Text(
+                  'Details',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: appColors.primary,
+                    fontSize: 16.sp,
+                  ),
+                ),
+              ),
+              DataColumn(
+                label: Text(
+                  'Actions',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: appColors.primary,
+                    fontSize: 16.sp,
+                  ),
+                ),
+              ),
+            ],
+            rows: List.generate(10, (index) {
+              return DataRow(
+                color: MaterialStateProperty.all(
+                  index % 2 == 0
+                      ? appColors.primary.withOpacity(0.2)  // Soft light blue for even rows
+                      : appColors.whiteBG,
+                ),
+                cells: [
+                  DataCell(Primarytext(
+                    text: 'Booking #${index + 1}',
+                    textColor: appColors.blacktext,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
+                  )),
+                  DataCell(Primarytext(
+                    text: 'Details about booking #${index + 1}',
+                    textColor: appColors.blacktext,
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  )),
+                  DataCell(Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                        icon: Icon(
+                          Icons.edit,
+                          color: appColors.primary,
+                          size: 24.sp,
+                        ),
+                        onPressed: () {
+                          // Handle Edit Action
+                        },
+                      ),
+                      IconButton(
+                        icon: Icon(
+                          Icons.delete,
+                          color: appColors.secondary,
+                          size: 24.sp,
+                        ),
+                        onPressed: () {
+                          // Handle Delete Action
+                        },
+                      ),
+                    ],
+                  )),
+                ],
+              );
+            }),
+          ),
+        ),
       ),
     );
   }
 }
+
+
+// class TrackBookingsTab extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: EdgeInsets.all(16.0.w),
+//       child: ListView.builder(
+//         itemCount: 10,
+//         itemBuilder: (context, index) {
+//           return Card(color: appColors.whiteBG,
+//             elevation: 5,
+//             margin: EdgeInsets.symmetric(vertical: 8.0.h),
+//             child: ListTile(
+//               title: Primarytext(text: 'Booking #${index + 1}',
+//                   textColor: appColors.blacktext,
+//                       fontSize: 18.sp, fontWeight: FontWeight.w600),
+//               subtitle: Primarytext(text: 'Details about booking #${index + 1}',textColor: appColors.blacktext,fontWeight: FontWeight.w400,
+//                  fontSize: 14.sp,),
+//               trailing: Row(
+//                 mainAxisSize: MainAxisSize.min,
+//                 children: [
+//                   IconButton(
+//                     icon: Icon(Icons.edit, color: appColors.grey),
+//                     onPressed: () {},
+//                   ),
+//                   IconButton(
+//                     icon: Icon(Icons.delete, color: appColors.secondary),
+//                     onPressed: () {},
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           );
+//         },
+//       ),
+//     );
+//   }
+// }
 
 class NotificationsTab extends StatelessWidget {
   @override
