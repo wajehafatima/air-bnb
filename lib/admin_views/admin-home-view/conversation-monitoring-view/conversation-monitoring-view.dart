@@ -69,88 +69,187 @@ class _ConversationMonitoringViewState extends State<ConversationMonitoringView>
 }
 
 // Pending Moderation Tab
+// class PendingModerationView extends StatelessWidget {
+//   const PendingModerationView({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: EdgeInsets.all(16.w),
+//       child: Column(
+//         crossAxisAlignment: CrossAxisAlignment.start,
+//         children: [
+//           Expanded(
+//             child: ListView.separated(
+//               itemCount: 5, // Example: 5 pending conversations
+//               separatorBuilder: (context, index) => SizedBox(height: 10.h),
+//               itemBuilder: (context, index) {
+//                 return Card(
+//                   elevation: 4,
+//                   shape: RoundedRectangleBorder(
+//                     borderRadius: BorderRadius.circular(12.r),
+//                   ),
+//                   child: Padding(
+//                     padding: EdgeInsets.all(16.w),
+//                     child: Column(
+//                       crossAxisAlignment: CrossAxisAlignment.start,
+//                       children: [
+//                         Row(
+//                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                           children: [
+//                             Primarytext(
+//                               text: "User ${index + 1}",
+//                               fontSize: 18.sp,
+//                               fontWeight: FontWeight.w600,
+//                               textColor: appColors.blacktext,
+//                             ),
+//                             Primarytext(
+//                               text: "Pending",
+//                               fontSize: 14.sp,
+//                               fontWeight: FontWeight.w400,
+//                               textColor: appColors.secondary,
+//                             ),
+//                           ],
+//                         ),
+//                         SizedBox(height: 8.h),
+//                         Primarytext(
+//                           text:
+//                               "This conversation contains sensitive details before booking confirmation.",
+//                           fontSize: 14.sp,
+//                           fontWeight: FontWeight.w400,
+//                           textColor: appColors.grey,
+//                         ),
+//                         SizedBox(height: 12.h),
+//                         Row(
+//                           mainAxisAlignment: MainAxisAlignment.end,
+//                           children: [
+//                             ElevatedButton(
+//                               onPressed: () {
+//                                 // Delete conversation logic
+//                               },
+//                               style: ElevatedButton.styleFrom(
+//                                 backgroundColor: appColors.secondary,
+//                                 shape: RoundedRectangleBorder(
+//                                   borderRadius: BorderRadius.circular(8.r),
+//                                 ),
+//                               ),
+//                               child: Primarytext(
+//                                 text: "Delete",
+//                                 fontSize: 14.sp,
+//                                 fontWeight: FontWeight.w500,
+//                                 textColor: appColors.whiteBG,
+//                               ),
+//                             ),
+//                           ],
+//                         ),
+//                       ],
+//                     ),
+//                   ),
+//                 );
+//               },
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
 class PendingModerationView extends StatelessWidget {
   const PendingModerationView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(16.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: ListView.separated(
-              itemCount: 5, // Example: 5 pending conversations
-              separatorBuilder: (context, index) => SizedBox(height: 10.h),
-              itemBuilder: (context, index) {
-                return Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(16.w),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Primarytext(
-                              text: "User ${index + 1}",
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w600,
-                              textColor: appColors.blacktext,
-                            ),
-                            Primarytext(
-                              text: "Pending",
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w400,
-                              textColor: appColors.secondary,
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 8.h),
-                        Primarytext(
-                          text:
-                              "This conversation contains sensitive details before booking confirmation.",
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400,
-                          textColor: appColors.grey,
-                        ),
-                        SizedBox(height: 12.h),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                // Delete conversation logic
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: appColors.secondary,
-                                shape: RoundedRectangleBorder(
+    return
+     Padding(
+        padding: EdgeInsets.all(16.w),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: ListView.separated(
+                itemCount: 5, // Example: 5 pending conversations
+                separatorBuilder: (context, index) => SizedBox(height: 10.h),
+                itemBuilder: (context, index) {
+                  return Card(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(16.w),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Primarytext(
+                                text: "User ${index + 1}",
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w600,
+                                textColor: appColors.blacktext,
+                              ),
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 4.h, horizontal: 8.w),
+                                decoration: BoxDecoration(
+                                  color: appColors.secondary.withOpacity(0.2),
                                   borderRadius: BorderRadius.circular(8.r),
                                 ),
+                                child: Primarytext(
+                                  text: "Pending",
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w500,
+                                  textColor: appColors.secondary,
+                                ),
                               ),
-                              child: Primarytext(
-                                text: "Delete",
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.w500,
-                                textColor: appColors.whiteBG,
+                            ],
+                          ),
+                          SizedBox(height: 8.h),
+                          Primarytext(
+                            text:
+                            "This conversation contains sensitive details before booking confirmation.",
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w400,
+                            textColor: appColors.grey,
+                          ),
+                          SizedBox(height: 16.h),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {
+                                  // Delete conversation logic
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: appColors.secondary,
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10.h, horizontal: 20.w),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8.r),
+                                  ),
+                                  elevation: 2,
+                                ),
+                                child: Primarytext(
+                                  text: "Delete",
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w500,
+                                  textColor: appColors.whiteBG,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
-          ),
-        ],
-      ),
+          ],
+        ),
+      
     );
   }
 }
