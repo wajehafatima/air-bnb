@@ -84,16 +84,16 @@ class ManageListingsWidget extends StatelessWidget {
       itemCount: 10,
       itemBuilder: (context, index) {
         return Container(
-          height: 160.h,
+          //height: 160.h,
           width: 340.w,
           decoration: BoxDecoration(
             color: appColors.whiteBG,
             border: Border.all(color: appColors.grey),
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(10),
           ),
-          margin: EdgeInsets.only(bottom: 16.h),
+          margin: EdgeInsets.only(bottom: 10.h),
           child: Padding(
-            padding: EdgeInsets.all(16.w),
+            padding: EdgeInsets.all(10.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -103,14 +103,14 @@ class ManageListingsWidget extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   textColor: appColors.blacktext,
                 ),
-                SizedBox(height: 10.h),
+                SizedBox(height: 5.h),
                 Primarytext(
                     text: 'Host ID: 1',
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w300,
                     textColor: AppColors.blackText),
                 SizedBox(
-                  height: 10.h,
+                  height: 5.h,
                 ),
                 Primarytext(
                     text: 'Host name: John',
