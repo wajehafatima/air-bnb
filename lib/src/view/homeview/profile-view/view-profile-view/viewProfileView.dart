@@ -2,6 +2,8 @@ import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/components/underlinedtext.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/view-profile-view/editProfileView/EditProfileView.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,7 +24,9 @@ class _ViewprofileviewState extends State<Viewprofileview> {
     Navigator.pop(context);
     },icon: Icon(Icons.arrow_back),),
       actions: [
-        TextButton(onPressed: (){}, child: UnderlinedText(text: 'Edit', onPressed: (){})),
+        TextButton(onPressed: (){
+          Navigator.pop(context);
+        }, child: UnderlinedText(text: 'Edit', onPressed: (){})),
       ],),
       backgroundColor: appColors.whiteBG,
       body: SingleChildScrollView(
@@ -116,7 +120,14 @@ class _ViewprofileviewState extends State<Viewprofileview> {
                   Primarytext(text: 'Your Roomoree profile is very important part of every reservation. Create profile to help other guests and hosts  get to know you', fontSize: 12.sp, fontWeight: FontWeight.w400,
                       textColor: appColors.blacktext),
                   SizedBox(height: 10.h,),
-                  Custombutton(text: 'Create your profile', onTap: (){})
+                  Custombutton(text: 'Create your profile', onTap: (){
+                    Navigator.pushReplacement(
+                      context,
+                      CupertinoDialogRoute(
+                          builder: (context) => Editprofileview(),
+                          context: context),
+                    );
+                  })
                   
         
                   

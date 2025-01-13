@@ -14,7 +14,7 @@ class Signupview extends StatefulWidget {
 
   @override
   State<Signupview> createState() => _SignupviewState();
-  
+
 }
 
 class _SignupviewState extends State<Signupview> {
@@ -132,7 +132,12 @@ class _SignupviewState extends State<Signupview> {
                       textColor: appColors.blacktext),
                 ),
                 Custombutton(text: 'Continue', onTap: () {
-                 
+                  Navigator.pushReplacement(
+                    context,
+                    CupertinoDialogRoute(
+                        builder: (context) => MainHomeView(),
+                        context: context),
+                  );
                 }),
                 Center(
                     child: Primarytext(

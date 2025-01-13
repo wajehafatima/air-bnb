@@ -1,4 +1,6 @@
+import 'package:air_bnb/admin_views/admin-home-view/manageent-views/managementView.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
+import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -77,13 +79,13 @@ class _AboutPlaceState extends State<AboutPlace> {
                     onPressed: () => decrementCount('guest'),
                   ),
                   // Text showing current count
-                  Text(
+                  Primarytext(text:
                     '$guestCount', // Display current count
-                    style: TextStyle(
+                    textColor: AppColors.blackText,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
+
                   // Increment Button
                   IconButton(
                     icon: Icon(Icons.add),
@@ -114,13 +116,13 @@ class _AboutPlaceState extends State<AboutPlace> {
                     onPressed: () => decrementCount('bedroom'),
                   ),
                   // Text showing current count
-                  Text(
+                  Primarytext(text:
                     '$bedroomCount', // Display current count
-                    style: TextStyle(
+                    textColor: AppColors.blackText,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
+
                   // Increment Button
                   IconButton(
                     icon: Icon(Icons.add),
@@ -151,13 +153,13 @@ class _AboutPlaceState extends State<AboutPlace> {
                     onPressed: () => decrementCount('bed'),
                   ),
                   // Text showing current count
-                  Text(
+                  Primarytext(text:
                     '$bedCount', // Display current count
-                    style: TextStyle(
+                   textColor: appColors.blacktext,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
+
                   // Increment Button
                   IconButton(
                     icon: Icon(Icons.add),
@@ -188,13 +190,13 @@ class _AboutPlaceState extends State<AboutPlace> {
                     onPressed: () => decrementCount('bathroom'),
                   ),
                   // Text showing current count
-                  Text(
+                  Primarytext(text:
                     '$bathroomCount', // Display current count
-                    style: TextStyle(
+                    textColor: appColors.blacktext,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
+
                   // Increment Button
                   IconButton(
                     icon: Icon(Icons.add),

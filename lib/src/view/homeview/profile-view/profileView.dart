@@ -17,6 +17,7 @@ import 'package:air_bnb/src/view/homeview/profile-view/settings-view/travelForWo
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/airbnb-works-view/airbnb-works-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/feed-back-view/feedback-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/support-view/get-help-security-view/gethelp-security-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/view-profile-view/viewProfileView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -89,7 +90,14 @@ class _ProfileviewState extends State<Profileview> {
                     width: 140.w,
                   ),
                   IconButton(
-                      onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          CupertinoDialogRoute(
+                              builder: (context) => Viewprofileview(),
+                              context: context),
+                        );
+                      }, icon: Icon(Icons.arrow_forward_ios)),
                 ],
               ),
               SizedBox(
