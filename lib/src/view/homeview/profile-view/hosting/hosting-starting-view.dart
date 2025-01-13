@@ -1,4 +1,5 @@
 import 'package:air_bnb/src/controller/components/custombutton.dart';
+import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/hosting-main-view.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,96 +33,95 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 20.h),
-            Text(
+            Primarytext(text:
               "It's easy to get started on Roomoree",
-              style: TextStyle(
+
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w700,
-                color: appColors.blacktext,
+                textColor: appColors.blacktext,
               ),
-            ),
+
             SizedBox(height: 30.h),
             ListTile(
-              leading: Text(
+              leading: Primarytext(text:
                 '1',
-                style: TextStyle(
+
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w600,
-                  color: appColors.blacktext,
+                  textColor: appColors.blacktext,
                 ),
-              ),
-              title: Text(
+
+              title: Primarytext(text:
                 'Tell us about your place',
-                style: TextStyle(
+
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w600,
-                  color: appColors.blacktext,
+                  textColor: appColors.blacktext,
                 ),
-              ),
-              subtitle: Text(
+
+              subtitle: Primarytext(text:
                 'Share some basic info, like where it is and how many guests can stay',
-                style: TextStyle(
+
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
-                  color: appColors.grey,
+                  textColor: appColors.grey,
                 ),
-              ),
+
               trailing: Icon(Icons.bed, color: appColors.blacktext),
             ),
             Divider(),
             ListTile(
-              leading: Text(
+              leading: Primarytext(text:
                 '2',
-                style: TextStyle(
+
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w600,
-                  color: appColors.blacktext,
+                  textColor: appColors.blacktext,
                 ),
-              ),
-              title: Text(
+
+              title: Primarytext(text:
                 'Make it stand out',
-                style: TextStyle(
+
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w600,
-                  color: appColors.blacktext,
+                  textColor: appColors.blacktext,
                 ),
-              ),
-              subtitle: Text(
+
+              subtitle: Primarytext(text:
                 "Add 5 or more photos plus a title and description--we'll help you out",
-                style: TextStyle(
+
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
-                  color: appColors.grey,
+                  textColor: appColors.grey,
                 ),
-              ),
+
               trailing: Icon(Icons.image, color: appColors.blacktext),
             ),
             Divider(),
             ListTile(
-              leading: Text(
+              leading: Primarytext(text:
                 '3',
-                style: TextStyle(
+
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w600,
-                  color: appColors.blacktext,
+                  textColor: appColors.blacktext,
                 ),
-              ),
-              title: Text(
+
+              title: Primarytext(text:
                 'Finish up and publish',
-                style: TextStyle(
+
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w600,
-                  color: appColors.blacktext,
+                  textColor: appColors.blacktext,
                 ),
-              ),
-              subtitle: Text(
+              subtitle: Primarytext(text:
                 'Choose a starting price, verify a few details, then publish your listing',
-                style: TextStyle(
+
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
-                  color: appColors.grey,
+                  textColor: appColors.grey,
                 ),
-              ),
+
               trailing: Icon(Icons.check_circle, color: appColors.blacktext),
             ),
             Divider(),

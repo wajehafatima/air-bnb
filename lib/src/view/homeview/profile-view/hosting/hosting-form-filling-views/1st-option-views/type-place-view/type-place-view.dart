@@ -223,7 +223,7 @@ class GuestTypeOption extends StatelessWidget {
                 width: double.infinity,
               ),
             ],
-          ), 
+          ),
         ),
       ),
     );
