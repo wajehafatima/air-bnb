@@ -1,3 +1,5 @@
+import 'package:air_bnb/admin_views/admin-home-view/manageent-views/managementView.dart';
+import 'package:air_bnb/src/controller/components/primarytext.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/1st-option-views/about-place-view/about-place-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-form-filling-views/1st-option-views/place-option-view/place-option-view.dart';
@@ -24,16 +26,16 @@ class _ExpandedScreenExampleState extends State<ExpandedScreenExample> {
           Expanded(
             flex: 15,
             child: Center(
-              child: Text(
+              child: Primarytext(text:
                 'Header Section',
-                style: TextStyle(
+
                   fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
-                  color: appColors.blacktext,
+                 textColor: appColors.blacktext,
                 ),
               ),
             ),
-          ),
+
           Expanded(
             flex: 70,
             child: IndexedStack(
@@ -56,7 +58,8 @@ class _ExpandedScreenExampleState extends State<ExpandedScreenExample> {
                     backgroundColor: appColors.blacktext,
                     foregroundColor: appColors.whiteBG,
                   ),
-                  child: Text('Next'),
+                  child: Primarytext(text: 'Next',fontWeight: FontWeight.w300,
+                    textColor: AppColors.blackText,fontSize: 14,),
                 ),
               ),
             ),

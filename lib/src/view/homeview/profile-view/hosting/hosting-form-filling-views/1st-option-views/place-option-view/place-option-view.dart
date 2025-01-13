@@ -1,3 +1,4 @@
+import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/hosting/hosting-widgets/place-option-wdget.dart';
 import 'package:flutter/material.dart';
@@ -22,14 +23,14 @@ class SelectPlace extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          Primarytext(text:
             'Which of these best describes your place?',
-            style: TextStyle(
+
               fontSize: 18.sp,
               fontWeight: FontWeight.bold,
-              color: appColors.blacktext,
+             textColor: appColors.blacktext,
             ),
-          ),
+
           SizedBox(height: 16.h),
           Expanded(
             child: GridView.builder(

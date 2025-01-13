@@ -1,3 +1,4 @@
+import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -40,34 +41,33 @@ class _AboutPlaceState extends State<AboutPlace> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Basics about the place
-          Text(
+          Primarytext(text:
             'Share some basics about your place',
-            style: TextStyle(
+
               fontSize: 20.sp,
               fontWeight: FontWeight.bold,
-              color: Colors.black,
+              textColor: Colors.black,
             ),
-          ),
+
           SizedBox(height: 8.h),
-          Text(
+          Primarytext(text:
             'You will add more details later, like bed types',
-            style: TextStyle(
+           fontWeight: FontWeight.w300,
               fontSize: 16.sp,
-              color: Colors.grey,
+            textColor: Colors.grey,
             ),
-          ),
+
           SizedBox(height: 16.h),
 
           // Guest Type Section
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Guest',
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  color: Colors.black,
-                ),
+              Primarytext(text:
+              'Guest',
+                fontWeight: FontWeight.w300,
+                fontSize: 16.sp,
+                textColor: Colors.grey,
               ),
               Row(
                 children: [
@@ -100,12 +100,11 @@ class _AboutPlaceState extends State<AboutPlace> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Bedrooms',
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  color: Colors.black,
-                ),
+              Primarytext(text:
+              'Bedrooms',
+                fontWeight: FontWeight.w300,
+                fontSize: 16.sp,
+                textColor: Colors.grey,
               ),
               Row(
                 children: [
@@ -138,12 +137,11 @@ class _AboutPlaceState extends State<AboutPlace> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Beds',
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  color: Colors.black,
-                ),
+              Primarytext(text:
+              'Beds',
+                fontWeight: FontWeight.w300,
+                fontSize: 16.sp,
+                textColor: Colors.grey,
               ),
               Row(
                 children: [
@@ -176,12 +174,11 @@ class _AboutPlaceState extends State<AboutPlace> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Bathrooms',
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  color: Colors.black,
-                ),
+              Primarytext(text:
+              'Bathrooms',
+                fontWeight: FontWeight.w300,
+                fontSize: 16.sp,
+                textColor: Colors.grey,
               ),
               Row(
                 children: [

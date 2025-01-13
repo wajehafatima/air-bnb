@@ -1,7 +1,9 @@
 import 'package:air_bnb/src/controller/components/custombutton.dart';
+import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GuestTypePlace extends StatelessWidget {
   const GuestTypePlace({super.key});
@@ -13,14 +15,14 @@ class GuestTypePlace extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          Primarytext(text:
             'What type of place will guests have?',
-            style: TextStyle(
+
               fontSize: 18.sp,
               fontWeight: FontWeight.bold,
-              color: appColors.blacktext,
+             textColor: appColors.blacktext,
             ),
-          ),
+
           SizedBox(height: 16.h),
           Column(
             children: const [
@@ -87,7 +89,7 @@ class GuestTypeOption extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.bold,
                       color: appColors.blacktext,
@@ -96,7 +98,7 @@ class GuestTypeOption extends StatelessWidget {
                   SizedBox(height: 4.h),
                   Text(
                     description,
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 14.sp,
                       color: Colors.grey,
                     ),
@@ -127,13 +129,13 @@ class GuestTypeOption extends StatelessWidget {
                     onPressed: () => Navigator.pop(context),
                     icon: const Icon(Icons.arrow_back_ios),
                   ),
-                  Text(
+                  Primarytext(text:
                     'Confirm your address',
-                    style: TextStyle(
+                   textColor: appColors.blacktext,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
+
                 ],
               ),
               SizedBox(height: 16.h),
