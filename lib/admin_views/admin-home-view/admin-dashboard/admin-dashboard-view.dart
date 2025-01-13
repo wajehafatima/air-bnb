@@ -89,19 +89,19 @@ class AdminDashboardView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Stats Section
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start, // Or 'spaceEvenly', depending on the design
-                children: [
-                  _buildStatCard('Total Host', '37,46K', Icons.group),
-                  _buildStatCard('Total Listings', '48,90K', Icons.home),
-                  _buildStatCard('Avg Reviews', '23,27', Icons.star),
-                  _buildStatCard('Avg Price', '\$153', Icons.attach_money),
-                ],
-              ),
-            )
-,
+            // SingleChildScrollView(
+            //   scrollDirection: Axis.horizontal,
+            //   child: Column(
+            //     mainAxisAlignment: MainAxisAlignment.start, // Or 'spaceEvenly', depending on the design
+            //     children: [
+            //       _buildStatCard('Total Host', '37,46K', Icons.group),
+            //       _buildStatCard('Total Listings', '48,90K', Icons.home),
+            //       _buildStatCard('Avg Reviews', '23,27', Icons.star),
+            //       _buildStatCard('Avg Price', '\$153', Icons.attach_money),
+            //     ],
+            //   ),
+            // )
+//,
             SizedBox(height: 20.h),
             // Filters Section
             Text(
@@ -202,32 +202,44 @@ class AdminDashboardView extends StatelessWidget {
       //elevation: 4,
       color: appColors.secondary,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      child: Container(
-        width: 80.w,
-        height: 100.h,
-        padding: EdgeInsets.all(8.w),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 30.sp, color: Colors.white),
-            SizedBox(height: 8.h),
-            Text(
-              value,
-              style: TextStyle(
-                fontSize: 16.sp,
-                fontWeight: FontWeight.bold,
-                color: Colors.white
-              ),
-            ),
-            SizedBox(height: 4.h),
-            Text(
-              title,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12.sp),
-            ),
-          ],
+      child:
+      ListTile(
+        leading: Icon(icon, size: 30.sp, color: Colors.white),
+        title:  Text(
+          value,
+          style: TextStyle(
+              fontSize: 16.sp,
+              fontWeight: FontWeight.bold,
+              color: Colors.white
+          ),
+        ),
+        subtitle:  Text(
+          title,
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 12.sp,color: Colors.white,),
         ),
       ),
+      // Column(
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   children: [
+      //     Icon(icon, size: 30.sp, color: Colors.white),
+      //     SizedBox(height: 8.h),
+      //     Text(
+      //       value,
+      //       style: TextStyle(
+      //         fontSize: 16.sp,
+      //         fontWeight: FontWeight.bold,
+      //         color: Colors.white
+      //       ),
+      //     ),
+      //     SizedBox(height: 4.h),
+      //     Text(
+      //       title,
+      //       textAlign: TextAlign.center,
+      //       style: TextStyle(fontSize: 12.sp,color: Colors.white,),
+      //     ),
+      //   ],
+      // ),
     );
   }
 
