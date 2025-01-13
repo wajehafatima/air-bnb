@@ -64,15 +64,9 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
 
-            home: //Listingview()
-         BookingManagement()
-            //AdminHomeView()
-//UserManagementView()
-                //Editprofileview()
-           
-            // UserManagementView()
             //Editprofileview()
-
+            home: AdminHomeView()
+            //Editprofileview()
 
             //Licensview()
             //Viewprofileview()
@@ -92,7 +86,6 @@ class MyApp extends StatelessWidget {
 //Feedbackview()
             //  Airbnbworksview()
             //Gethelpsecurityview()
-
             )); //));
   }
 }

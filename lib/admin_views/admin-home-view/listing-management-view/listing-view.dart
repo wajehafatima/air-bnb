@@ -46,8 +46,20 @@ class _ListingviewState extends State<Listingview>
           indicatorColor: appColors.secondary,
           unselectedLabelColor: appColors.grey,
           tabs: [
-            Tab(child: Primarytext(text: 'Manage listing', fontSize: 12.sp, fontWeight:FontWeight.w500, textColor: appColors.grey),),
-            Tab(child: Primarytext(text: 'Control Ranking', fontSize: 12.sp, fontWeight:FontWeight.w500, textColor: appColors.grey),),
+            Tab(
+              child: Primarytext(
+                  text: 'Manage listing',
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w500,
+                  textColor: appColors.grey),
+            ),
+            Tab(
+              child: Primarytext(
+                  text: 'Control Ranking',
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w500,
+                  textColor: appColors.grey),
+            ),
           ],
         ),
       ),
@@ -72,19 +84,16 @@ class ManageListingsWidget extends StatelessWidget {
       itemCount: 10,
       itemBuilder: (context, index) {
         return Container(
-
-          height: 160.h,
+          //height: 160.h,
           width: 340.w,
           decoration: BoxDecoration(
             color: appColors.whiteBG,
             border: Border.all(color: appColors.grey),
-            borderRadius: BorderRadius.circular(15),
-
+            borderRadius: BorderRadius.circular(10),
           ),
-          margin: EdgeInsets.only(bottom: 16.h),
-
+          margin: EdgeInsets.only(bottom: 10.h),
           child: Padding(
-            padding: EdgeInsets.all(16.w),
+            padding: EdgeInsets.all(10.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -94,10 +103,20 @@ class ManageListingsWidget extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   textColor: appColors.blacktext,
                 ),
-                SizedBox(height: 10.h),
-                Primarytext(text: 'Host ID: 1', fontSize: 14.sp, fontWeight: FontWeight.w300, textColor: AppColors.blackText),
-                SizedBox(height: 10.h,),
-                Primarytext(text: 'Host name: John', fontSize: 14.sp, fontWeight: FontWeight.w300, textColor: AppColors.blackText),
+                SizedBox(height: 5.h),
+                Primarytext(
+                    text: 'Host ID: 1',
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w300,
+                    textColor: AppColors.blackText),
+                SizedBox(
+                  height: 5.h,
+                ),
+                Primarytext(
+                    text: 'Host name: John',
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w300,
+                    textColor: AppColors.blackText),
                 SizedBox(height: 10.h),
                 Primarytext(
                   text: "Status: Pending Approval",
@@ -110,36 +129,35 @@ class ManageListingsWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      height: 30.h,width: 140.w,
-                      decoration:BoxDecoration(color: appColors.whiteBG,
-                          borderRadius: BorderRadius.circular(5),
-
-                          border: Border.all(color: appColors.grey)),
-                      child:
-                           TextButton(onPressed: (){},
-                             child: Primarytext(
-                                text: 'Approve',
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w600,
-                                textColor: appColors.blacktext),
-                           )),
-
-                    Container(
-                        height: 30.h,width: 140.w,
-                        decoration:BoxDecoration(color: appColors.whiteBG,
+                        height: 30.h,
+                        width: 140.w,
+                        decoration: BoxDecoration(
+                            color: appColors.whiteBG,
                             borderRadius: BorderRadius.circular(5),
                             border: Border.all(color: appColors.grey)),
-                        child:
-                        TextButton(onPressed: (){},
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Primarytext(
+                              text: 'Approve',
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w600,
+                              textColor: appColors.blacktext),
+                        )),
+                    Container(
+                        height: 30.h,
+                        width: 140.w,
+                        decoration: BoxDecoration(
+                            color: appColors.whiteBG,
+                            borderRadius: BorderRadius.circular(5),
+                            border: Border.all(color: appColors.grey)),
+                        child: TextButton(
+                          onPressed: () {},
                           child: Primarytext(
                               text: 'Reject',
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w600,
                               textColor: appColors.blacktext),
-
                         )),
-
-
                   ],
                 ),
               ],
