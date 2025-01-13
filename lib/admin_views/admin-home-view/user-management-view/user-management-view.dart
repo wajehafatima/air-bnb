@@ -34,21 +34,24 @@ class _UserManagementViewState extends State<UserManagementView> with SingleTick
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(backgroundColor: appColors.whiteBG,
+      appBar: AppBar(backgroundColor: appColors.whiteBG,leading: IconButton(onPressed: (){
+        Navigator.pop(context);
+      },
+          icon:Icon(Icons.arrow_back_ios,color: appColors.blacktext,)),
         title: Primarytext(
           text: 'User Management',
-          fontSize: 25.sp,
+          fontSize: 20.sp,
           fontWeight: FontWeight.w500,
           textColor: appColors.blacktext,
         ),
         bottom: TabBar(
           controller: _tabController,
-          labelColor: appColors.secondary,
-          unselectedLabelColor: appColors.blacktext,
+          labelColor: appColors.blacktext,
           indicatorColor: appColors.secondary,
+          unselectedLabelColor: appColors.grey,
           tabs: const [
-            Tab(child: Primarytext(text: 'Hosts', fontSize: 12, fontWeight: FontWeight.w400, textColor:Colors.grey,),),
-            Tab(text: 'Guests'),
+            Tab(child: Primarytext(text: 'Hosts', fontSize: 13, fontWeight: FontWeight.w400, textColor:Colors.grey,),),
+            Tab(child: Primarytext(text: 'Guests', fontSize: 13, fontWeight: FontWeight.w400, textColor:Colors.grey,),),
           ],
         ),
       ),

@@ -85,7 +85,7 @@ class AdminDashboardView extends StatelessWidget {
         ),
 
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.w),
+        padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

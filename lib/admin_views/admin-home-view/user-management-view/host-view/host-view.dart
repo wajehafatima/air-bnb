@@ -53,8 +53,10 @@
 //     );
 //   }
 // }
+import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HostView extends StatelessWidget {
   const HostView({super.key});
@@ -79,10 +81,10 @@ class HostView extends StatelessWidget {
     final reviews = data.skip(1).map((row) => int.parse(row[3])).toList();
     final earnings = data.skip(1).map((row) => double.parse(row[7].replaceAll('\$', ''))).toList();
 
-    return Scaffold(
-     
+    return Scaffold(backgroundColor: appColors.whiteBG,
+
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -114,7 +116,7 @@ class HostView extends StatelessWidget {
                 height: 300,
                 padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: appColors.whiteBG,
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
@@ -193,7 +195,7 @@ class HostView extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: Text(
             header,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               fontWeight: FontWeight.bold,
               fontSize: 14,
               color: Colors.white,
@@ -219,7 +221,7 @@ class HostView extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 cell,
-                style: TextStyle(fontSize: 14, color: Colors.black87),
+                style: GoogleFonts.poppins(fontSize: 14, color: Colors.black87),
                 textAlign: TextAlign.center,
               ),
             );

@@ -49,6 +49,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Guestview extends StatelessWidget {
   const Guestview({super.key});
@@ -74,9 +75,9 @@ class Guestview extends StatelessWidget {
     };
 
     return Scaffold(
-
+backgroundColor: appColors.whiteBG,
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             // Table for displaying guest data
@@ -109,11 +110,11 @@ class Guestview extends StatelessWidget {
               height: 300,
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: appColors.whiteBG,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
+                    color: appColors.grey.withOpacity(0.2),
                     spreadRadius: 3,
                     blurRadius: 7,
                     offset: Offset(0, 3),
@@ -226,7 +227,7 @@ class Guestview extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Text(
         text,
-        style: TextStyle(fontSize: 14, color: Colors.black87),
+        style: GoogleFonts.poppins(fontSize: 14, color: Colors.black87),
         textAlign: TextAlign.center,
       ),
     );
