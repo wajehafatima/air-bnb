@@ -210,14 +210,24 @@ class AdminDashboardView extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       elevation: 4,
       child: ListTile(
-        leading: Container(
-          padding: EdgeInsets.all(10),
+        leading:
+        Container(
+          height: 36.w,
+          width: 36.w,
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(8),
+            color: appColors.whiteBG.withOpacity(0.2),
+            borderRadius: BorderRadius.circular(18.r),
           ),
-          child: Icon(icon, size: 30.sp, color: appColors.secondary),
+          child: Icon(icon, color: Colors.white, size: 20.w),
         ),
+        // Container(
+        //   padding: EdgeInsets.all(10),
+        //   decoration: BoxDecoration(
+        //     color: Colors.white,
+        //     borderRadius: BorderRadius.circular(8),
+        //   ),
+        //   child: Icon(icon, size: 30.sp, color: appColors.secondary),
+        // ),
         title: Text(
           value,
           style: GoogleFonts.poppins(
