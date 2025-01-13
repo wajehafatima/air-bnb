@@ -34,7 +34,7 @@ class _TermsviewState extends State<Termsview> {
           style: TextStyle(fontSize: 16, color: Colors.black),
           children: [
             TextSpan(
-              text: 'Airbnb Terms of Service\n\n',
+              text: 'Roomoree Terms of Service\n\n',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -60,7 +60,7 @@ class _TermsviewState extends State<Termsview> {
             ),
             TextSpan(
               text:
-              'Users must provide accurate information and maintain the confidentiality of their account details. Airbnb may suspend or terminate accounts for violations.\n\n',
+              'Users must provide accurate information and maintain the confidentiality of their account details. Roomore may suspend or terminate accounts for violations.\n\n',
             ),
             TextSpan(
               text: '3. Booking and Payment\n',
@@ -71,7 +71,7 @@ class _TermsviewState extends State<Termsview> {
             ),
             TextSpan(
               text:
-              'Payments are made through Airbnb’s secure system. Cancellation policies vary based on the listing and are governed by the host’s terms.\n\n',
+              'Payments are made through Roomoree’s secure system. Cancellation policies vary based on the listing and are governed by the host’s terms.\n\n',
             ),
             TextSpan(
               text: '4. Host and Guest Responsibilities\n',
@@ -93,7 +93,7 @@ class _TermsviewState extends State<Termsview> {
             ),
             TextSpan(
               text:
-              'Airbnb offers programs like Host Guarantee and Host Protection Insurance, but these have limitations. Users are responsible for their own safety and insurance.\n\n',
+              'Roomoree offers programs like Host Guarantee and Host Protection Insurance, but these have limitations. Users are responsible for their own safety and insurance.\n\n',
             ),
             TextSpan(
               text: '6. Dispute Resolution\n',
@@ -104,7 +104,7 @@ class _TermsviewState extends State<Termsview> {
             ),
             TextSpan(
               text:
-              'Disputes are typically resolved through arbitration rather than lawsuits. Users must follow Airbnb’s dispute resolution process.\n\n',
+              'Disputes are typically resolved through arbitration rather than lawsuits. Users must follow Roomoree dispute resolution process.\n\n',
             ),
             TextSpan(
               text: '7. Prohibited Activities\n',
@@ -115,7 +115,7 @@ class _TermsviewState extends State<Termsview> {
             ),
             TextSpan(
               text:
-              'Misrepresentation, fraud, discrimination, and illegal activities are strictly prohibited. Airbnb can remove listings or terminate accounts for violations.\n\n',
+              'Misrepresentation, fraud, discrimination, and illegal activities are strictly prohibited. Roomoree can remove listings or terminate accounts for violations.\n\n',
             ),
             TextSpan(
               text: '8. Content and Intellectual Property\n',
@@ -126,7 +126,7 @@ class _TermsviewState extends State<Termsview> {
             ),
             TextSpan(
               text:
-              'Users grant Airbnb the right to use content they upload, such as photos and reviews. Airbnb retains ownership of its branding and intellectual property.\n\n',
+              'Users grant Roomoree the right to use content they upload, such as photos and reviews. Roomoree retains ownership of its branding and intellectual property.\n\n',
             ),
             TextSpan(
               text: '9. Privacy\n',
@@ -137,7 +137,7 @@ class _TermsviewState extends State<Termsview> {
             ),
             TextSpan(
               text:
-              'Airbnb collects and uses personal data as described in its Privacy Policy. Users must consent to Airbnb’s use of cookies and tracking technologies.\n\n',
+              'Roomoree collects and uses personal data as described in its Privacy Policy. Users must consent to Roomoree’s use of cookies and tracking technologies.\n\n',
             ),
             TextSpan(
               text: '10. Changes to Terms\n',
@@ -148,11 +148,11 @@ class _TermsviewState extends State<Termsview> {
             ),
             TextSpan(
               text:
-              'Airbnb can update the Terms of Service at any time, and continued use of the platform implies acceptance of the updated terms.\n\n',
+              'Roomoree can update the Terms of Service at any time, and continued use of the platform implies acceptance of the updated terms.\n\n',
             ),
             TextSpan(
               text:
-              'For full details, please refer to the official Terms of Service on Airbnb’s website.',
+              'For full details, please refer to the official Terms of Service on Roomoree’s website.',
               style: TextStyle(
                 fontStyle: FontStyle.italic,
               ),

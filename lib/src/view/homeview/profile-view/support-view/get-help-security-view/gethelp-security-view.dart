@@ -29,7 +29,7 @@ class _GethelpsecurityviewState extends State<Gethelpsecurityview> {
           Column(children: [CircleAvatar(backgroundColor: appColors.blacktext,radius: 20.r,
 
           ),SizedBox(height: 3.h,),
-          Primarytext(text: 'Airbnb Support', fontSize:10.sp,
+          Primarytext(text: 'Roomoree Support', fontSize:10.sp,
         fontWeight: FontWeight.w300, textColor: appColors.blacktext)],),
           TextButton(onPressed: (){}, child: Primarytext(text: 'Details', fontSize:11.sp,
         fontWeight: FontWeight.w500, textColor: appColors.blacktext)),
@@ -41,7 +41,7 @@ class _GethelpsecurityviewState extends State<Gethelpsecurityview> {
           Primarytext(text: 'Today', fontSize: 10.sp,
               fontWeight: FontWeight.w400, textColor: appColors.blacktext),
             SizedBox(height: 10.h,),
-            Primarytext(text: 'Airbnb support  12:19 AM', fontSize: 11.sp,
+            Primarytext(text: 'Roomoree support  12:19 AM', fontSize: 11.sp,
                 fontWeight: FontWeight.w400, textColor:appColors.blacktext),
             Gethelpwidgets(text: 'Hi wajeha, if there is any emergency in progress, lets get you connected with local emergency services now.'),
             Container(height: 40.h,width: 300.w,decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
@@ -56,7 +56,7 @@ class _GethelpsecurityviewState extends State<Gethelpsecurityview> {
                 IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward_ios))
               ],),
             ),
-            Gethelpwidgets(text: 'If you need help from Airbnb, select the issue you\'re experiencing. This info helps us get to the right person faster.'),
+            Gethelpwidgets(text: 'If you need help from Roomoree, select the issue you\'re experiencing. This info helps us get to the right person faster.'),
             
 
 

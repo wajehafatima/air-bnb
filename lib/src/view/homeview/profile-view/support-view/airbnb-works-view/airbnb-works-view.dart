@@ -57,7 +57,7 @@ class _AirbnbworksviewState extends State<Airbnbworksview> {
               Primarytext(text: 'Still have questions?', fontSize: 20.sp, fontWeight: FontWeight.w500, textColor: appColors.blacktext),
               SizedBox(height: 30.h,),
              Questionlist(text: 'Do I need to meet my host?'),
-              Questionlist(text: 'whats the Airbnb doing about covid19?'),
+              Questionlist(text: 'whats the Roomoree doing about covid19?'),
               Questionlist(text: 'when am I charged for reservation?'),
               Questionlist(text: 'Host Center'),
               Questionlist(text: 'Need more info')

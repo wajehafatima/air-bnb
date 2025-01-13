@@ -23,7 +23,7 @@ class _TravelforworkState extends State<Travelforwork> {
         padding: const EdgeInsets.only(left: 20,right: 20),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start,
           children: [SizedBox(height: 10.h,),
-          Primarytext(text: 'Try Airbnb for work', fontSize: 25.sp,
+          Primarytext(text: 'Try Roomoree for work', fontSize: 25.sp,
               fontWeight:FontWeight.w500, textColor: appColors.blacktext),
           Primarytext(text: 'Add your work email to unlock extra perks for business trips.', fontSize: 12.sp,
               fontWeight:FontWeight.w400, textColor: appColors.blacktext),

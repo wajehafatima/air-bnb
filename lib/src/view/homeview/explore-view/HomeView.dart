@@ -47,7 +47,7 @@ class _HomeviewState extends State<Homeview> {
           // Carousel slider
           SizedBox(
             height: 250.h,
-            width: 360.w, // Set width of the carousel slider
+            width: 360.w,
             child: Stack(
               children: [
                 PageView.builder(

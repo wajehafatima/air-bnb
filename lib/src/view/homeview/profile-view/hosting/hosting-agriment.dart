@@ -34,7 +34,7 @@ class _HostingAgreementScreenState extends State<HostingAgreementScreen> {
               textColor: appColors.blacktext),
           SizedBox(height: 20.h),
           Primarytext(
-              text: 'Xobnb is a community where anyone can belong',
+              text: 'Roomoree is a community where anyone can belong',
               fontSize: 22.sp, // Extra large text
               fontWeight: FontWeight.w700, // Full bold
               textColor: appColors.blacktext),
@@ -48,7 +48,7 @@ class _HostingAgreementScreenState extends State<HostingAgreementScreen> {
           SizedBox(height: 20.h),
           Primarytext(
               text:
-                  'I agree to treat everyone in the Xobnb community---regardless of their race, religion, origin, ethnicity, skin color, disability, sex, gender identity, sexual orientation or age---with respect, and without judgment or bias.',
+                  'I agree to treat everyone in the Roomoree community---regardless of their race, religion, origin, ethnicity, skin color, disability, sex, gender identity, sexual orientation or age---with respect, and without judgment or bias.',
               fontSize: 16.sp,
               fontWeight: FontWeight.w600, // Normal bold
               textColor: appColors.blacktext),

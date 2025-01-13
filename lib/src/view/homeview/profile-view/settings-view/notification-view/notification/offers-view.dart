@@ -47,7 +47,7 @@ class _OffersAndUpdatesScreenState extends State<OffersAndUpdatesScreen> {
             ),
             SizedBox(height: 20.h),
             Primarytext(
-                text: 'Airbnb Updates & Alerts',
+                text: 'Roomoree Updates & Alerts',
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w500,
                 textColor: appColors.blacktext),

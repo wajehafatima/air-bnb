@@ -28,7 +28,7 @@ class _AccountScreenState extends State<AccountScreen> {
           ),
           Primarytext(
             text:
-                'Confirm your booking and account activity, and learn about important Airbnb policies.',
+                'Confirm your booking and account activity, and learn about important Roomoree policies.',
             fontSize: 12.sp,
             fontWeight: FontWeight.w300,
             textColor: appColors.blacktext,

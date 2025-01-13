@@ -70,7 +70,7 @@ class _ViewprofileviewState extends State<Viewprofileview> {
                         fontSize: 13.sp,
                         fontWeight: FontWeight.w600,
                         textColor: appColors.blacktext),
-                    Primarytext(text: 'month on Airbnb',
+                    Primarytext(text: 'month on Roomoree',
                         fontSize: 10.sp,
                         fontWeight: FontWeight.w400,
                         textColor: appColors.blacktext)
@@ -113,7 +113,7 @@ class _ViewprofileviewState extends State<Viewprofileview> {
                       fontSize:16.sp, fontWeight: FontWeight.w600,
                       textColor: appColors.blacktext),
                   SizedBox(height: 5.h,),
-                  Primarytext(text: 'Your Airbnb profile is very important part of every reservation. Create profile to help other guests and hosts  get to know you', fontSize: 12.sp, fontWeight: FontWeight.w400,
+                  Primarytext(text: 'Your Roomoree profile is very important part of every reservation. Create profile to help other guests and hosts  get to know you', fontSize: 12.sp, fontWeight: FontWeight.w400,
                       textColor: appColors.blacktext),
                   SizedBox(height: 10.h,),
                   Custombutton(text: 'Create your profile', onTap: (){})

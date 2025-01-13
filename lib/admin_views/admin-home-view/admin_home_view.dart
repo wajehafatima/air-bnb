@@ -121,7 +121,7 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Primarytext(
-                                text: 'Airbnb your home',
+                                text: 'Roomoree your home',
                                 fontSize: 13.sp,
                                 fontWeight: FontWeight.w500,
                                 textColor: appColors.blacktext,

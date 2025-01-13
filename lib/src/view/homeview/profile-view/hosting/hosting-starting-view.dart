@@ -33,7 +33,7 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
           children: [
             SizedBox(height: 20.h),
             Text(
-              "It's easy to get started on Xobnb",
+              "It's easy to get started on Roomoree",
               style: TextStyle(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w700,

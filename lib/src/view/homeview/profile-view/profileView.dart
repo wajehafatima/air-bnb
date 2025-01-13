@@ -119,7 +119,7 @@ class _ProfileviewState extends State<Profileview> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Primarytext(
-                              text: 'Airbnb your home',
+                              text: 'Roomoree your home',
                               fontSize: 13.sp,
                               fontWeight: FontWeight.w500,
                               textColor: appColors.blacktext,
@@ -277,7 +277,7 @@ class _ProfileviewState extends State<Profileview> {
               ),
               ProfileDetails(
                 icon: Icons.mode_of_travel_outlined,
-                text: 'How Airbnb works',
+                text: 'How Roomoree works',
                 onTap: () {  Navigator.push(context,CupertinoPageRoute(builder: (context)=> Airbnbworksview()));
 
                 },

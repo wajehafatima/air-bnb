@@ -48,7 +48,7 @@ class _SignupviewState extends State<Signupview> {
                 Padding(
                   padding: const EdgeInsets.only(left: 10, top: 30, bottom: 20),
                   child: Primarytext(
-                    text: 'Log in or sign up to Airbnb',
+                    text: 'Log in or sign up to Roomoree',
                     fontSize: 18.sp,
                     fontWeight: FontWeight.w500,
                     textColor: appColors.blacktext,

@@ -121,7 +121,7 @@ class _UserManagementViewState extends State<UserManagementView>
           unselectedLabelColor: AppColors.blackText,
           indicatorColor: AppColors.secondary,
           tabs: const [
-            Tab(text: 'Hosts'),
+            Tab(text: 'Hosts',),
             Tab(text: 'Guests'),
           ],
         ),

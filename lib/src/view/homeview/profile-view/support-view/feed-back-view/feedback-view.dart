@@ -43,7 +43,7 @@ class _FeedbackviewState extends State<Feedbackview> {
             ),
             Primarytext(
               text:
-              'Thanks for sending us your ideas, issues, or appreciation. We can\'t respond individually, but we\'ll pass it on to the teams who are working to help make Airbnb better for everyone.',
+              'Thanks for sending us your ideas, issues, or appreciation. We can\'t respond individually, but we\'ll pass it on to the teams who are working to help make Roomoree better for everyone.',
               fontSize: 10.sp,
               fontWeight: FontWeight.w300,
               textColor: appColors.blacktext,
