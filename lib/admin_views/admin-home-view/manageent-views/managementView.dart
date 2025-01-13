@@ -108,21 +108,26 @@ class _UserManagementViewState extends State<UserManagementView>
     return Scaffold(
       backgroundColor: appColors.whiteBG,
       appBar: AppBar(
+        leading: IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back_ios)),
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'User Management',
-          fontSize: 25.sp,
+          fontSize: 20.sp,
           fontWeight: FontWeight.w500,
-          textColor: AppColors.blackText,
+          textColor: appColors.blacktext,
         ),
+
+       
         bottom: TabBar(
           controller: _tabController,
           labelColor: appColors.secondary,
           unselectedLabelColor: appColors.blacktext,
           indicatorColor: appColors.secondary,
-          tabs: const [
-            Tab(text: 'Hosts',),
-            Tab(text: 'Guests'),
+          tabs:  [
+            Tab(child: Primarytext(text: 'Hosts', fontSize: 12.sp, fontWeight: FontWeight.w400, textColor: appColors.blacktext),),
+            Tab(child: Primarytext(text: 'Guests', fontSize: 12.sp, fontWeight: FontWeight.w400, textColor: appColors.blacktext),),
+
+
           ],
         ),
       ),
