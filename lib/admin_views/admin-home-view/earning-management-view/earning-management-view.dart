@@ -63,6 +63,7 @@
 //   }
 // }
 
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:air_bnb/admin_views/admin-home-view/earning-management-view/cancellation-view/cancellation-view.dart';
@@ -178,15 +179,10 @@ class TotalEarningsView extends StatelessWidget {
 
           SizedBox(height: 10.h),
 
-          // Placeholder for Graphical Overview (without Expanded)
-          Center(
-            child: Primarytext(
-              text: "Graphical Overview Coming Soon",
-              fontSize: 16.sp,
-              fontWeight: FontWeight.w400,
-              textColor: appColors.grey,
-            ),
-          ),
+          // Graphical Overview - Earnings Graph
+          _buildEarningsGraph(),
+
+          SizedBox(height: 20.h),
         ],
       ),
     );
@@ -233,7 +229,60 @@ class TotalEarningsView extends StatelessWidget {
       ),
     );
   }
+
+  // Function to build the earnings graph
+  Widget _buildEarningsGraph() {
+    return Card(
+      color: appColors.whiteBG,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12.r),
+      ),
+      elevation: 4,
+      child: Padding(
+        padding: EdgeInsets.all(16.w),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Primarytext(
+              text: "Earnings Graph",
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w600,
+              textColor: appColors.blacktext,
+            ),
+            SizedBox(height: 10.h),
+            SizedBox(
+              height: 200.h,  // Adjust the height as per your design
+              child: LineChart(
+                LineChartData(
+                  gridData: FlGridData(show: true),
+                  titlesData: FlTitlesData(show: true),
+                  borderData: FlBorderData(show: true),
+                  lineBarsData: [
+                    LineChartBarData(
+                      spots: [
+                        FlSpot(0, 24000),  // Total earnings
+                        FlSpot(1, 200000), // Yearly earnings
+                        FlSpot(2, 15000),  // Monthly earnings
+                        FlSpot(3, 3500),   // Weekly earnings
+                        FlSpot(4, 500),    // Daily earnings
+                      ],
+                      isCurved: true,
+                      color: appColors.secondary,
+                      barWidth: 4,
+                      belowBarData: BarAreaData(show: true, color: appColors.secondary.withOpacity(0.2)),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
+
+
 // Total Earnings Tab
 // class TotalEarningsView extends StatelessWidget {
 //   const TotalEarningsView({super.key});
