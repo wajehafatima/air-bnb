@@ -60,28 +60,30 @@
 
 
 import 'package:air_bnb/src/controller/assets/appIcons/appIcons.dart';
+import 'package:air_bnb/src/controller/components/primarytext.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 class AdminDashboardView extends StatelessWidget {
   const AdminDashboardView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(
+      backgroundColor: appColors.whiteBG,
+      appBar: AppBar(leading: IconButton(onPressed: (){},icon: Icon(Icons.arrow_back_ios),),
+        backgroundColor: appColors.whiteBG,
+        title: Primarytext(text:
           'Admin Dashboard',
-          style: TextStyle(
+
             fontSize: 20.sp,
             fontWeight: FontWeight.w600,
-            color: Colors.black,
+            textColor: Colors.black,
           ),
         ),
-      ),
+
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.w),
         child: Column(
@@ -95,14 +97,14 @@ class AdminDashboardView extends StatelessWidget {
             SizedBox(height: 20.h),
 
             // Charts Section
-            Text(
-              'Total Listings by Neighborhood & Room Type',
-              style: TextStyle(
+            Primarytext(text:
+              'Total Listings by neighborhood & Room type',
+
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w600,
-                color: appColors.primary, // Matching title with theme color
+                textColor: appColors.blacktext,// Matching title with theme color
               ),
-            ),
+
             SizedBox(height: 10.h),
             Container(
               height: 200.h,
@@ -160,14 +162,14 @@ class AdminDashboardView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.h),
-            Text(
+            Primarytext(text:
               'Number of Reviews vs Price',
-              style: TextStyle(
+
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w600,
-                color: appColors.primary, // Matching title with theme color
+                textColor: appColors.blacktext, // Matching title with theme color
               ),
-            ),
+
             SizedBox(height: 10.h),
             Container(
               height: 200.h,
@@ -216,7 +218,7 @@ class AdminDashboardView extends StatelessWidget {
         ),
         title: Text(
           value,
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             fontSize: 26.sp,
             fontWeight: FontWeight.bold,
             color: Colors.white,
@@ -224,7 +226,7 @@ class AdminDashboardView extends StatelessWidget {
         ),
         subtitle: Text(
           title,
-          style: TextStyle(fontSize: 16.sp, color: Colors.white),
+          style: GoogleFonts.poppins(fontSize: 16.sp, color: Colors.white),
         ),
       ),
     );

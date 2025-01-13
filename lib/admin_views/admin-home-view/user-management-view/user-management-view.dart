@@ -47,7 +47,7 @@ class _UserManagementViewState extends State<UserManagementView> with SingleTick
           unselectedLabelColor: appColors.blacktext,
           indicatorColor: appColors.secondary,
           tabs: const [
-            Tab(text: 'Hosts'),
+            Tab(child: Primarytext(text: 'Hosts', fontSize: 12, fontWeight: FontWeight.w400, textColor:Colors.grey,),),
             Tab(text: 'Guests'),
           ],
         ),
