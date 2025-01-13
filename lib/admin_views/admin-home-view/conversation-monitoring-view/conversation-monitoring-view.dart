@@ -286,6 +286,7 @@ class AllConversationsView extends StatelessWidget {
               separatorBuilder: (context, index) => SizedBox(height: 10.h),
               itemBuilder: (context, index) {
                 return Card(
+                  color: appColors.secondary,
                   elevation: 4,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.r),
