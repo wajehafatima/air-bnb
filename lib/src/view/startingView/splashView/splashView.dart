@@ -28,8 +28,11 @@ class _SplashviewState extends State<Splashview> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(appImages.splashImage), fit: BoxFit.cover)),
+                image: AssetImage(appImages.appLogo), fit: BoxFit.cover)),
       ),
     );
   }
 }
+// class AppImages{
+//   static String appLogo='assets/splash.png';
+// }
