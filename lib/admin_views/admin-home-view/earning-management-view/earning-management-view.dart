@@ -148,47 +148,50 @@ class TotalEarningsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Primarytext(
-            text: "Earnings Overview",
-            fontSize: 20.sp,
-            fontWeight: FontWeight.w600,
-            textColor: appColors.blacktext,
-          ),
-          SizedBox(height: 10.h),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Primarytext(
+              text: "Earnings Overview",
+              fontSize: 20.sp,
+              fontWeight: FontWeight.w600,
+              textColor: appColors.blacktext,
+            ),
+            SizedBox(height: 10.h),
 
-          // Total Earnings Card
-          _buildEarningsCard("Total Earnings", "\$24,890", Icons.bar_chart_rounded),
+            // Total Earnings Card
+            _buildEarningsCard("Total Earnings", "\$24,890", Icons.bar_chart_rounded),
 
-          SizedBox(height: 10.h),
+            SizedBox(height: 10.h),
 
-          // Yearly Earnings Card
-          _buildEarningsCard("Yearly Earnings", "\$200,000", Icons.show_chart_rounded),
+            // Yearly Earnings Card
+            _buildEarningsCard("Yearly Earnings", "\$200,000", Icons.show_chart_rounded),
 
-          SizedBox(height: 10.h),
+            SizedBox(height: 10.h),
 
-          // Monthly Earnings Card
-          _buildEarningsCard("Monthly Earnings", "\$15,000", Icons.insert_chart_outlined),
+            // Monthly Earnings Card
+            _buildEarningsCard("Monthly Earnings", "\$15,000", Icons.insert_chart_outlined),
 
-          SizedBox(height: 10.h),
+            SizedBox(height: 10.h),
 
-          // Weekly Earnings Card
-          _buildEarningsCard("Weekly Earnings", "\$3,500", Icons.pie_chart_rounded),
+            // Weekly Earnings Card
+            _buildEarningsCard("Weekly Earnings", "\$3,500", Icons.pie_chart_rounded),
 
-          SizedBox(height: 10.h),
+            SizedBox(height: 10.h),
 
-          // Daily Earnings Card
-          _buildEarningsCard("Daily Earnings", "\$500", Icons.bar_chart),
+            // Daily Earnings Card
+            _buildEarningsCard("Daily Earnings", "\$500", Icons.bar_chart),
 
-          SizedBox(height: 10.h),
+            SizedBox(height: 10.h),
 
-          // Graphical Overview - Earnings Graph
-          _buildEarningsGraph(),
+            // Graphical Overview - Earnings Graph
+            _buildEarningsGraph(),
 
-          SizedBox(height: 20.h),
-        ],
+            SizedBox(height: 20.h),
+          ],
+        ),
       ),
     );
   }
@@ -204,8 +207,18 @@ class TotalEarningsView extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(16.w),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Container(
+              height: 32.w,
+              width: 36.w,
+              decoration: BoxDecoration(
+                color: appColors.whiteBG.withOpacity(0.2),
+                borderRadius: BorderRadius.circular(18.r),
+              ),
+              child: Icon(icon, color: Colors.white, size: 20.w),
+            ),
+            SizedBox(width: 15.w,),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -215,7 +228,7 @@ class TotalEarningsView extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                   textColor: appColors.whiteBG,
                 ),
-                SizedBox(height: 6.h),
+                //SizedBox(height: 6.h),
                 Primarytext(
                   text: amount,
                   fontSize: 24.sp,
@@ -224,11 +237,11 @@ class TotalEarningsView extends StatelessWidget {
                 ),
               ],
             ),
-            Icon(
-              icon,
-              size: 40.r,
-              color: appColors.whiteBG,
-            ),
+            // Icon(
+            //   icon,
+            //   size: 40.r,
+            //   color: appColors.whiteBG,
+            // ),
           ],
         ),
       ),
