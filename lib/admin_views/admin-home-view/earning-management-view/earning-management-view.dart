@@ -97,15 +97,17 @@ class _EarningManagementViewState extends State<EarningManagementView>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: appColors.whiteBG,
      // backgroundColor: appColors.grey,
-      appBar: AppBar(
+      appBar: AppBar(leading: IconButton(onPressed: (){Navigator.pop(context);
+      Navigator.pop(context);
+      },icon: Icon(Icons.arrow_back_ios),),
         elevation: 0,
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'Earning Management',
           fontSize: 20.sp,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w600,
           textColor: appColors.blacktext,
         ),
         bottom: TabBar(
@@ -123,7 +125,7 @@ class _EarningManagementViewState extends State<EarningManagementView>
             textColor: appColors.blacktext),),
       Tab(child:  Primarytext(text: 'Refunds', fontSize: 12.sp, fontWeight:FontWeight.w400,
           textColor: appColors.blacktext),),
-            Tab(child:  Primarytext(text: 'Total earnings', fontSize: 12.sp, fontWeight:FontWeight.w400,
+            Tab(child:  Primarytext(text: 'Cancellation', fontSize: 12.sp, fontWeight:FontWeight.w400,
                 textColor: appColors.blacktext),),
           ],
         ),
@@ -427,7 +429,7 @@ class CancellationsView extends StatelessWidget {
             contentPadding: EdgeInsets.zero,
             leading: Icon(
               Icons.warning_rounded,
-              color: appColors.linkBlue,
+              color: appColors.secondary,
               size: 30.r,
             ),
             title: Primarytext(
@@ -448,7 +450,7 @@ class CancellationsView extends StatelessWidget {
             contentPadding: EdgeInsets.zero,
             leading: Icon(
               Icons.warning_rounded,
-              color: appColors.linkBlue,
+              color: appColors.secondary,
               size: 30.r,
             ),
             title: Primarytext(

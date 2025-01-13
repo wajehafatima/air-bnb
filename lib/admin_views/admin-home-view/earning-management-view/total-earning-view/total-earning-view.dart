@@ -1,3 +1,5 @@
+import 'package:air_bnb/src/controller/components/primaryText.dart';
+import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,7 +9,7 @@ class Totalearningview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16.w),
+      padding: EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,25 +27,26 @@ class Totalearningview extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: Padding(
-              padding: EdgeInsets.all(16.w),
+              padding: EdgeInsets.all(20.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Total Earnings: ₹50,000',
-                    style:
-                        TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
-                  ),
+                  Primarytext(text:
+                    'Total Earnings: ₹50,000',textColor: appColors.whiteBG,
+                   fontSize: 16.sp, fontWeight: FontWeight.w600),
+
                   SizedBox(height: 10.h),
-                  Text(
+                  Primarytext(text:
                     'Total Hosts: 20',
-                    style: TextStyle(fontSize: 14.sp),
-                  ),
+                    textColor: appColors.whiteBG,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14.sp),
+
                   SizedBox(height: 10.h),
-                  Text(
-                    'Total Guests: 300',
-                    style: TextStyle(fontSize: 14.sp),
-                  ),
+                  Primarytext(text:
+                    'Total Guests: 300',textColor: appColors.whiteBG,fontWeight: FontWeight.w300,
+                    fontSize: 14.sp),
+
                 ],
               ),
             ),
