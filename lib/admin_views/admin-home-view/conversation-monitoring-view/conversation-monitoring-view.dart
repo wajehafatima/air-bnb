@@ -334,7 +334,7 @@ class AllConversationsView extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.message_rounded,
-                              color: appColors.secondary,
+                              color: appColors.whiteBG,
                               size: 20.r,
                             ),
                             SizedBox(width: 8.w),
@@ -342,7 +342,7 @@ class AllConversationsView extends StatelessWidget {
                               text: "View Conversation",
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w500,
-                              textColor: appColors.secondary,
+                              textColor: appColors.whiteBG,
                             ),
                           ],
                         ),
