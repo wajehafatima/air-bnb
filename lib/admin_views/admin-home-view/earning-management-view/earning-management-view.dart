@@ -97,7 +97,7 @@ class _EarningManagementViewState extends State<EarningManagementView>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: appColors.grey,
+     // backgroundColor: appColors.grey,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: appColors.whiteBG,
@@ -141,58 +141,53 @@ class TotalEarningsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(16.w),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Primarytext(
-              text: "Earnings Overview",
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w600,
-              textColor: appColors.blacktext,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Primarytext(
+            text: "Earnings Overview",
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w600,
+            textColor: appColors.blacktext,
+          ),
+          SizedBox(height: 10.h),
+
+          // Total Earnings Card
+          _buildEarningsCard("Total Earnings", "\$24,890", Icons.bar_chart_rounded),
+
+          SizedBox(height: 10.h),
+
+          // Yearly Earnings Card
+          _buildEarningsCard("Yearly Earnings", "\$200,000", Icons.show_chart_rounded),
+
+          SizedBox(height: 10.h),
+
+          // Monthly Earnings Card
+          _buildEarningsCard("Monthly Earnings", "\$15,000", Icons.insert_chart_outlined),
+
+          SizedBox(height: 10.h),
+
+          // Weekly Earnings Card
+          _buildEarningsCard("Weekly Earnings", "\$3,500", Icons.pie_chart_rounded),
+
+          SizedBox(height: 10.h),
+
+          // Daily Earnings Card
+          _buildEarningsCard("Daily Earnings", "\$500", Icons.bar_chart),
+
+          SizedBox(height: 10.h),
+
+          // Placeholder for Graphical Overview (without Expanded)
+          Center(
+            child: Primarytext(
+              text: "Graphical Overview Coming Soon",
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w400,
+              textColor: appColors.grey,
             ),
-            SizedBox(height: 10.h),
-        
-            // Total Earnings Card
-            _buildEarningsCard("Total Earnings", "\$24,890", Icons.bar_chart_rounded),
-        
-            SizedBox(height: 20.h),
-        
-            // Yearly Earnings Card
-            _buildEarningsCard("Yearly Earnings", "\$200,000", Icons.show_chart_rounded),
-        
-            SizedBox(height: 20.h),
-        
-            // Monthly Earnings Card
-            _buildEarningsCard("Monthly Earnings", "\$15,000", Icons.insert_chart_outlined),
-        
-            SizedBox(height: 20.h),
-        
-            // Weekly Earnings Card
-            _buildEarningsCard("Weekly Earnings", "\$3,500", Icons.pie_chart_rounded),
-        
-            SizedBox(height: 20.h),
-        
-            // Daily Earnings Card
-            _buildEarningsCard("Daily Earnings", "\$500", Icons.bar_chart),
-        
-            SizedBox(height: 20.h),
-        
-            // Placeholder for Graphical Overview
-            Expanded(
-              child: Center(
-                child: Primarytext(
-                  text: "Graphical Overview Coming Soon",
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w400,
-                  textColor: appColors.grey,
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -200,7 +195,7 @@ class TotalEarningsView extends StatelessWidget {
   // Function to build individual earnings card
   Widget _buildEarningsCard(String title, String amount, IconData icon) {
     return Card(
-      color: appColors.whiteBG,
+      color: appColors.secondary,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.r),
       ),
@@ -217,21 +212,21 @@ class TotalEarningsView extends StatelessWidget {
                   text: title,
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w500,
-                  textColor: appColors.grey,
+                  textColor: appColors.whiteBG,
                 ),
                 SizedBox(height: 6.h),
                 Primarytext(
                   text: amount,
                   fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
-                  textColor: appColors.secondary,
+                  textColor: appColors.whiteBG,
                 ),
               ],
             ),
             Icon(
               icon,
               size: 40.r,
-              color: appColors.secondary,
+              color: appColors.whiteBG,
             ),
           ],
         ),
