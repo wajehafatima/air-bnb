@@ -87,9 +87,7 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                             textColor: appColors.blacktext),
                       ],
                     ),
-                    SizedBox(
-                      width: 140.w,
-                    ),
+                    Spacer(),
                     IconButton(
                         onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
                   ],
@@ -131,7 +129,7 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                               ),
                               Primarytext(
                                   text:
-                                      'It\'s easy to start hosting and earn extra income',
+                                      'It\'s easy to start hosting and\nearn extra income',
                                   fontSize: 10.sp,
                                   fontWeight: FontWeight.w300,
                                   textColor: appColors.blacktext)
