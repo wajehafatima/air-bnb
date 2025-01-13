@@ -55,7 +55,7 @@ class _UserManagementViewState extends State<UserManagementView> with SingleTick
       body: TabBarView(
         controller: _tabController,
         children: [
-          Hostview(),
+          HostView(),
           Guestview()
         ],
       ),
