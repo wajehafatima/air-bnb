@@ -128,7 +128,7 @@ class _UserManagementViewState extends State<UserManagementView>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [Hostview(), Guestview()],
+        children: [HostView(), Guestview()],
       ),
     );
   }
