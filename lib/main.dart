@@ -43,7 +43,8 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
         designSize: Size(360, 640),
         child: MaterialApp(
-            title: 'H Pulse',
+          debugShowCheckedModeBanner: false,
+            title: 'Roomeroo',
             theme: ThemeData(
               // This is the theme of your application.
               //
