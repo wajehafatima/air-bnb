@@ -108,16 +108,16 @@ class AdminDashboardView extends StatelessWidget {
             _buildStatCard('Avg Price', '\$153', Icons.attach_money),
             SizedBox(height: 20.h),
             // Filters Section
-            Text(
-              'Filters',
-              style: TextStyle(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            SizedBox(height: 10.h),
-            _buildFilters(),
-            SizedBox(height: 20.h),
+            // Text(
+            //   'Filters',
+            //   style: TextStyle(
+            //     fontSize: 18.sp,
+            //     fontWeight: FontWeight.w600,
+            //   ),
+            // ),
+            // SizedBox(height: 10.h),
+            // _buildFilters(),
+            // SizedBox(height: 20.h),
             // Charts Section
             Text(
               'Total Listings by Neighborhood & Room Type',
