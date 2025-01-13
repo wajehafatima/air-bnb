@@ -59,6 +59,8 @@
 // }
 
 
+import 'package:air_bnb/src/controller/assets/appIcons/appIcons.dart';
+import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -87,15 +89,19 @@ class AdminDashboardView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Stats Section
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _buildStatCard('Total Host', '37,46K', Icons.group),
-                _buildStatCard('Total Listings', '48,90K', Icons.home),
-                _buildStatCard('Avg Reviews', '23,27', Icons.star),
-                _buildStatCard('Avg Price', '\$153', Icons.attach_money),
-              ],
-            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start, // Or 'spaceEvenly', depending on the design
+                children: [
+                  _buildStatCard('Total Host', '37,46K', Icons.group),
+                  _buildStatCard('Total Listings', '48,90K', Icons.home),
+                  _buildStatCard('Avg Reviews', '23,27', Icons.star),
+                  _buildStatCard('Avg Price', '\$153', Icons.attach_money),
+                ],
+              ),
+            )
+,
             SizedBox(height: 20.h),
             // Filters Section
             Text(
@@ -193,7 +199,8 @@ class AdminDashboardView extends StatelessWidget {
 
   Widget _buildStatCard(String title, String value, IconData icon) {
     return Card(
-      elevation: 4,
+      //elevation: 4,
+      color: appColors.secondary,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Container(
         width: 80.w,
@@ -202,13 +209,14 @@ class AdminDashboardView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: 30.sp, color: Colors.blue),
+            Icon(icon, size: 30.sp, color: Colors.white),
             SizedBox(height: 8.h),
             Text(
               value,
               style: TextStyle(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
+                color: Colors.white
               ),
             ),
             SizedBox(height: 4.h),
