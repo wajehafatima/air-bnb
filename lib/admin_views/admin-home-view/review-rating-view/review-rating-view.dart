@@ -44,7 +44,7 @@ class _ReviewRatingViewState extends State<ReviewRatingView>
           fontWeight: FontWeight.w600,
           textColor: appColors.blacktext,
         ),
-
+      
       // appBar: AppBar(
       //   elevation: 0,
       //   backgroundColor: appColors.whiteBG,
