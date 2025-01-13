@@ -33,14 +33,27 @@ class _ReviewRatingViewState extends State<ReviewRatingView>
     return Scaffold(
       backgroundColor: appColors.whiteBG,
       appBar: AppBar(
+        leading: IconButton(onPressed: (){Navigator.pop(context);
+
+        },icon: Icon(Icons.arrow_back_ios),),
         elevation: 0,
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'Review and Ratings',
-          fontSize: 22.sp,
-          fontWeight: FontWeight.bold,
+          fontSize: 20.sp,
+          fontWeight: FontWeight.w600,
           textColor: appColors.blacktext,
         ),
+
+      // appBar: AppBar(
+      //   elevation: 0,
+      //   backgroundColor: appColors.whiteBG,
+      //   title: Primarytext(
+      //     text: 'Review and Ratings',
+      //     fontSize: 22.sp,
+      //     fontWeight: FontWeight.bold,
+      //     textColor: appColors.blacktext,
+      //   ),
         bottom: TabBar(
           controller: _tabController,
           labelColor: appColors.secondary,

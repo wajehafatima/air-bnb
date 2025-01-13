@@ -32,16 +32,20 @@ class _ConversationMonitoringViewState extends State<ConversationMonitoringView>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: appColors.whiteBG,
+      appBar: AppBar(
+        leading: IconButton(onPressed: (){Navigator.pop(context);
 
-        appBar: AppBar(
+        },icon: Icon(Icons.arrow_back_ios),),
         elevation: 0,
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
-        text: 'Conversation Monitoring',
-        fontSize: 22.sp,
-        fontWeight: FontWeight.bold,
-        textColor: appColors.blacktext,
-    ),
+          text: 'Conversation Monitoring',
+          fontSize: 20.sp,
+          fontWeight: FontWeight.w600,
+          textColor: appColors.blacktext,
+        ),
+
+
 
       // appBar: AppBar(
       //   elevation: 0,
