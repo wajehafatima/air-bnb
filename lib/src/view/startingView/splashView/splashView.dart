@@ -33,3 +33,6 @@ class _SplashviewState extends State<Splashview> {
     );
   }
 }
+// class AppImages{
+//   static String appLogo='assets/splash.png';
+// }
