@@ -227,7 +227,7 @@ class PendingModerationView extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(8.r),
                                 ),
                                 child: Primarytext(
-                                  text: "Delete",
+                                  text: "  Delete  ",
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w500,
                                   textColor: appColors.secondary,
