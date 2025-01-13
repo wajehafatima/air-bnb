@@ -47,7 +47,7 @@ class _UserManagementViewState extends State<UserManagementView> with SingleTick
         bottom: TabBar(
           controller: _tabController,
           labelColor: appColors.blacktext,
-          indicatorColor: appColors.secondary,
+          indicatorColor: Color(0xffF1510C),
           unselectedLabelColor: appColors.grey,
           tabs:  [
             Tab(child: Primarytext(text: 'Hosts', fontSize: 12.sp, fontWeight: FontWeight.w400, textColor:appColors.grey,),),

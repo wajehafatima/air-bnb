@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../src/controller/components/primaryText.dart';
 import '../../../src/controller/constants/colors/appColors.dart';
@@ -38,7 +39,7 @@ class _BookingManagementState extends State<BookingManagement>
         backgroundColor: appColors.whiteBG,
         title: Primarytext(
           text: 'Booking Management',
-          fontSize: 25.sp,
+          fontSize: 20.sp,
           fontWeight: FontWeight.w500,
           textColor: appColors.blacktext,
         ),
@@ -47,9 +48,9 @@ class _BookingManagementState extends State<BookingManagement>
           labelColor: appColors.secondary,
           unselectedLabelColor: appColors.blacktext,
           indicatorColor: appColors.secondary,
-          tabs: const [
-            Tab(text: 'Track Bookings'),
-            Tab(text: 'Notifications'),
+          tabs:  [
+            Tab(child: Primarytext(text: 'Track Bookings', fontSize: 12.sp, fontWeight: FontWeight.w400, textColor: appColors.blacktext),),
+            Tab(child: Primarytext(text: 'Notifications', fontSize: 12.sp, fontWeight: FontWeight.w400, textColor: appColors.blacktext),),
           ],
         ),
       ),
@@ -67,7 +68,7 @@ class TrackBookingsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16.0.w),
+      padding: EdgeInsets.all(20.0.w),
       child: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
@@ -84,40 +85,38 @@ class TrackBookingsTab extends StatelessWidget {
           child: DataTable(
             headingRowHeight: 60,
             dataRowHeight: 70,
-            headingTextStyle: TextStyle(
+            headingTextStyle: GoogleFonts.poppins(
               fontSize: 16.sp,
               fontWeight: FontWeight.w600,
               color: appColors.primary,
             ),
             columns: [
               DataColumn(
-                label: Text(
-                  'Booking #',
-                  style: TextStyle(
+                label: Primarytext(text:
+                  'Booking',
+
                     fontWeight: FontWeight.bold,
-                    color: appColors.primary,
+                    textColor: appColors.blacktext,
                     fontSize: 16.sp,
                   ),
                 ),
-              ),
+
               DataColumn(
-                label: Text(
-                  'Details',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: appColors.primary,
-                    fontSize: 16.sp,
-                  ),
+                label:Primarytext(text:
+                'Details',
+
+                  fontWeight: FontWeight.bold,
+                  textColor: appColors.blacktext,
+                  fontSize: 16.sp,
                 ),
               ),
               DataColumn(
-                label: Text(
-                  'Actions',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: appColors.primary,
-                    fontSize: 16.sp,
-                  ),
+                label: Primarytext(text:
+                'Actions',
+
+                  fontWeight: FontWeight.bold,
+                  textColor: appColors.blacktext,
+                  fontSize: 16.sp,
                 ),
               ),
             ],
@@ -132,13 +131,13 @@ class TrackBookingsTab extends StatelessWidget {
                   DataCell(Primarytext(
                     text: 'Booking #${index + 1}',
                     textColor: appColors.blacktext,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
                   )),
                   DataCell(Primarytext(
                     text: 'Details about booking #${index + 1}',
                     textColor: appColors.blacktext,
-                    fontSize: 14.sp,
+                    fontSize: 12.sp,
                     fontWeight: FontWeight.w400,
                   )),
                   DataCell(Row(
@@ -223,7 +222,7 @@ class NotificationsTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Primarytext(text: 'Automated notifications', fontSize:20.sp, fontWeight:FontWeight.w600,
+          Primarytext(text: 'Automated notifications', fontSize:18.sp, fontWeight:FontWeight.w600,
               textColor: appColors.blacktext
           ),
           SizedBox(height: 16.h),
