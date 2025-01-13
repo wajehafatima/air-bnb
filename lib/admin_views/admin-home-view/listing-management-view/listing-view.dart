@@ -1,4 +1,5 @@
 import 'package:air_bnb/admin_views/admin-home-view/manageent-views/managementView.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -169,6 +170,9 @@ class ManageListingsWidget extends StatelessWidget {
   }
 }
 
+
+
+
 class ControlRankingWidget extends StatelessWidget {
   const ControlRankingWidget({super.key});
 
@@ -187,32 +191,76 @@ class ControlRankingWidget extends StatelessWidget {
           ),
           child: Padding(
             padding: EdgeInsets.all(16.w),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Primarytext(
-                  text: "Listing #${index + 1}",
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w300,
-                  textColor: appColors.blacktext,
-                ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.arrow_upward,
-                        color: appColors.grey,
-                      ),
+                    Primarytext(
+                      text: "Listing #${index + 1}",
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w300,
+                      textColor: appColors.blacktext,
                     ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.arrow_downward,
-                        color: appColors.secondary,
-                      ),
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.arrow_upward,
+                            color: appColors.grey,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.arrow_downward,
+                            color: appColors.secondary,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
+                ),
+                SizedBox(height: 16.h),
+                SizedBox(
+                  height: 200.h,
+                  child: BarChart(
+                    BarChartData(
+                      barGroups: _generateBarGroups(index),
+                      titlesData: FlTitlesData(
+                        leftTitles: AxisTitles(
+                          sideTitles: SideTitles(
+                            showTitles: true,
+                            getTitlesWidget: (value, meta) {
+                              return Text(value.toInt().toString(), style: TextStyle(fontSize: 10.sp));
+                            },
+                          ),
+                        ),
+                        bottomTitles: AxisTitles(
+                          sideTitles: SideTitles(
+                            showTitles: true,
+                            getTitlesWidget: (value, meta) {
+                              switch (value.toInt()) {
+                                case 0:
+                                  return Text('Metric 1', style: TextStyle(fontSize: 12.sp));
+                                case 1:
+                                  return Text('Metric 2', style: TextStyle(fontSize: 12.sp));
+                                case 2:
+                                  return Text('Metric 3', style: TextStyle(fontSize: 12.sp));
+                                default:
+                                  return const Text('');
+                              }
+                            },
+                          ),
+                        ),
+                      ),
+
+                      borderData: FlBorderData(show: false),
+                      gridData: FlGridData(show: false),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -221,4 +269,68 @@ class ControlRankingWidget extends StatelessWidget {
       },
     );
   }
+
+  List<BarChartGroupData> _generateBarGroups(int index) {
+    // Example data for the chart. You can replace this with dynamic data as needed.
+    return [
+      BarChartGroupData(x: 0, barRods: [BarChartRodData(toY: (index + 1) * 2.0, color: appColors.grey)]),
+      BarChartGroupData(x: 1, barRods: [BarChartRodData(toY: (index + 1) * 1.5, color: appColors.secondary)]),
+      BarChartGroupData(x: 2, barRods: [BarChartRodData(toY: (index + 1) * 1.0, color: appColors.grey)]),
+    ];
+  }
 }
+
+
+// class ControlRankingWidget extends StatelessWidget {
+//   const ControlRankingWidget({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView.builder(
+//       padding: EdgeInsets.all(16.w),
+//       itemCount: 10,
+//       itemBuilder: (context, index) {
+//         return Card(
+//           color: appColors.whiteBG,
+//           elevation: 5,
+//           margin: EdgeInsets.only(bottom: 16.h),
+//           shape: RoundedRectangleBorder(
+//             borderRadius: BorderRadius.circular(12.r),
+//           ),
+//           child: Padding(
+//             padding: EdgeInsets.all(16.w),
+//             child: Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Primarytext(
+//                   text: "Listing #${index + 1}",
+//                   fontSize: 16.sp,
+//                   fontWeight: FontWeight.w300,
+//                   textColor: appColors.blacktext,
+//                 ),
+//                 Row(
+//                   children: [
+//                     IconButton(
+//                       onPressed: () {},
+//                       icon: Icon(
+//                         Icons.arrow_upward,
+//                         color: appColors.grey,
+//                       ),
+//                     ),
+//                     IconButton(
+//                       onPressed: () {},
+//                       icon: Icon(
+//                         Icons.arrow_downward,
+//                         color: appColors.secondary,
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//               ],
+//             ),
+//           ),
+//         );
+//       },
+//     );
+//   }
+// }
