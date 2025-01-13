@@ -53,16 +53,14 @@
 //     );
 //   }
 // }
-import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HostView extends StatelessWidget {
   const HostView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Sample data for the table
     final List<List<String>> data = [
       ['ID', 'Host Name', 'Listing Name', 'Number of Reviews', 'Price', 'Total Listings', 'Bookings', 'Earnings'],
       ['1', 'Host 1', 'Listing 1', '5', '\$100', '1', '10', '\$500'],
@@ -77,51 +75,127 @@ class HostView extends StatelessWidget {
       ['10', 'Host 10', 'Listing 10', '50', '\$1000', '10', '100', '\$5000'],
     ];
 
-    // Transpose the data for rows to become columns
-    final transposedData = _transpose(data);
+    // Extract data for the chart
+    final reviews = data.skip(1).map((row) => int.parse(row[3])).toList();
+    final earnings = data.skip(1).map((row) => double.parse(row[7].replaceAll('\$', ''))).toList();
 
     return Scaffold(
+     
       body: Padding(
-        padding: EdgeInsets.all(16.0.w),
+        padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Table(
-              columnWidths: const <int, TableColumnWidth>{
-                0: FixedColumnWidth(100), // Fix the first column width
-              },
-              defaultColumnWidth: IntrinsicColumnWidth(),
-              border: TableBorder.all(
-                color: Colors.grey.shade300,
-                width: 1.0,
-                borderRadius: BorderRadius.circular(10.r),
+          child: Column(
+            children: [
+              // Table widget (as you already have)
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Table(
+                    columnWidths: const <int, TableColumnWidth>{
+                      0: FixedColumnWidth(100), // Fix the first column width
+                    },
+                    defaultColumnWidth: IntrinsicColumnWidth(),
+                    border: TableBorder.all(
+                      color: Colors.grey.shade300,
+                      width: 1.0,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    children: [
+                      _buildHeaderRow(data.first),
+                      ..._buildDataRows(data.skip(1).toList()),
+                    ],
+                  ),
+                ),
               ),
-              children: [
-                _buildHeaderRow(transposedData.first),
-                ..._buildDataRows(transposedData.skip(1).toList()),
-              ],
-            ),
+              SizedBox(height: 20),
+              // Bar Chart widget
+              Container(
+                height: 300,
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 3,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: BarChart(
+                  BarChartData(
+                    alignment: BarChartAlignment.spaceBetween,
+                    gridData: FlGridData(show: true),
+                    titlesData: FlTitlesData(
+                      bottomTitles: AxisTitles(
+                        sideTitles: SideTitles(
+                          showTitles: true,
+                          // getTitles: (value) {
+                          //   return 'Host ${value.toInt()}';
+                          // },
+                          // getTitlesTextStyle: (context, value) {
+                          //   return TextStyle(fontSize: 12, color: Colors.black);
+                          // },
+                        ),
+                      ),
+                      leftTitles: AxisTitles(
+                        sideTitles: SideTitles(
+                          showTitles: true,
+                          // getTitles: (value) {
+                          //   return '\$${value.toInt()}';
+                          // },
+                          // getTitlesTextStyle: (context, value) {
+                          //   return TextStyle(fontSize: 12, color: Colors.black);
+                          // },
+                        ),
+                      ),
+                    ),
+                    borderData: FlBorderData(show: true),
+                    barGroups: List.generate(reviews.length, (i) {
+                      return BarChartGroupData(
+                        x: i,
+                        barRods: [
+                          BarChartRodData(
+                            toY: reviews[i].toDouble(),
+                            color: Colors.blueAccent,
+                            width: 16,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          BarChartRodData(
+                            toY: earnings[i],
+                            color: Colors.greenAccent,
+                            width: 16,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ],
+                      );
+                    }),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 
-  /// Creates the header row with bold text and a background color
   TableRow _buildHeaderRow(List<String> headers) {
     return TableRow(
       decoration: BoxDecoration(
-        color: appColors.secondary.withOpacity(0.8)//Colors.blueAccent.shade100,
+        color: Colors.blueAccent.shade100,
       ),
       children: headers.map((header) {
         return Padding(
-          padding: EdgeInsets.all(12.0.w),
+          padding: const EdgeInsets.all(12.0),
           child: Text(
             header,
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 14.sp,
+              fontSize: 14,
               color: Colors.white,
             ),
             textAlign: TextAlign.center,
@@ -131,7 +205,6 @@ class HostView extends StatelessWidget {
     );
   }
 
-  /// Creates the data rows with alternating background colors
   List<TableRow> _buildDataRows(List<List<String>> rows) {
     return List<TableRow>.generate(
       rows.length,
@@ -143,24 +216,16 @@ class HostView extends StatelessWidget {
           ),
           children: rows[index].map((cell) {
             return Padding(
-              padding: EdgeInsets.all(8.0.w),
+              padding: const EdgeInsets.all(8.0),
               child: Text(
                 cell,
-                style: TextStyle(fontSize: 14.sp, color: Colors.black87),
+                style: TextStyle(fontSize: 14, color: Colors.black87),
                 textAlign: TextAlign.center,
               ),
             );
           }).toList(),
         );
       },
-    );
-  }
-
-  /// Transpose function to convert rows to columns and vice versa
-  List<List<String>> _transpose(List<List<String>> data) {
-    return List.generate(
-      data[0].length,
-          (i) => List.generate(data.length, (j) => data[j][i]),
     );
   }
 }
