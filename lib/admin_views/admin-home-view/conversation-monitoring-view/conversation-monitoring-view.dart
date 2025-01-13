@@ -172,6 +172,7 @@ class PendingModerationView extends StatelessWidget {
                 separatorBuilder: (context, index) => SizedBox(height: 10.h),
                 itemBuilder: (context, index) {
                   return Card(
+                    color: appColors.secondary,
                     elevation: 4,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.r),
@@ -188,13 +189,13 @@ class PendingModerationView extends StatelessWidget {
                                 text: "User ${index + 1}",
                                 fontSize: 18.sp,
                                 fontWeight: FontWeight.w600,
-                                textColor: appColors.blacktext,
+                                textColor: appColors.whiteBG,
                               ),
                               Container(
                                 padding: EdgeInsets.symmetric(
                                     vertical: 4.h, horizontal: 8.w),
                                 decoration: BoxDecoration(
-                                  color: appColors.secondary.withOpacity(0.2),
+                                  color: appColors.whiteBG.withOpacity(0.8),
                                   borderRadius: BorderRadius.circular(8.r),
                                 ),
                                 child: Primarytext(
@@ -212,7 +213,7 @@ class PendingModerationView extends StatelessWidget {
                             "This conversation contains sensitive details before booking confirmation.",
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
-                            textColor: appColors.grey,
+                            textColor: appColors.grey.withOpacity(0.8),
                           ),
                           SizedBox(height: 16.h),
                           Row(
@@ -249,7 +250,7 @@ class PendingModerationView extends StatelessWidget {
             ),
           ],
         ),
-      
+
     );
   }
 }
