@@ -136,8 +136,9 @@ class ManageListingsWidget extends StatelessWidget {
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w600,
                               textColor: appColors.blacktext),
-                          
+
                         )),
+                    
 
                   ],
                 ),
