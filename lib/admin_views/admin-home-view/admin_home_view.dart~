@@ -245,51 +245,51 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                               builder: (context) =>
                                   ConversationMonitoringView()));
                     }),
-                // ProfileDetails(
-                //     icon: Icons.comment_bank,
-                //     text: 'Admin bank accounts',
-                //     onTap: () {
-                //       Navigator.push(
-                //           context,
-                //           CupertinoPageRoute(
-                //               builder: (context) => AdminAccountsVieww()));
-                //     }),
-                // ProfileDetails(
-                //     icon: Icons.calendar_month,
-                //     text: 'Calender',
-                //     onTap: () {
-                //       Navigator.push(
-                //           context,
-                //           CupertinoPageRoute(
-                //               builder: (context) => Calenderview()));
-                //     }),
-                // ProfileDetails(
-                //     icon: Icons.analytics_outlined,
-                //     text: 'Analytics and report',
-                //     onTap: () {
-                //       Navigator.push(
-                //           context,
-                //           CupertinoPageRoute(
-                //               builder: (context) => Analyticsreportsview()));
-                //     }),
-                // ProfileDetails(
-                //     icon: Icons.control_point_duplicate_outlined,
-                //     text: 'Control hosting',
-                //     onTap: () {
-                //       Navigator.push(
-                //           context,
-                //           CupertinoPageRoute(
-                //               builder: (context) => Controlhostingview()));
-                //     }),
-                // ProfileDetails(
-                //     icon: Icons.info_outline,
-                //     text: 'About',
-                //     onTap: () {
-                //       Navigator.push(
-                //           context,
-                //           CupertinoPageRoute(
-                //               builder: (context) => Aboutview()));
-                //     }),
+                ProfileDetails(
+                    icon: Icons.comment_bank,
+                    text: 'Admin bank accounts',
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => AdminAccountsVieww()));
+                    }),
+                ProfileDetails(
+                    icon: Icons.calendar_month,
+                    text: 'Calender',
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => Calenderview()));
+                    }),
+                ProfileDetails(
+                    icon: Icons.analytics_outlined,
+                    text: 'Analytics and report',
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => Analyticsreportsview()));
+                    }),
+                ProfileDetails(
+                    icon: Icons.control_point_duplicate_outlined,
+                    text: 'Control hosting',
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => Controlhostingview()));
+                    }),
+                ProfileDetails(
+                    icon: Icons.info_outline,
+                    text: 'About',
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => Aboutview()));
+                    }),
               ],
             ),
           ),

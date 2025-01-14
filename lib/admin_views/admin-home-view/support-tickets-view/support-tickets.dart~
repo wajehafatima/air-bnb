@@ -135,11 +135,13 @@ class _SupportticketsState extends State<Supporttickets> {
     return Scaffold(
       backgroundColor: appColors.whiteBG,
       appBar: AppBar(
-        leading: IconButton(onPressed: (){Navigator.pop(context);
-
-        },icon: Icon(Icons.arrow_back_ios),),
-        elevation: 0,
         backgroundColor: appColors.whiteBG,
+        elevation: 2,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: appColors.blacktext),
+          onPressed: () => Navigator.pop(context),
+        ),
         title: Primarytext(
           text: 'Support Tickets',
           fontSize: 20.sp,

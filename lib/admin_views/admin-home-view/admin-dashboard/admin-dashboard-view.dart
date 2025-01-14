@@ -210,26 +210,51 @@ class AdminDashboardView extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       elevation: 4,
       child: ListTile(
-        leading: Container(
-          padding: EdgeInsets.all(10),
+        leading:
+        Container(
+          height: 36.w,
+          width: 36.w,
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(8),
+            color: appColors.whiteBG.withOpacity(0.2),
+            borderRadius: BorderRadius.circular(18.r),
           ),
-          child: Icon(icon, size: 30.sp, color: appColors.secondary),
+          child: Icon(icon, color: Colors.white, size: 20.w),
         ),
-        title: Text(
-          value,
-          style: GoogleFonts.poppins(
-            fontSize: 26.sp,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+        // Container(
+        //   padding: EdgeInsets.all(10),
+        //   decoration: BoxDecoration(
+        //     color: Colors.white,
+        //     borderRadius: BorderRadius.circular(8),
+        //   ),
+        //   child: Icon(icon, size: 30.sp, color: appColors.secondary),
+        // ),
+        title:
+        Primarytext(
+          text: value,
+          fontSize: 26.sp,
+          fontWeight: FontWeight.w500,
+          textColor: Colors.white,
         ),
-        subtitle: Text(
-          title,
-          style: GoogleFonts.poppins(fontSize: 16.sp, color: Colors.white),
+
+        // Text(
+        //   value,
+        //   style: GoogleFonts.poppins(
+        //     fontSize: 26.sp,
+        //     fontWeight: FontWeight.bold,
+        //     color: Colors.white,
+        //   ),
+        // ),
+        subtitle:
+        Primarytext(
+          text: title,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w500,
+          textColor: Colors.white,
         ),
+        // Text(
+        //   title,
+        //   style: GoogleFonts.poppins(fontSize: 16.sp, color: Colors.white),
+        // ),
       ),
     );
   }
