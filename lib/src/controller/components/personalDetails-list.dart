@@ -11,6 +11,7 @@ class PersonalDetails extends StatefulWidget {
   final String title2;
   final String buttonText;
   final VoidCallback onTap;
+  final Widget? expandedContent; // Optional expanded content
 
   const PersonalDetails({
     Key? key,
@@ -18,6 +19,7 @@ class PersonalDetails extends StatefulWidget {
     required this.title2,
     required this.buttonText,
     required this.onTap,
+    this.expandedContent, // Optional parameter
   }) : super(key: key);
 
   @override
@@ -72,15 +74,11 @@ class _PersonalDetailsState extends State<PersonalDetails> {
           textColor: appColors.grey,
         ),
         SizedBox(height: 5.h),
-        if (_isExpanded)
+        if (_isExpanded && widget.expandedContent != null)
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Add any expanded content here
-              Text(
-                "Expanded content goes here.",
-                style: TextStyle(fontSize: 12.sp, color: appColors.grey),
-              ),
+              widget.expandedContent!, // Display optional expanded content
               Divider(),
             ],
           )

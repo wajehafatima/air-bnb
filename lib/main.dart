@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
             ),
 
             //Editprofileview()
-            home:AdminHomeView())
+            home://AdminHomeView())
             //Editprofileview()
              Profileview()
             //Licensview()
