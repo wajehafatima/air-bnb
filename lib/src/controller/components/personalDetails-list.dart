@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/colors/appColors.dart';
 
-class PersonalDetails extends StatelessWidget {
+class PersonalDetails extends StatefulWidget {
   final String title;
   final String title2;
   final String buttonText;
@@ -21,45 +21,72 @@ class PersonalDetails extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<PersonalDetails> createState() => _PersonalDetailsState();
+}
+
+class _PersonalDetailsState extends State<PersonalDetails> {
+  bool _isExpanded = false;
+
+  void _toggleExpansion() {
+    setState(() {
+      _isExpanded = !_isExpanded;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [SizedBox(height: 5.h,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Primarytext(
-                text: title,
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w400,
-                textColor: appColors.blacktext,
-              ),
-              TextButton(
-                onPressed: onTap,
-                child: Text(
-                  buttonText,
-                  style: GoogleFonts.poppins(
-                    fontSize: 12.sp,
-                    color: appColors.blacktext,
-                    fontWeight: FontWeight.w600,
-                    decoration: TextDecoration.underline,
-                  ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 5.h),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Primarytext(
+              text: widget.title,
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w400,
+              textColor: appColors.blacktext,
+            ),
+            TextButton(
+              onPressed: () {
+                _toggleExpansion();
+                widget.onTap();
+              },
+              child: Text(
+                widget.buttonText,
+                style: GoogleFonts.poppins(
+                  fontSize: 12.sp,
+                  color: appColors.blacktext,
+                  fontWeight: FontWeight.w600,
+                  decoration: TextDecoration.underline,
                 ),
               ),
+            ),
+          ],
+        ),
+        Primarytext(
+          text: widget.title2,
+          fontSize: 12.sp,
+          fontWeight: FontWeight.w300,
+          textColor: appColors.grey,
+        ),
+        SizedBox(height: 5.h),
+        if (_isExpanded)
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Add any expanded content here
+              Text(
+                "Expanded content goes here.",
+                style: TextStyle(fontSize: 12.sp, color: appColors.grey),
+              ),
+              Divider(),
             ],
-          ),
-          Primarytext(
-            text: title2,
-            fontSize: 12.sp,
-            fontWeight: FontWeight.w300,
-            textColor: appColors.grey,
-          ),
-          SizedBox(height: 5.h),
+          )
+        else
           Divider(),
-        ],
-      ),
+      ],
     );
   }
 }
