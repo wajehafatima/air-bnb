@@ -2,7 +2,7 @@ import 'package:air_bnb/src/controller/assets/appIcons/appIcons.dart';
 import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
-import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/addEmergency-view.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/emergency/addEmergency-view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

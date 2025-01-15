@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:country_picker/country_picker.dart';
 
-import '../../../../../../controller/components/primaryText.dart';
-import '../../../../../../controller/constants/colors/appColors.dart';
-import 'PERSONALiNFO-WIDGETS/CustomTextFiled.dart';
+import '../../../../../../../controller/components/primaryText.dart';
+import '../../../../../../../controller/constants/colors/appColors.dart';
+import '../PERSONALiNFO-WIDGETS/CustomTextFiled.dart';
 
 class Addemergencyview extends StatefulWidget {
   const Addemergencyview({super.key});

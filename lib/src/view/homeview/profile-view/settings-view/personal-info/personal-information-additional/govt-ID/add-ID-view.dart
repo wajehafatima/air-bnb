@@ -1,9 +1,12 @@
+import 'package:air_bnb/src/controller/assets/appIcons/appIcons.dart';
+import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/PERSONALiNFO-WIDGETS/govt-id-row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:country_picker/country_picker.dart';
 
-import '../../../../../../controller/constants/colors/appColors.dart';
+import '../../../../../../../controller/constants/colors/appColors.dart';
 
 class Addidview extends StatefulWidget {
   const Addidview({super.key});
@@ -74,14 +77,14 @@ class _AddidviewState extends State<Addidview> {
               textColor: appColors.grey,
             ),
             SizedBox(height: 20.h),
-            Container(height: 50.h,decoration: BoxDecoration(
-              color: appColors.whiteBG,
-              border: Border.all(color: appColors.blacktext),
-              
-            ),
-            child: Row(children: [
-              Image.asset()
-            ],),)
+            GovtIdrow( icon: appIcons.car,text: 'Driver\'s  license'),
+            SizedBox(height: 10.h,),
+            GovtIdrow( icon: appIcons.passport,text: 'Passport'),
+            SizedBox(height: 10.h,),
+            GovtIdrow( icon: appIcons.ID,text: 'Identity card',),
+            SizedBox(height: 60.h,),
+            Custombutton(text: 'Continue', onTap: (){},color: appColors.blacktext,)
+
           ],
         ),
       ),

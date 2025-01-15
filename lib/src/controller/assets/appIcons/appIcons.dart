@@ -10,4 +10,7 @@ class appIcons {
   static String support = 'lib/src/controller/assets/appIcons/supportt.png';
   static String emergency = 'lib/src/controller/assets/appIcons/emergency.png';
   static String verify= 'lib/src/controller/assets/appIcons/verification.png';
+  static String car= 'lib/src/controller/assets/appIcons/car.png';
+  static String passport= 'lib/src/controller/assets/appIcons/passport.png';
+  static String ID= 'lib/src/controller/assets/appIcons/id-card.png';
 }
