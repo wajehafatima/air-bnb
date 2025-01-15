@@ -129,7 +129,7 @@ class _AddressviewState extends State<Addressview> {
             ),
             SizedBox(height: 20.h),
             Custombutton(text: 'Save', onTap: (){},width: 150.w,
-              color: appColors.secondary,textColor:appColors.whiteBG,),
+              color: appColors.blacktext,textColor:appColors.whiteBG,),
             // Save Button
 
           ],

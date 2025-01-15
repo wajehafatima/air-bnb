@@ -15,14 +15,15 @@ class EmailView extends StatefulWidget {
 class _EmailViewState extends State<EmailView> {
   @override
   Widget build(BuildContext context) {
-    return  Column(children: [
+    return  Column(crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
         Primarytext(text: 'Use an address you\'ll always have access to', fontSize: 12.sp, fontWeight:FontWeight.w300,
             textColor: appColors.blacktext),
         SizedBox(height: 10.sp,),
         CustomTextFormField(labelText: 'Email'),
         SizedBox(height: 20.h,),
         Custombutton(text: 'Save', onTap: (){},width: 150.w,
-          color: appColors.secondary,textColor:appColors.whiteBG,),
+          color: appColors.blacktext,textColor:appColors.whiteBG,),
       ],
     );
   }

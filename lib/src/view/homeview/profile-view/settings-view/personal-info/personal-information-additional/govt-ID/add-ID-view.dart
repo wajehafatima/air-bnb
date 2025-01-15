@@ -34,7 +34,7 @@ class _AddidviewState extends State<Addidview> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: appColors.whiteBG,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -45,7 +45,8 @@ class _AddidviewState extends State<Addidview> {
         backgroundColor: appColors.whiteBG,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        padding: EdgeInsets.only(left:
+        20,right: 20,top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -64,7 +65,7 @@ class _AddidviewState extends State<Addidview> {
               onTap: _pickCountry,
               decoration: InputDecoration(
                 labelText: 'Issuing Country/Region',
-                labelStyle: TextStyle(fontSize: 14.sp),
+                labelStyle: TextStyle(fontSize: 12.sp),
                 border: OutlineInputBorder(),
                 suffixIcon: const Icon(Icons.arrow_drop_down),
               ),
@@ -77,11 +78,11 @@ class _AddidviewState extends State<Addidview> {
               textColor: appColors.grey,
             ),
             SizedBox(height: 20.h),
-            GovtIdrow( icon: appIcons.car,text: 'Driver\'s  license'),
+            GovtIdrow( icon: appIcons.car,text: 'Driver\'s  license',onTap: (){},),
             SizedBox(height: 10.h,),
-            GovtIdrow( icon: appIcons.passport,text: 'Passport'),
+            GovtIdrow( icon: appIcons.passport,text: 'Passport',onTap: (){}),
             SizedBox(height: 10.h,),
-            GovtIdrow( icon: appIcons.ID,text: 'Identity card',),
+            GovtIdrow( icon: appIcons.ID,text: 'Identity card',onTap: (){}),
             SizedBox(height: 60.h,),
             Custombutton(text: 'Continue', onTap: (){},color: appColors.blacktext,)
 

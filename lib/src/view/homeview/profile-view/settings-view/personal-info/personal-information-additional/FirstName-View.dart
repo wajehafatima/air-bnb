@@ -23,7 +23,7 @@ class _FirstnameviewState extends State<Firstnameview> {
         CustomTextFormField(labelText: 'Preferred first name (optional)'),
         SizedBox(height: 20.h,),
         Custombutton(text: 'Save', onTap: (){},width: 150.w,
-          color: appColors.secondary,textColor:appColors.whiteBG,),
+          color: appColors.blacktext,textColor:appColors.whiteBG,),
       ],
     );
   }

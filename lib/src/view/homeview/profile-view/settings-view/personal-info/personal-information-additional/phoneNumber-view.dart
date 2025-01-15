@@ -93,11 +93,11 @@ class _PhonenumberviewState extends State<Phonenumberview> {
               border: InputBorder.none,
             ),
           ),
-          SizedBox(height: 5.h,),
+
           Primarytext(text: 'We\'ll text you a code to verify your number. standard message and data rates apply',
-              fontSize: 12.sp, fontWeight: FontWeight.w300, textColor:appColors.blacktext),
+              fontSize: 10.sp, fontWeight: FontWeight.w300, textColor:appColors.blacktext),
           SizedBox(height: 20,),
-          Custombutton(text: 'Continue', onTap:(){})
+          Custombutton(text: 'Continue', onTap:(){},color: appColors.blacktext,)
         ],
 
     );
