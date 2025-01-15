@@ -1,3 +1,4 @@
+import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:air_bnb/src/controller/components/primaryText.dart';
 import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/loginandsecurity-view/deactivateAccount/selectable-row.dart';
@@ -48,6 +49,7 @@ class _DeactivateaccountviewState extends State<Deactivateaccountview> {
             SimpleRow(text: 'Other'),
 
             SizedBox(height: 20.h,),
+            Custombutton(text: 'Continue', onTap: (){})
 
 
 

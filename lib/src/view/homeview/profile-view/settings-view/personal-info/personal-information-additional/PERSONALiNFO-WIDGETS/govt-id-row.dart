@@ -29,10 +29,13 @@ class GovtIdrow extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset(
-              icon,
-              height: 30.h,
-              width: 30.w,
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Image.asset(
+                icon,
+                height: 30.h,
+                width: 30.w,
+              ),
             ),
             SizedBox(width: 10.w),
             Primarytext(
