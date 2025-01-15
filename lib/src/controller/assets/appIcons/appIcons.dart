@@ -9,4 +9,5 @@ class appIcons {
   static String calender = 'lib/src/controller/assets/appIcons/calender.png';
   static String support = 'lib/src/controller/assets/appIcons/supportt.png';
   static String emergency = 'lib/src/controller/assets/appIcons/emergency.png';
+  static String verify= 'lib/src/controller/assets/appIcons/verification.png';
 }
