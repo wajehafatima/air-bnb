@@ -1,3 +1,4 @@
+import 'package:air_bnb/src/controller/components/custombutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:country_picker/country_picker.dart';
@@ -42,13 +43,16 @@ class _AddemergencyviewState extends State<Addemergencyview> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back_ios),
         ),
         backgroundColor: appColors.whiteBG,
       ),
+      backgroundColor: appColors.whiteBG,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        padding: EdgeInsets.only(left: 20,right: 20,top: 20),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,7 +64,7 @@ class _AddemergencyviewState extends State<Addemergencyview> {
               ),
               SizedBox(height: 10.h),
               Primarytext(
-                text: 'Enter your name for identification.',
+                text: 'Legal name is preferred.',
                 fontSize: 10.sp,
                 fontWeight: FontWeight.w300,
                 textColor: appColors.grey,
@@ -74,7 +78,7 @@ class _AddemergencyviewState extends State<Addemergencyview> {
               ),
               SizedBox(height: 10.h),
               Primarytext(
-                text: 'Enter your relationship with the emergency contact.',
+                text: 'Enter your relationship Ex. mom, friend (required)',
                 fontSize: 10.sp,
                 fontWeight: FontWeight.w300,
                 textColor: appColors.grey,
@@ -88,7 +92,7 @@ class _AddemergencyviewState extends State<Addemergencyview> {
               ),
               SizedBox(height: 10.h),
               Primarytext(
-                text: 'Enter the email for contact notifications.',
+                text: 'Enter Email address (optional).',
                 fontSize: 10.sp,
                 fontWeight: FontWeight.w300,
                 textColor: appColors.grey,
@@ -131,14 +135,8 @@ class _AddemergencyviewState extends State<Addemergencyview> {
                   ),
                 ),
               ),
+
               SizedBox(height: 10.h),
-              Primarytext(
-                text: 'Select the country for emergency contact.',
-                fontSize: 10.sp,
-                fontWeight: FontWeight.w300,
-                textColor: appColors.grey,
-              ),
-              SizedBox(height: 20.h),
 
               // Phone Number TextField with PrimaryText
               CustomTextFormField(
@@ -147,12 +145,13 @@ class _AddemergencyviewState extends State<Addemergencyview> {
               ),
               SizedBox(height: 10.h),
               Primarytext(
-                text: 'Enter the phone number for emergency contact.',
+                text: 'Enter phone number (required)',
                 fontSize: 10.sp,
                 fontWeight: FontWeight.w300,
                 textColor: appColors.grey,
               ),
-              SizedBox(height: 20.h),
+              SizedBox(height: 30.h),
+              Custombutton(text: 'Save', onTap: (){},color: appColors.blacktext,),
             ],
           ),
         ),
