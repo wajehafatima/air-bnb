@@ -6,5 +6,5 @@ class appColors{
   static Color grey= Color(0xff888888);
   static Color primary= Color(0xff888888);
   static Color blacktext= Color(0xff000000);
-  static Color linkBlue= Color(0xff0000ff);
+  static Color linkBlue= Color(0xff3c949e);
 }

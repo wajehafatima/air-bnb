@@ -78,10 +78,10 @@ class MyApp extends StatelessWidget {
             //NotificationView(),
             // MainHomeView()
             //TaxesView()
-          PersonalInfo()
+        //  PersonalInfo()
             //TranslationView()
             //PaymentsView()
-            //LogInSecurity()
+            LogInSecurity()
             //PersonalInfo(),
             // HostingAgreementScreen()
               //Splashview()),
