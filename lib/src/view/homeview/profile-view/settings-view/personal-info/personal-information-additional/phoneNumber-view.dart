@@ -19,106 +19,87 @@ class _PhonenumberviewState extends State<Phonenumberview> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(
-        backgroundColor: appColors.whiteBG,
-        title: Primarytext(
-          text: 'Add phone number',
-          fontSize: 18.sp,
-          fontWeight: FontWeight.w500,
-          textColor: appColors.blacktext,
-        ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back_ios),
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Primarytext(
-              text: 'For notifications, reminders, and help logging in.',
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w300,
-              textColor: appColors.blacktext,
-            ),
-            SizedBox(height: 10.h),
-            GestureDetector(
-              onTap: () {
-                showCountryPicker(
-                  context: context,
-                  showPhoneCode: true,
-                  onSelect: (Country country) {
-                    setState(() {
-                      selectedCountry = country.name;
-                      selectedCode = "+${country.phoneCode}";
-                    });
-                  },
-                );
-              },
-              child: Container(
-                height: 40.h,
-                padding:
-                const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                decoration: BoxDecoration(
-                  border: Border.all(color: appColors.grey),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Primarytext(
-                          text: 'Country/region',
-                          fontSize: 10.sp,
-                          fontWeight: FontWeight.w300,
-                          textColor: appColors.grey,
-                        ),
-                        SizedBox(height: 3.h),
-                        Primarytext(
-                          text: '$selectedCountry ($selectedCode)',
-                          fontSize: 10.sp,
-                          fontWeight: FontWeight.w400,
-                          textColor: appColors.blacktext,
-                        ),
-                      ],
-                    ),
-                    const Icon(Icons.keyboard_arrow_down_sharp),
-                  ],
-                ),
+    return  Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Primarytext(
+            text: 'For notifications, reminders, and help logging in.',
+            fontSize: 12.sp,
+            fontWeight: FontWeight.w300,
+            textColor: appColors.blacktext,
+          ),
+          SizedBox(height: 10.h),
+          GestureDetector(
+            onTap: () {
+              showCountryPicker(
+                context: context,
+                showPhoneCode: true,
+                onSelect: (Country country) {
+                  setState(() {
+                    selectedCountry = country.name;
+                    selectedCode = "+${country.phoneCode}";
+                  });
+                },
+              );
+            },
+            child: Container(
+              height: 40.h,
+              padding:
+              const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                border: Border.all(color: appColors.grey),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Primarytext(
+                        text: 'Country/region',
+                        fontSize: 10.sp,
+                        fontWeight: FontWeight.w300,
+                        textColor: appColors.grey,
+                      ),
+                      SizedBox(height: 3.h),
+                      Primarytext(
+                        text: '$selectedCountry ($selectedCode)',
+                        fontSize: 10.sp,
+                        fontWeight: FontWeight.w400,
+                        textColor: appColors.blacktext,
+                      ),
+                    ],
+                  ),
+                  const Icon(Icons.keyboard_arrow_down_sharp),
+                ],
               ),
             ),
-            SizedBox(height: 20.h),
-            TextFormField(
-              decoration: InputDecoration(
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: appColors.grey),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: appColors.grey),
-                ),
-                hintText: 'Phone number',
-                border: InputBorder.none,
+          ),
+          SizedBox(height: 20.h),
+          TextFormField(
+            decoration: InputDecoration(
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: appColors.grey),
               ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: appColors.grey),
+              ),
+              hintText: 'Phone number',
+              border: InputBorder.none,
             ),
-            SizedBox(height: 5.h,),
-            Primarytext(text: 'We\'ll text you a code to verify your number. standard message and data rates apply',
-                fontSize: 12.sp, fontWeight: FontWeight.w300, textColor:appColors.blacktext),
-            SizedBox(height: 20,),
-            Custombutton(text: 'Continue', onTap:(){})
-          ],
-        ),
-      ),
+          ),
+          SizedBox(height: 5.h,),
+          Primarytext(text: 'We\'ll text you a code to verify your number. standard message and data rates apply',
+              fontSize: 12.sp, fontWeight: FontWeight.w300, textColor:appColors.blacktext),
+          SizedBox(height: 20,),
+          Custombutton(text: 'Continue', onTap:(){})
+        ],
+
     );
   }
 }

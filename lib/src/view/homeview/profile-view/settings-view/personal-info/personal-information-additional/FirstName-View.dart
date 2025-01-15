@@ -15,29 +15,16 @@ class Firstnameview extends StatefulWidget {
 class _FirstnameviewState extends State<Firstnameview> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: appColors.whiteBG,
-      appBar: AppBar(backgroundColor: appColors.whiteBG,
-        title: Primarytext(text: 'Preferred first name', fontSize: 18.sp, fontWeight: FontWeight.w500,
+    return  Column(crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Primarytext(text: 'This is how your first name will appear to Hosts and Guests', fontSize: 14.sp, fontWeight: FontWeight.w300,
             textColor: appColors.blacktext),
-        leading: IconButton(onPressed: (){
-          Navigator.pop(context);
-
-        }, icon: Icon(Icons.arrow_back_ios)),
-      ),
-       body: Padding(
-         padding: const EdgeInsets.only(left: 20,right: 20,top: 20),
-         child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-           children: [
-             Primarytext(text: 'This is how your first name will appear to Hosts and Guests', fontSize: 14.sp, fontWeight: FontWeight.w300,
-                 textColor: appColors.blacktext),
-             SizedBox(height: 10.h,),
-             CustomTextFormField(labelText: 'Preferred first name (optional)'),
-             SizedBox(height: 20.h,),
-             Custombutton(text: 'Save', onTap: (){},width: 150.w,
-               color: appColors.secondary,textColor:appColors.whiteBG,),
-           ],
-         ),
-       ),
+        SizedBox(height: 10.h,),
+        CustomTextFormField(labelText: 'Preferred first name (optional)'),
+        SizedBox(height: 20.h,),
+        Custombutton(text: 'Save', onTap: (){},width: 150.w,
+          color: appColors.secondary,textColor:appColors.whiteBG,),
+      ],
     );
   }
 }

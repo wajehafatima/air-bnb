@@ -56,7 +56,7 @@ class _PersonalDetailsState extends State<PersonalDetails> {
                 widget.onTap();
               },
               child: Text(
-                widget.buttonText,
+                _isExpanded ? 'Cancel' : widget.buttonText, // Toggle button text
                 style: GoogleFonts.poppins(
                   fontSize: 12.sp,
                   color: appColors.blacktext,
@@ -67,12 +67,13 @@ class _PersonalDetailsState extends State<PersonalDetails> {
             ),
           ],
         ),
-        Primarytext(
-          text: widget.title2,
-          fontSize: 12.sp,
-          fontWeight: FontWeight.w300,
-          textColor: appColors.grey,
-        ),
+        if (!_isExpanded) // Show title2 only when not expanded
+          Primarytext(
+            text: widget.title2,
+            fontSize: 12.sp,
+            fontWeight: FontWeight.w300,
+            textColor: appColors.grey,
+          ),
         SizedBox(height: 5.h),
         if (_isExpanded && widget.expandedContent != null)
           Column(

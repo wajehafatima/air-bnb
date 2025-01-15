@@ -15,28 +15,15 @@ class EmailView extends StatefulWidget {
 class _EmailViewState extends State<EmailView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(backgroundColor: appColors.whiteBG,
-        title: Primarytext(text: 'Email', fontSize: 18.sp, fontWeight: FontWeight.w500,
+    return  Column(children: [
+        Primarytext(text: 'Use an address you\'ll always have access to', fontSize: 12.sp, fontWeight:FontWeight.w300,
             textColor: appColors.blacktext),
-        leading: IconButton(onPressed: (){
-          Navigator.pop(context);
-
-        }, icon: Icon(Icons.arrow_back_ios)),
-      ),
-      backgroundColor: appColors.whiteBG,
-      body: Padding(
-        padding: const EdgeInsets.only(left: 20,right: 20,top: 20),
-        child: Column(children: [
-          Primarytext(text: 'Use an address you\'ll always have access to', fontSize: 12.sp, fontWeight:FontWeight.w300,
-              textColor: appColors.blacktext),
-          SizedBox(height: 10.sp,),
-          CustomTextFormField(labelText: 'Email'),
-          SizedBox(height: 20.h,),
-          Custombutton(text: 'Save', onTap: (){},width: 150.w,
-            color: appColors.secondary,textColor:appColors.whiteBG,),
-        ],),
-      ),
+        SizedBox(height: 10.sp,),
+        CustomTextFormField(labelText: 'Email'),
+        SizedBox(height: 20.h,),
+        Custombutton(text: 'Save', onTap: (){},width: 150.w,
+          color: appColors.secondary,textColor:appColors.whiteBG,),
+      ],
     );
   }
 }

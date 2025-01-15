@@ -14,17 +14,7 @@ class Legalnameview extends StatefulWidget {
 class _LegalnameviewState extends State<Legalnameview> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: appColors.whiteBG,
-    appBar:AppBar(backgroundColor: appColors.whiteBG,
-      title: Primarytext(text: 'Legal name', fontSize: 20.sp,
-          fontWeight: FontWeight.w500, textColor:appColors.blacktext),
-      leading: IconButton(onPressed: (){
-        Navigator.pop(context);
-      }, icon: Icon(Icons.arrow_back_ios)),
-    ),
-    body: Padding(
-      padding: const EdgeInsets.only(left: 20,right: 20,top: 20),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+    return  Column(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Primarytext(text: 'Make sure that this matches the name on your government ID ', fontSize: 14.sp, fontWeight: FontWeight.w300,
               textColor: appColors.blacktext),
@@ -36,8 +26,8 @@ class _LegalnameviewState extends State<Legalnameview> {
           Custombutton(text: 'Save', onTap: (){},width: 150.w,
             color: appColors.secondary,textColor:appColors.whiteBG,),
         ],
-      ),
-    ),
+
+
 
     );
   }

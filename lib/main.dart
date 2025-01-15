@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
             //Editprofileview()
             home://AdminHomeView())
             //Editprofileview()
-             Profileview()
+             //Profileview()
             //Licensview()
             //Viewprofileview()
             //Travelforwork()
@@ -78,6 +78,7 @@ class MyApp extends StatelessWidget {
             //NotificationView(),
             // MainHomeView()
             //TaxesView()
+          PersonalInfo()
             //TranslationView()
             //PaymentsView()
             //LogInSecurity()
