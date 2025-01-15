@@ -4,6 +4,7 @@ import 'package:air_bnb/src/controller/constants/colors/appColors.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/profileView.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/EmergencyContact-View.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/FirstName-View.dart';
+import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/Govt-id-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/LegalName-view.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/PERSONALiNFO-WIDGETS/CustomTextFiled.dart';
 import 'package:air_bnb/src/view/homeview/profile-view/settings-view/personal-info/personal-information-additional/addressView.dart';
@@ -66,7 +67,14 @@ class _PersonalInfoState extends State<PersonalInfo> {
                 );
               },
                ),
-              PersonalDetails(title: 'Government ID', title2: 'not provided', buttonText:'Add', onTap:(){}),
+              PersonalDetails(title: 'Government ID', title2: 'not provided', buttonText:'Add', onTap:(){
+                Navigator.pushReplacement(
+                  context,
+                  CupertinoDialogRoute(
+                      builder: (context) => Govtidview(),
+                      context: context),
+                );
+              }),
             ],
           ),
         ),
