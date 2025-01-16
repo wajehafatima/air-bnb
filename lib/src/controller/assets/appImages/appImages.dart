@@ -1,5 +1,5 @@
 class appImages {
-  static String appLogo='assets/splash.png';
+  static String appLogo='assets/splash.jpg';
   static String splashImage= 'lib/src/controller/assets/appImages/splash.jpg';
   static String hotel= 'lib/src/controller/assets/appImages/hotel.jpg';
   static String hotel2= 'lib/src/controller/assets/appImages/hotel2.jpg';

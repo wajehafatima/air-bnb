@@ -81,10 +81,11 @@ class MyApp extends StatelessWidget {
         //  PersonalInfo()
             //TranslationView()
             //PaymentsView()
-            LogInSecurity()
+
+          // LogInSecurity()
             //PersonalInfo(),
             // HostingAgreementScreen()
-              //Splashview()),
+              Splashview(),
             // Homeview()
               //Feedbackview()
             //  Airbnbworksview()
