@@ -13,4 +13,5 @@ class appIcons {
   static String car= 'lib/src/controller/assets/appIcons/car.png';
   static String passport= 'lib/src/controller/assets/appIcons/passport.png';
   static String ID= 'lib/src/controller/assets/appIcons/id-card.png';
+  static String check= 'lib/src/controller/assets/appIcons/check.png';
 }

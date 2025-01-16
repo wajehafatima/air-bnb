@@ -23,7 +23,7 @@ class SimpleRow extends StatelessWidget {
           Primarytext(
             text: text,
             fontSize: 12.sp,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w300,
             textColor: appColors.blacktext,
           ),
           Icon(Icons.circle_outlined,color: appColors.grey.withOpacity(0.4),),
