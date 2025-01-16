@@ -85,8 +85,7 @@ class _DeactivateaccountviewState extends State<Deactivateaccountview> {
                               border: OutlineInputBorder(borderSide: BorderSide(color: appColors.blacktext),
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
-                              contentPadding: EdgeInsets.symmetric(
-                                  horizontal: 10.w, vertical: 10.h),
+
                             ),
                           ),
                         ],
