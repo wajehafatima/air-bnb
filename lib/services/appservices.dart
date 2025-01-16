@@ -1,4 +1,5 @@
-import 'package:demo_app/constants/linker.dart';
+import 'dart:math';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
@@ -91,8 +92,8 @@ class AuthMethods {
     if (userDoc.exists) {
       SharedPref.saveLoginStatus(true);
       //  Navigator.pushReplacementNamed(context, routeDashboard);
-      Navigator.pushReplacement(
-          context, CupertinoPageRoute(builder: (context) => NavBarExample()));
+      // Navigator.pushReplacement(
+      //     context, CupertinoPageRoute(builder: (context) => NavBarExample()));
     } else {
       String referralCode = _generateReferralCode();
       Map<String, dynamic> userInfoMap = {
@@ -120,12 +121,12 @@ class AuthMethods {
       });
       SharedPref.saveLoginStatus(true);
 
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => CreateProfileScreen(role: 'register'),
-        ),
-      );
+      // Navigator.pushReplacement(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => CreateProfileScreen(role: 'register'),
+      //   ),
+      // );
     }
   }
 }

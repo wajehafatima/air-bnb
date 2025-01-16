@@ -41,6 +41,10 @@ dependencies:
   google_maps_flutter: ^2.10.0
   fl_chart: ^0.69.2
   firebase_auth: ^5.4.0
+  google_sign_in:
+  sign_in_with_apple:
+  shared_preferences:
+  cloud_firestore:
 
 dev_dependencies:
   flutter_test:
